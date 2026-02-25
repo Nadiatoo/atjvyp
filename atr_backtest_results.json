@@ -1,0 +1,14 @@
+{
+  "fixed_stop": {
+    "total_trades": 25,
+    "win_rate": 0.68,
+    "total_return": 585.1337798389563,
+    "max_drawdown": 0.0664641218663361
+  },
+  "atr_stop": {
+    "total_trades": 25,
+    "win_rate": 0.68,
+    "total_return": 270.50599093800264,
+    "max_drawdown": 0.140175289840559
+  }
+}
