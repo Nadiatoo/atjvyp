@@ -314,7 +314,109 @@ class CycleWeightBacktester:
         return all_results
 
 
-# 模拟历史数据生成器（用于测试框架）
+# 真实历史数据获取（使用akshare）
+def fetch_real_historical_data(start_date='20240101', end_date='20250225'):
+    """
+    获取真实历史数据（2024-2025年）
+    使用akshare获取A股全市场数据
+    """
+    try:
+        import akshare as ak
+        print(f"正在获取真实历史数据: {start_date} 至 {end_date}")
+        
+        # 转换日期格式
+        start_dt = datetime.strptime(start_date, '%Y%m%d')
+        end_dt = datetime.strptime(end_date, '%Y%m%d')
+        
+        data = []
+        current_dt = start_dt
+        
+        while current_dt <= end_dt:
+            date_str = current_dt.strftime('%Y%m%d')
+            date_display = current_dt.strftime('%Y-%m-%d')
+            
+            # 跳过周末
+            if current_dt.weekday() >= 5:
+                current_dt += timedelta(days=1)
+                continue
+            
+            try:
+                # 获取当日全市场数据
+                df = ak.stock_zh_a_spot_em()
+                
+                if df is None or len(df) == 0:
+                    print(f"  {date_display}: 无数据，跳过")
+                    current_dt += timedelta(days=1)
+                    continue
+                
+                # 计算关键指标
+                up_limit = len(df[df['涨跌幅'] >= 9.5])  # 涨停
+                down_limit = len(df[df['涨跌幅'] <= -9.5])  # 跌停
+                total_volume = df['成交额'].sum() / 100000000  # 成交额（亿）
+                
+                # 强势股统计（近5日涨幅前100中今日跌停的数量）
+                # 这里简化处理，用当日跌幅>7%且前5日涨幅>20%的股票数
+                strong_drop = len(df[(df['涨跌幅'] < -7) & (df['5日涨幅'] > 20)])
+                
+                # 炸板率（简化：涨停开板数/涨停总数）
+                # 实际应该获取分时数据，这里用近似值
+                zhaban = len(df[(df['涨跌幅'] > 7) & (df['涨跌幅'] < 9.5)])
+                zhaban_rate = (zhaban / (up_limit + zhaban) * 100) if (up_limit + zhaban) > 0 else 0
+                
+                # 市场环境指标（简化版）
+                market_data = {
+                    'date': date_display,
+                    'up_limit': up_limit,
+                    'down_limit': down_limit,
+                    'volume': total_volume,
+                    'strong_stock_drop': strong_drop,
+                    '炸板率': zhaban_rate,
+                    
+                    # 市场环境指标（需要更详细的数据源）
+                    'quant_seat_ratio': 0.35,  # 默认值，需要龙虎榜数据
+                    'intraday_atr': 0.05,      # 默认值
+                    'next_day_down_rate': 0.55, # 默认值
+                    'northbound_consecutive_days': 5,  # 默认值
+                    'research_density': 2.0,   # 默认值
+                    'limit_up_height': 5,      # 默认值
+                    'avg_turnover': 0.15,      # 默认值
+                }
+                
+                # 推断实际季节（基于真实市场数据）
+                if up_limit > 100 and down_limit < 20 and total_volume > 25000:
+                    actual_season = 'summer'
+                elif down_limit > 40:
+                    actual_season = 'spring'
+                elif up_limit > 80 and down_limit > 20:
+                    actual_season = 'autumn'
+                else:
+                    actual_season = 'winter'
+                
+                data.append({
+                    'date': date_display,
+                    'market_data': market_data,
+                    'actual_season': actual_season
+                })
+                
+                print(f"  {date_display}: 涨停{up_limit}, 跌停{down_limit}, 成交{total_volume:.0f}亿, 季节{actual_season}")
+                
+            except Exception as e:
+                print(f"  {date_display}: 获取失败 - {e}")
+            
+            current_dt += timedelta(days=1)
+        
+        print(f"\n成功获取 {len(data)} 个交易日数据")
+        return data
+        
+    except ImportError:
+        print("akshare未安装，使用模拟数据")
+        return generate_mock_historical_data()
+    except Exception as e:
+        print(f"获取真实数据失败: {e}，使用模拟数据")
+        return generate_mock_historical_data()
+
+
+# 模拟历史数据生成器（备用）
 def generate_mock_historical_data(start_date='2024-01-01', days=250):
     """生成模拟历史数据（实际使用时替换为真实数据）"""
     data = []
@@ -364,9 +466,21 @@ def generate_mock_historical_data(start_date='2024-01-01', days=250):
 
 # 主函数
 if __name__ == "__main__":
-    # 生成模拟数据
-    print("正在生成模拟历史数据...")
-    historical_data = generate_mock_historical_data('2024-01-01', 250)
+    # 选择数据源
+    use_real_data = False  # True=真实数据, False=模拟数据
+    
+    if use_real_data:
+        # 获取真实历史数据（2024-2025年）
+        historical_data = fetch_real_historical_data('20240101', '20250225')
+    else:
+        # 生成模拟数据（今天先用模拟数据验证框架）
+        print("【注意】使用模拟数据验证框架，明天接入真实数据")
+        print("正在生成模拟历史数据...")
+        historical_data = generate_mock_historical_data('2024-01-01', 300)
+    
+    if len(historical_data) == 0:
+        print("错误：未能获取任何数据")
+        exit(1)
     
     # 运行回测
     backtester = CycleWeightBacktester()
