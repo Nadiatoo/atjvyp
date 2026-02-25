@@ -1,0 +1,397 @@
+{
+  "overall": [
+    {
+      "combo": "基准",
+      "win_rate": 0.544,
+      "total_return": 2.6049999999999938,
+      "max_drawdown": 0.2613981762917933,
+      "sharpe_ratio": 3.025492304574578
+    },
+    {
+      "combo": "量化A",
+      "win_rate": 0.54,
+      "total_return": 2.3799999999999937,
+      "max_drawdown": 0.2613981762917933,
+      "sharpe_ratio": 2.7873746440479645
+    },
+    {
+      "combo": "量化B",
+      "win_rate": 0.54,
+      "total_return": 2.3799999999999937,
+      "max_drawdown": 0.2613981762917933,
+      "sharpe_ratio": 2.7873746440479645
+    },
+    {
+      "combo": "量化C",
+      "win_rate": 0.532,
+      "total_return": 1.929999999999996,
+      "max_drawdown": 0.30281690140845047,
+      "sharpe_ratio": 2.3014151323705683
+    },
+    {
+      "combo": "机构A",
+      "win_rate": 0.548,
+      "total_return": 2.829999999999994,
+      "max_drawdown": 0.2613981762917933,
+      "sharpe_ratio": 3.26077012145602
+    },
+    {
+      "combo": "机构B",
+      "win_rate": 0.548,
+      "total_return": 2.829999999999994,
+      "max_drawdown": 0.2613981762917933,
+      "sharpe_ratio": 3.26077012145602
+    },
+    {
+      "combo": "机构C",
+      "win_rate": 0.548,
+      "total_return": 2.829999999999994,
+      "max_drawdown": 0.2613981762917933,
+      "sharpe_ratio": 3.26077012145602
+    },
+    {
+      "combo": "游资A",
+      "win_rate": 0.536,
+      "total_return": 2.154999999999995,
+      "max_drawdown": 0.3028169014084505,
+      "sharpe_ratio": 2.5461219376718227
+    },
+    {
+      "combo": "游资B",
+      "win_rate": 0.524,
+      "total_return": 1.4799999999999967,
+      "max_drawdown": 0.3598326359832636,
+      "sharpe_ratio": 1.8002237386200928
+    },
+    {
+      "combo": "高流动性",
+      "win_rate": 0.548,
+      "total_return": 2.829999999999994,
+      "max_drawdown": 0.2613981762917933,
+      "sharpe_ratio": 3.26077012145602
+    },
+    {
+      "combo": "低流动性",
+      "win_rate": 0.524,
+      "total_return": 1.4799999999999973,
+      "max_drawdown": 0.4393305439330544,
+      "sharpe_ratio": 1.800223738620093
+    }
+  ],
+  "quant": [
+    {
+      "combo": "基准",
+      "win_rate": 0.40625,
+      "total_return": -0.19499999999999984,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": -2.3661208066963026
+    },
+    {
+      "combo": "量化A",
+      "win_rate": 0.40625,
+      "total_return": -0.19499999999999984,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": -2.3661208066963026
+    },
+    {
+      "combo": "量化B",
+      "win_rate": 0.40625,
+      "total_return": -0.19499999999999984,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": -2.3661208066963026
+    },
+    {
+      "combo": "量化C",
+      "win_rate": 0.40625,
+      "total_return": -0.19499999999999984,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": -2.3661208066963026
+    },
+    {
+      "combo": "机构A",
+      "win_rate": 0.4375,
+      "total_return": 0.030000000000000138,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": 0.31479446696124486
+    },
+    {
+      "combo": "机构B",
+      "win_rate": 0.4375,
+      "total_return": 0.030000000000000138,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": 0.31479446696124486
+    },
+    {
+      "combo": "机构C",
+      "win_rate": 0.4375,
+      "total_return": 0.030000000000000138,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": 0.31479446696124486
+    },
+    {
+      "combo": "游资A",
+      "win_rate": 0.40625,
+      "total_return": -0.19499999999999984,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": -2.3661208066963026
+    },
+    {
+      "combo": "游资B",
+      "win_rate": 0.40625,
+      "total_return": -0.19499999999999984,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": -2.3661208066963026
+    },
+    {
+      "combo": "高流动性",
+      "win_rate": 0.4375,
+      "total_return": 0.030000000000000138,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": 0.31479446696124486
+    },
+    {
+      "combo": "低流动性",
+      "win_rate": 0.40625,
+      "total_return": -0.19499999999999984,
+      "max_drawdown": 0.30499999999999994,
+      "sharpe_ratio": -2.3661208066963026
+    }
+  ],
+  "institution": [
+    {
+      "combo": "基准",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "量化A",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "量化B",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "量化C",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "机构A",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "机构B",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "机构C",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "游资A",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "游资B",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "高流动性",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "低流动性",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    }
+  ],
+  "retail": [
+    {
+      "combo": "基准",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "量化A",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "量化B",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "量化C",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "机构A",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "机构B",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "机构C",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "游资A",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "游资B",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "高流动性",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    },
+    {
+      "combo": "低流动性",
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
+    }
+  ],
+  "mixed": [
+    {
+      "combo": "基准",
+      "win_rate": 0.5642201834862385,
+      "total_return": 2.799999999999993,
+      "max_drawdown": 0.24538258575197905,
+      "sharpe_ratio": 3.6405728935551047
+    },
+    {
+      "combo": "量化A",
+      "win_rate": 0.5596330275229358,
+      "total_return": 2.574999999999993,
+      "max_drawdown": 0.24538258575197905,
+      "sharpe_ratio": 3.376107435552291
+    },
+    {
+      "combo": "量化B",
+      "win_rate": 0.5596330275229358,
+      "total_return": 2.574999999999993,
+      "max_drawdown": 0.24538258575197905,
+      "sharpe_ratio": 3.376107435552291
+    },
+    {
+      "combo": "量化C",
+      "win_rate": 0.5504587155963303,
+      "total_return": 2.1249999999999947,
+      "max_drawdown": 0.2784431137724551,
+      "sharpe_ratio": 2.837303080471085
+    },
+    {
+      "combo": "机构A",
+      "win_rate": 0.5642201834862385,
+      "total_return": 2.799999999999993,
+      "max_drawdown": 0.24538258575197905,
+      "sharpe_ratio": 3.6405728935551047
+    },
+    {
+      "combo": "机构B",
+      "win_rate": 0.5642201834862385,
+      "total_return": 2.799999999999993,
+      "max_drawdown": 0.24538258575197905,
+      "sharpe_ratio": 3.6405728935551047
+    },
+    {
+      "combo": "机构C",
+      "win_rate": 0.5642201834862385,
+      "total_return": 2.799999999999993,
+      "max_drawdown": 0.24538258575197905,
+      "sharpe_ratio": 3.6405728935551047
+    },
+    {
+      "combo": "游资A",
+      "win_rate": 0.555045871559633,
+      "total_return": 2.3499999999999943,
+      "max_drawdown": 0.278443113772455,
+      "sharpe_ratio": 3.1084825724567176
+    },
+    {
+      "combo": "游资B",
+      "win_rate": 0.5412844036697247,
+      "total_return": 1.674999999999996,
+      "max_drawdown": 0.3217993079584774,
+      "sharpe_ratio": 2.2825240222282264
+    },
+    {
+      "combo": "高流动性",
+      "win_rate": 0.5642201834862385,
+      "total_return": 2.799999999999993,
+      "max_drawdown": 0.24538258575197905,
+      "sharpe_ratio": 3.6405728935551047
+    },
+    {
+      "combo": "低流动性",
+      "win_rate": 0.5412844036697247,
+      "total_return": 1.6749999999999965,
+      "max_drawdown": 0.37024221453287187,
+      "sharpe_ratio": 2.2825240222282264
+    }
+  ]
+}
