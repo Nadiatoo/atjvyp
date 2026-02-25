@@ -2,159 +2,159 @@
   "overall": [
     {
       "combo": "基准",
-      "win_rate": 0.5333333333333333,
-      "total_return": 2.844999999999992,
-      "max_drawdown": 0.2613981762917933,
-      "sharpe_ratio": 2.7798339148451414
+      "win_rate": 0.6,
+      "total_return": 0.99,
+      "max_drawdown": 0.0888030888030888,
+      "sharpe_ratio": 7.686922793177918
     },
     {
       "combo": "量化A",
-      "win_rate": 0.5266666666666666,
-      "total_return": 2.394999999999992,
-      "max_drawdown": 0.2613981762917933,
-      "sharpe_ratio": 2.375350429767933
+      "win_rate": 0.48,
+      "total_return": 0.01500000000000002,
+      "max_drawdown": 0.2489451476793249,
+      "sharpe_ratio": 0.13428883337258607
     },
     {
       "combo": "量化B",
-      "win_rate": 0.5266666666666666,
-      "total_return": 2.394999999999992,
-      "max_drawdown": 0.2613981762917933,
-      "sharpe_ratio": 2.375350429767933
+      "win_rate": 0.28,
+      "total_return": -0.8099999999999997,
+      "max_drawdown": 0.8599999999999999,
+      "sharpe_ratio": -12.102011262093129
     },
     {
       "combo": "量化C",
-      "win_rate": 0.52,
-      "total_return": 1.9449999999999945,
-      "max_drawdown": 0.30281690140845047,
-      "sharpe_ratio": 1.9605655256656644
+      "win_rate": 0.36,
+      "total_return": -0.6599999999999998,
+      "max_drawdown": 0.71,
+      "sharpe_ratio": -8.721445456532011
     },
     {
       "combo": "机构A",
-      "win_rate": 0.5366666666666666,
-      "total_return": 3.0699999999999923,
-      "max_drawdown": 0.2613981762917933,
-      "sharpe_ratio": 2.9786985011207086
+      "win_rate": 0.6,
+      "total_return": 1.14,
+      "max_drawdown": 0.0756578947368421,
+      "sharpe_ratio": 8.79342179662318
     },
     {
       "combo": "机构B",
-      "win_rate": 0.5366666666666666,
-      "total_return": 3.0699999999999923,
-      "max_drawdown": 0.2613981762917933,
-      "sharpe_ratio": 2.9786985011207086
+      "win_rate": 0.6,
+      "total_return": 1.14,
+      "max_drawdown": 0.0756578947368421,
+      "sharpe_ratio": 8.79342179662318
     },
     {
       "combo": "机构C",
-      "win_rate": 0.5366666666666666,
-      "total_return": 3.0699999999999923,
-      "max_drawdown": 0.2613981762917933,
-      "sharpe_ratio": 2.9786985011207086
+      "win_rate": 0.6,
+      "total_return": 0.99,
+      "max_drawdown": 0.0888030888030888,
+      "sharpe_ratio": 7.686922793177918
     },
     {
       "combo": "游资A",
-      "win_rate": 0.5233333333333333,
-      "total_return": 2.1699999999999933,
-      "max_drawdown": 0.3028169014084505,
-      "sharpe_ratio": 2.169349722972076
+      "win_rate": 0.52,
+      "total_return": 0.24000000000000002,
+      "max_drawdown": 0.2489451476793249,
+      "sharpe_ratio": 2.0339556927100593
     },
     {
       "combo": "游资B",
-      "win_rate": 0.5133333333333333,
-      "total_return": 1.4949999999999952,
-      "max_drawdown": 0.3598326359832636,
-      "sharpe_ratio": 1.5337175991536065
+      "win_rate": 0.36,
+      "total_return": -0.6599999999999998,
+      "max_drawdown": 0.71,
+      "sharpe_ratio": -8.721445456532011
     },
     {
       "combo": "高流动性",
-      "win_rate": 0.5366666666666666,
-      "total_return": 3.0699999999999923,
-      "max_drawdown": 0.2613981762917933,
-      "sharpe_ratio": 2.9786985011207086
+      "win_rate": 0.6,
+      "total_return": 0.99,
+      "max_drawdown": 0.0888030888030888,
+      "sharpe_ratio": 7.686922793177918
     },
     {
       "combo": "低流动性",
-      "win_rate": 0.5133333333333333,
-      "total_return": 1.4949999999999959,
-      "max_drawdown": 0.4393305439330544,
-      "sharpe_ratio": 1.5337175991536065
+      "win_rate": 0.36,
+      "total_return": -0.6599999999999998,
+      "max_drawdown": 0.71,
+      "sharpe_ratio": -8.721445456532011
     }
   ],
   "quant": [
     {
       "combo": "基准",
-      "win_rate": 0.42857142857142855,
-      "total_return": -0.05999999999999985,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": -0.5717270347488711
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "量化A",
-      "win_rate": 0.42857142857142855,
-      "total_return": -0.05999999999999985,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": -0.5717270347488711
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "量化B",
-      "win_rate": 0.42857142857142855,
-      "total_return": -0.05999999999999985,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": -0.5717270347488711
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "量化C",
-      "win_rate": 0.42857142857142855,
-      "total_return": -0.05999999999999985,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": -0.5717270347488711
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "机构A",
-      "win_rate": 0.45714285714285713,
-      "total_return": 0.16500000000000012,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": 1.4326991501897823
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "机构B",
-      "win_rate": 0.45714285714285713,
-      "total_return": 0.16500000000000012,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": 1.4326991501897823
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "机构C",
-      "win_rate": 0.45714285714285713,
-      "total_return": 0.16500000000000012,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": 1.4326991501897823
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "游资A",
-      "win_rate": 0.42857142857142855,
-      "total_return": -0.05999999999999985,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": -0.5717270347488711
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "游资B",
-      "win_rate": 0.42857142857142855,
-      "total_return": -0.05999999999999985,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": -0.5717270347488711
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "高流动性",
-      "win_rate": 0.45714285714285713,
-      "total_return": 0.16500000000000012,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": 1.4326991501897823
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     },
     {
       "combo": "低流动性",
-      "win_rate": 0.42857142857142855,
-      "total_return": -0.05999999999999985,
-      "max_drawdown": 0.30499999999999994,
-      "sharpe_ratio": -0.5717270347488711
+      "win_rate": 0,
+      "total_return": 0,
+      "max_drawdown": 0,
+      "sharpe_ratio": 0
     }
   ],
   "institution": [
@@ -318,80 +318,80 @@
   "mixed": [
     {
       "combo": "基准",
-      "win_rate": 0.5471698113207547,
-      "total_return": 2.904999999999992,
-      "max_drawdown": 0.24538258575197905,
-      "sharpe_ratio": 3.1760084168251956
+      "win_rate": 0.6,
+      "total_return": 0.99,
+      "max_drawdown": 0.0888030888030888,
+      "sharpe_ratio": 7.686922793177918
     },
     {
       "combo": "量化A",
-      "win_rate": 0.539622641509434,
-      "total_return": 2.4549999999999916,
-      "max_drawdown": 0.24538258575197905,
-      "sharpe_ratio": 2.726596868859018
+      "win_rate": 0.48,
+      "total_return": 0.01500000000000002,
+      "max_drawdown": 0.2489451476793249,
+      "sharpe_ratio": 0.13428883337258607
     },
     {
       "combo": "量化B",
-      "win_rate": 0.539622641509434,
-      "total_return": 2.4549999999999916,
-      "max_drawdown": 0.24538258575197905,
-      "sharpe_ratio": 2.726596868859018
+      "win_rate": 0.28,
+      "total_return": -0.8099999999999997,
+      "max_drawdown": 0.8599999999999999,
+      "sharpe_ratio": -12.102011262093129
     },
     {
       "combo": "量化C",
-      "win_rate": 0.5320754716981132,
-      "total_return": 2.0049999999999932,
-      "max_drawdown": 0.2784431137724551,
-      "sharpe_ratio": 2.2656090409907907
+      "win_rate": 0.36,
+      "total_return": -0.6599999999999998,
+      "max_drawdown": 0.71,
+      "sharpe_ratio": -8.721445456532011
     },
     {
       "combo": "机构A",
-      "win_rate": 0.5471698113207547,
-      "total_return": 2.904999999999992,
-      "max_drawdown": 0.24538258575197905,
-      "sharpe_ratio": 3.1760084168251956
+      "win_rate": 0.6,
+      "total_return": 1.14,
+      "max_drawdown": 0.0756578947368421,
+      "sharpe_ratio": 8.79342179662318
     },
     {
       "combo": "机构B",
-      "win_rate": 0.5471698113207547,
-      "total_return": 2.904999999999992,
-      "max_drawdown": 0.24538258575197905,
-      "sharpe_ratio": 3.1760084168251956
+      "win_rate": 0.6,
+      "total_return": 1.14,
+      "max_drawdown": 0.0756578947368421,
+      "sharpe_ratio": 8.79342179662318
     },
     {
       "combo": "机构C",
-      "win_rate": 0.5471698113207547,
-      "total_return": 2.904999999999992,
-      "max_drawdown": 0.24538258575197905,
-      "sharpe_ratio": 3.1760084168251956
+      "win_rate": 0.6,
+      "total_return": 0.99,
+      "max_drawdown": 0.0888030888030888,
+      "sharpe_ratio": 7.686922793177918
     },
     {
       "combo": "游资A",
-      "win_rate": 0.5358490566037736,
-      "total_return": 2.229999999999993,
-      "max_drawdown": 0.278443113772455,
-      "sharpe_ratio": 2.4976855222164462
+      "win_rate": 0.52,
+      "total_return": 0.24000000000000002,
+      "max_drawdown": 0.2489451476793249,
+      "sharpe_ratio": 2.0339556927100593
     },
     {
       "combo": "游资B",
-      "win_rate": 0.5245283018867924,
-      "total_return": 1.5549999999999948,
-      "max_drawdown": 0.3217993079584774,
-      "sharpe_ratio": 1.7907414754276127
+      "win_rate": 0.36,
+      "total_return": -0.6599999999999998,
+      "max_drawdown": 0.71,
+      "sharpe_ratio": -8.721445456532011
     },
     {
       "combo": "高流动性",
-      "win_rate": 0.5471698113207547,
-      "total_return": 2.904999999999992,
-      "max_drawdown": 0.24538258575197905,
-      "sharpe_ratio": 3.1760084168251956
+      "win_rate": 0.6,
+      "total_return": 0.99,
+      "max_drawdown": 0.0888030888030888,
+      "sharpe_ratio": 7.686922793177918
     },
     {
       "combo": "低流动性",
-      "win_rate": 0.5245283018867924,
-      "total_return": 1.5549999999999953,
-      "max_drawdown": 0.37024221453287187,
-      "sharpe_ratio": 1.7907414754276127
+      "win_rate": 0.36,
+      "total_return": -0.6599999999999998,
+      "max_drawdown": 0.71,
+      "sharpe_ratio": -8.721445456532011
     }
   ]
 }

@@ -464,18 +464,34 @@ def generate_mock_historical_data(start_date='2024-01-01', days=250):
     return data
 
 
+def load_from_docs():
+    """从复盘文档加载历史数据"""
+    import json
+    try:
+        with open('historical_data_from_docs.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        print(f"✅ 从复盘文档加载了 {len(data)} 个历史数据点")
+        return data
+    except FileNotFoundError:
+        print("❌ 未找到文档数据，使用模拟数据")
+        return generate_mock_historical_data('2021-01-01', 300)
+
+
 # 主函数
 if __name__ == "__main__":
     # 选择数据源
-    use_real_data = False  # True=真实数据, False=模拟数据
+    data_source = 'docs'  # 'docs'=文档数据, 'real'=实时数据, 'mock'=模拟数据
     
-    if use_real_data:
+    if data_source == 'docs':
+        # 从复盘文档提取的数据（2021-2026年关键节点）
+        print("【使用复盘文档历史数据】")
+        historical_data = load_from_docs()
+    elif data_source == 'real':
         # 获取真实历史数据（2024-2025年）
         historical_data = fetch_real_historical_data('20240101', '20250225')
     else:
-        # 生成模拟数据（今天先用模拟数据验证框架）
-        print("【注意】使用模拟数据验证框架，明天接入真实数据")
-        print("正在生成模拟历史数据...")
+        # 生成模拟数据
+        print("【使用模拟数据】")
         historical_data = generate_mock_historical_data('2024-01-01', 300)
     
     if len(historical_data) == 0:

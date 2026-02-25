@@ -1,0 +1,502 @@
+[
+  {
+    "date": "2026-01-05",
+    "market_data": {
+      "up_limit": 80,
+      "down_limit": 5,
+      "volume": 20000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.32,
+      "intraday_atr": 0.075,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "开年逼空启动",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2026-01-12",
+    "market_data": {
+      "up_limit": 120,
+      "down_limit": 8,
+      "volume": 36000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.32,
+      "intraday_atr": 0.075,
+      "next_day_down_rate": 0.4,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 10,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "逼空高潮，胜通14板",
+    "market_env": "retail"
+  },
+  {
+    "date": "2026-01-13",
+    "market_data": {
+      "up_limit": 60,
+      "down_limit": 25,
+      "volume": 32000,
+      "strong_stock_drop": 5,
+      "炸板率": 25,
+      "quant_seat_ratio": 0.32,
+      "intraday_atr": 0.075,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "autumn",
+    "event": "村里降温，4连阴开始",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2026-01-20",
+    "market_data": {
+      "up_limit": 30,
+      "down_limit": 45,
+      "volume": 22000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.32,
+      "intraday_atr": 0.075,
+      "next_day_down_rate": 0.65,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 5,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "winter",
+    "event": "批量跌停，情绪冰点",
+    "market_env": "quant"
+  },
+  {
+    "date": "2026-02-03",
+    "market_data": {
+      "up_limit": 50,
+      "down_limit": 15,
+      "volume": 18000,
+      "strong_stock_drop": 15,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.32,
+      "intraday_atr": 0.075,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "spring",
+    "event": "节后开门红，春播试错",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2026-02-15",
+    "market_data": {
+      "up_limit": 95,
+      "down_limit": 10,
+      "volume": 25000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.32,
+      "intraday_atr": 0.075,
+      "next_day_down_rate": 0.45,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 3,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "AI硬件CPO创历史新高",
+    "market_env": "institution"
+  },
+  {
+    "date": "2025-03-01",
+    "market_data": {
+      "up_limit": 40,
+      "down_limit": 8,
+      "volume": 22000,
+      "strong_stock_drop": 15,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.3,
+      "intraday_atr": 0.07,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "spring",
+    "event": "人形机器人启动",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2025-05-15",
+    "market_data": {
+      "up_limit": 85,
+      "down_limit": 12,
+      "volume": 28000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.3,
+      "intraday_atr": 0.07,
+      "next_day_down_rate": 0.45,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 3,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "人形机器人高潮",
+    "market_env": "institution"
+  },
+  {
+    "date": "2025-08-01",
+    "market_data": {
+      "up_limit": 35,
+      "down_limit": 6,
+      "volume": 18000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.3,
+      "intraday_atr": 0.07,
+      "next_day_down_rate": 0.45,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 3,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "创新药政策拐点",
+    "market_env": "institution"
+  },
+  {
+    "date": "2025-11-01",
+    "market_data": {
+      "up_limit": 55,
+      "down_limit": 20,
+      "volume": 24000,
+      "strong_stock_drop": 5,
+      "炸板率": 25,
+      "quant_seat_ratio": 0.3,
+      "intraday_atr": 0.07,
+      "next_day_down_rate": 0.65,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 5,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "autumn",
+    "event": "量化占比达30%",
+    "market_env": "quant"
+  },
+  {
+    "date": "2024-01-15",
+    "market_data": {
+      "up_limit": 25,
+      "down_limit": 120,
+      "volume": 15000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.25,
+      "intraday_atr": 0.065,
+      "next_day_down_rate": 0.65,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 5,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "winter",
+    "event": "微盘股指数暴跌40%",
+    "market_env": "quant"
+  },
+  {
+    "date": "2024-02-05",
+    "market_data": {
+      "up_limit": 40,
+      "down_limit": 15,
+      "volume": 19000,
+      "strong_stock_drop": 15,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.25,
+      "intraday_atr": 0.065,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "spring",
+    "event": "量化踩踏结束，春播启动",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2024-03-20",
+    "market_data": {
+      "up_limit": 90,
+      "down_limit": 8,
+      "volume": 32000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.25,
+      "intraday_atr": 0.065,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "春季行情高潮",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2024-06-15",
+    "market_data": {
+      "up_limit": 45,
+      "down_limit": 25,
+      "volume": 21000,
+      "strong_stock_drop": 5,
+      "炸板率": 25,
+      "quant_seat_ratio": 0.25,
+      "intraday_atr": 0.065,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "autumn",
+    "event": "年中震荡调整",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2024-09-30",
+    "market_data": {
+      "up_limit": 150,
+      "down_limit": 2,
+      "volume": 45000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.25,
+      "intraday_atr": 0.065,
+      "next_day_down_rate": 0.4,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 10,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "9.24政策牛市启动",
+    "market_env": "retail"
+  },
+  {
+    "date": "2023-03-01",
+    "market_data": {
+      "up_limit": 60,
+      "down_limit": 5,
+      "volume": 22000,
+      "strong_stock_drop": 15,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.22,
+      "intraday_atr": 0.06,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "spring",
+    "event": "ChatGPT概念启动",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2023-04-15",
+    "market_data": {
+      "up_limit": 110,
+      "down_limit": 8,
+      "volume": 35000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.22,
+      "intraday_atr": 0.06,
+      "next_day_down_rate": 0.65,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 5,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "AI行情高潮，中际旭创5倍",
+    "market_env": "quant"
+  },
+  {
+    "date": "2023-06-20",
+    "market_data": {
+      "up_limit": 40,
+      "down_limit": 35,
+      "volume": 18000,
+      "strong_stock_drop": 5,
+      "炸板率": 25,
+      "quant_seat_ratio": 0.22,
+      "intraday_atr": 0.06,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "autumn",
+    "event": "AI退潮，无量阴跌",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2022-04-27",
+    "market_data": {
+      "up_limit": 30,
+      "down_limit": 80,
+      "volume": 12000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.18,
+      "intraday_atr": 0.05,
+      "next_day_down_rate": 0.45,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 3,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "winter",
+    "event": "上海疫情，市场冰点",
+    "market_env": "institution"
+  },
+  {
+    "date": "2022-06-30",
+    "market_data": {
+      "up_limit": 85,
+      "down_limit": 10,
+      "volume": 28000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.18,
+      "intraday_atr": 0.05,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "疫后反弹高潮",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2022-10-31",
+    "market_data": {
+      "up_limit": 25,
+      "down_limit": 65,
+      "volume": 14000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.18,
+      "intraday_atr": 0.05,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "winter",
+    "event": "美联储加息，外资撤离",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2021-02-18",
+    "market_data": {
+      "up_limit": 55,
+      "down_limit": 15,
+      "volume": 32000,
+      "strong_stock_drop": 5,
+      "炸板率": 25,
+      "quant_seat_ratio": 0.15,
+      "intraday_atr": 0.04,
+      "next_day_down_rate": 0.45,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 3,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "autumn",
+    "event": "茅台2600见顶",
+    "market_env": "institution"
+  },
+  {
+    "date": "2021-03-09",
+    "market_data": {
+      "up_limit": 20,
+      "down_limit": 85,
+      "volume": 18000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.15,
+      "intraday_atr": 0.04,
+      "next_day_down_rate": 0.45,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 3,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "winter",
+    "event": "抱团瓦解，茅台跌至1900",
+    "market_env": "institution"
+  },
+  {
+    "date": "2021-09-01",
+    "market_data": {
+      "up_limit": 70,
+      "down_limit": 20,
+      "volume": 26000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.15,
+      "intraday_atr": 0.04,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "summer",
+    "event": "周期股行情",
+    "market_env": "mixed"
+  },
+  {
+    "date": "2021-12-13",
+    "market_data": {
+      "up_limit": 35,
+      "down_limit": 50,
+      "volume": 15000,
+      "strong_stock_drop": 5,
+      "炸板率": 15,
+      "quant_seat_ratio": 0.15,
+      "intraday_atr": 0.04,
+      "next_day_down_rate": 0.55,
+      "northbound_consecutive_days": 5,
+      "research_density": 2.0,
+      "limit_up_height": 7,
+      "avg_turnover": 0.15
+    },
+    "actual_season": "winter",
+    "event": "年末流动性紧张",
+    "market_env": "mixed"
+  }
+]
