@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1771866016007
+    },
+    "tushare-finance": {
+      "version": "2.0.6",
+      "installedAt": 1771870597696
+    }
+  }
+}

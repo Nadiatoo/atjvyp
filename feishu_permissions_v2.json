@@ -1,0 +1,90 @@
+[
+  {
+    "scope": "docs:document:write",
+    "name": "创建文档"
+  },
+  {
+    "scope": "docs:document.content:write",
+    "name": "编辑文档内容"
+  },
+  {
+    "scope": "docs:document.content:read",
+    "name": "读取文档内容"
+  },
+  {
+    "scope": "drive:drive:write",
+    "name": "云空间写入"
+  },
+  {
+    "scope": "drive:drive:read",
+    "name": "云空间读取"
+  },
+  {
+    "scope": "drive:file:write",
+    "name": "文件写入"
+  },
+  {
+    "scope": "drive:file:read",
+    "name": "文件读取"
+  },
+  {
+    "scope": "drive:folder:write",
+    "name": "文件夹写入"
+  },
+  {
+    "scope": "drive:folder:read",
+    "name": "文件夹读取"
+  },
+  {
+    "scope": "wiki:wiki:write",
+    "name": "知识库写入"
+  },
+  {
+    "scope": "wiki:wiki:read",
+    "name": "知识库读取"
+  },
+  {
+    "scope": "wiki:node:write",
+    "name": "节点写入"
+  },
+  {
+    "scope": "wiki:node:read",
+    "name": "节点读取"
+  },
+  {
+    "scope": "im:message:send_as_bot",
+    "name": "以机器人身份发送消息"
+  },
+  {
+    "scope": "im:message:readonly",
+    "name": "读取消息"
+  },
+  {
+    "scope": "im:message.p2p_msg:readonly",
+    "name": "读取单聊消息"
+  },
+  {
+    "scope": "im:chat:readonly",
+    "name": "读取群聊信息"
+  },
+  {
+    "scope": "im:chat.members:readonly",
+    "name": "读取群成员"
+  },
+  {
+    "scope": "contact:user.employee_id:readonly",
+    "name": "读取用户employee ID"
+  },
+  {
+    "scope": "contact:user.base:readonly",
+    "name": "读取用户基本信息"
+  },
+  {
+    "scope": "application:bot.menu:write",
+    "name": "编辑机器人菜单"
+  },
+  {
+    "scope": "application:application:self_manage",
+    "name": "应用自管理"
+  }
+]

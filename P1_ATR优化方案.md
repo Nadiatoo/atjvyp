@@ -157,22 +157,23 @@ class IntegratedTradingSystem:
 
 ### 真实数据获取方案
 
-**方案A：Tushare Pro（推荐）**
+**方案A：akshare（免费推荐）**
 ```python
-import tushare as ts
+import akshare as ak
 
 # 获取历史日线数据
-df = ts.pro.daily(ts_code='000001.SZ', start_date='20240101', end_date='20250225')
+df = ak.stock_zh_a_hist(symbol="000001", period="daily",
+                        start_date="20240101", end_date="20250225")
 
 # 计算ATR
-df['tr1'] = df['high'] - df['low']
-df['tr2'] = abs(df['high'] - df['close'].shift(1))
-df['tr3'] = abs(df['low'] - df['close'].shift(1))
+df['tr1'] = df['最高'] - df['最低']
+df['tr2'] = abs(df['最高'] - df['收盘'].shift(1))
+df['tr3'] = abs(df['最低'] - df['收盘'].shift(1))
 df['tr'] = df[['tr1', 'tr2', 'tr3']].max(axis=1)
 df['atr'] = df['tr'].rolling(window=14).mean()
 ```
 
-**方案B：akshare（备用）**
+**方案B：已有复盘数据扩展**
 ```python
 import akshare as ak
 
@@ -224,7 +225,7 @@ df = ak.stock_zh_a_hist(symbol="000001", period="daily",
 - ⚠️ 参数优化：需真实数据校准乘数
 - ⚠️ 效果验证：需扩展样本量验证
 
-**建议**：明天接入Tushare真实数据后，重新跑回测并优化参数。
+**建议**：明天akshare数据源恢复后，用真实历史数据重新跑回测并优化参数。
 
 ---
 

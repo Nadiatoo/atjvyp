@@ -1,0 +1,39 @@
+{
+  "scopes": {
+    "tenant": [
+      "docs:document:write",
+      "docs:document.content:write", 
+      "docs:document.content:read",
+      "drive:drive:write",
+      "drive:drive:read",
+      "drive:file:write",
+      "drive:file:read",
+      "drive:folder:write",
+      "drive:folder:read",
+      "wiki:wiki:write",
+      "wiki:wiki:read",
+      "wiki:node:write",
+      "wiki:node:read",
+      "im:message:send_as_bot",
+      "im:message:readonly",
+      "im:message.p2p_msg:readonly",
+      "im:chat:readonly",
+      "im:chat.members:readonly",
+      "contact:user.employee_id:readonly",
+      "contact:user.base:readonly",
+      "application:bot.menu:write",
+      "application:application:self_manage"
+    ],
+    "user": [
+      "docs:document:write",
+      "docs:document.content:write",
+      "docs:document.content:read",
+      "drive:drive:write",
+      "drive:drive:read",
+      "drive:file:write",
+      "drive:file:read",
+      "wiki:wiki:write",
+      "wiki:wiki:read"
+    ]
+  }
+}
