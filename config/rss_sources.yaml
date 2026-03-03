@@ -1,0 +1,103 @@
+# RSS 订阅源配置
+# 用于盘前分析获取宏观政策和财经新闻
+# 最后更新: 2026-03-03
+
+sources:
+  # ✅ 已验证可用
+  - name: "36氪"
+    url: "https://36kr.com/feed"
+    category: "科技创投"
+    priority: 1
+    status: "active"
+    
+  - name: "钛媒体"
+    url: "https://www.tmtpost.com/feed"
+    category: "科技财经"
+    priority: 1
+    status: "active"
+    
+  - name: "雷锋网"
+    url: "https://www.leiphone.com/feed"
+    category: "科技AI"
+    priority: 1
+    status: "active"
+    
+  - name: "爱范儿"
+    url: "https://www.ifanr.com/feed"
+    category: "科技消费"
+    priority: 2
+    status: "active"
+    
+  - name: "Solidot"
+    url: "https://www.solidot.org/index.rss"
+    category: "科技资讯"
+    priority: 2
+    status: "active"
+    
+  - name: "小众软件"
+    url: "https://www.appinn.com/feed/"
+    category: "软件工具"
+    priority: 3
+    status: "active"
+    
+  # ⏸️ 待验证/已失效
+  - name: "华尔街见闻"
+    url: "https://wallstreetcn.com/rss.xml"
+    category: "财经快讯"
+    priority: 2
+    status: "inactive"
+    note: "当前无法获取"
+    
+  - name: "界面新闻"
+    url: "https://www.jiemian.com/rss.xml"
+    category: "综合财经"
+    priority: 2
+    status: "inactive"
+    note: "当前无法获取"
+
+# 关键词过滤（用于筛选重要新闻）
+keywords:
+  macro:
+    - 央行
+    - 降准
+    - 降息
+    - 货币政策
+    - 财政政策
+    - 证监会
+    - 银保监会
+    - 发改委
+    - 国务院
+    - 两会
+    - 政治局
+    
+  sectors:
+    - 新能源
+    - 芯片
+    - 半导体
+    - 人工智能
+    - AI
+    - 房地产
+    - 基建
+    - 消费
+    - 医药
+    - 军工
+    - 券商
+    - 银行
+    - 保险
+    
+  market:
+    - A股
+    - 股市
+    - 大盘
+    - 指数
+    - 涨停
+    - 跌停
+    - 北向资金
+    - 南向资金
+    - 龙虎榜
+
+# 输出配置
+output:
+  max_items_per_source: 10
+  summary_max_length: 200
+  filter_by_keywords: true
