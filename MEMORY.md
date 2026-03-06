@@ -50,6 +50,14 @@
    - 每日复盘后更新 MEMORY.md
    - 每日同步到 GitHub 仓库（新增要求）
 
+7. **真夏长识别系统升级** ✅
+   - 设计"真夏长"vs"假夏长"量化评分系统
+   - 新增六大维度：板块持续性、量能质量、龙头高度、跟风生态、指数共振、中军健康度
+   - 中军健康度权重20%，核心指标：涨跌幅、收回速度、成交活跃度、亏钱效应、技术形态
+   - 判定标准：≥70分真夏长，<50分假夏长
+   - 代码实现：`qlib_biaoge/summer_authenticity_scorer.py`
+   - 使用指南：`qlib_biaoge/zhongjun_monitor_guide.md`
+
 ### 今日成果（2026-03-03）
 1. **QVeris配置完成** ✅
    - skill已安装，`QVERIS_API_KEY`已配置到`openclaw.json`
