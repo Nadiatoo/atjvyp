@@ -58,6 +58,13 @@
    - 代码实现：`qlib_biaoge/summer_authenticity_scorer.py`
    - 使用指南：`qlib_biaoge/zhongjun_monitor_guide.md`
 
+8. **历史案例数据收集与回测验证** ⏳
+   - 整理2024-2025年8个典型案例（5真3假）
+   - 建立数据收集框架：`historical_data_collection.py`
+   - 手工数据收集表：`historical_cases_manual_data.md`
+   - 待完成：通过东方财富/同花顺补全详细数据
+   - 待完成：运行评分系统验证阈值和权重
+
 ### 今日成果（2026-03-03）
 1. **QVeris配置完成** ✅
    - skill已安装，`QVERIS_API_KEY`已配置到`openclaw.json`
