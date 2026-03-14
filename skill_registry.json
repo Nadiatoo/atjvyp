@@ -1,0 +1,1067 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-03-14T17:37:19.383367",
+  "registry": {
+    "skill_registry_manager": {
+      "name": "Skill注册表管理器",
+      "description": "管理所有skill的注册表系统，提供skill发现、调用、状态监控功能",
+      "category": "system",
+      "location": "workspace/skill_registry.json",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "management",
+        "registry"
+      ],
+      "usage_count": 1,
+      "last_used": "2026-03-14T17:37:19.383359"
+    },
+    "user_self-improving": {
+      "name": "Self Improving",
+      "description": "Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and improves permanently.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/skills/self-improving",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.630479"
+    },
+    "user_biage-market-analyzer": {
+      "name": "Biage Market Analyzer",
+      "description": "彪哥战法全市场分析器 - 基于akshare获取全市场数据，实时季节判断，识别龙头/中军候选。",
+      "category": "finance",
+      "location": "/Users/tuqibiao/.openclaw/skills/biage-market-analyzer",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "finance",
+        "user"
+      ],
+      "usage_count": 2,
+      "last_used": "2026-03-14T17:37:19.377802",
+      "registered_at": "2026-03-14T17:35:27.631135"
+    },
+    "user_biage-premarket-analyzer": {
+      "name": "Biage Premarket Analyzer",
+      "description": "彪哥战法盘前分析器 - 获取全球市场数据+国际财经新闻，深度分析对A股板块影响",
+      "category": "finance",
+      "location": "/Users/tuqibiao/.openclaw/skills/biage-premarket-analyzer",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "finance",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.631507"
+    },
+    "user_biage-report-generator": {
+      "name": "Biage Report Generator",
+      "description": "彪哥战法报告生成器 - 自动生成周报（JPG图片）和观点包（Word文档），保存到桌面。",
+      "category": "finance",
+      "location": "/Users/tuqibiao/.openclaw/skills/biage-report-generator",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "finance",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.631938"
+    },
+    "user_find-skills": {
+      "name": "Find Skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "category": "system",
+      "location": "/Users/tuqibiao/.openclaw/skills/find-skills",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.632300"
+    },
+    "user_tushare-finance": {
+      "name": "Tushare Finance",
+      "description": "获取中国金融市场数据（A股、港股、美股、基金、期货、债券）。支持220+个Tushare Pro接口：股票行情、财务报表、宏观经济指标。当用户请求股价数据、财务分析、指数行情、GDP/CPI等宏观数据时使用。",
+      "category": "finance",
+      "location": "/Users/tuqibiao/.openclaw/skills/tushare-finance",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "finance",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.632608"
+    },
+    "user_agent-reach": {
+      "name": "Agent Reach",
+      "description": ">",
+      "category": "system",
+      "location": "/Users/tuqibiao/.openclaw/skills/agent-reach",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.633081"
+    },
+    "user_skill-vetter": {
+      "name": "Skill Vetter",
+      "description": "skill-vetter skill",
+      "category": "system",
+      "location": "/Users/tuqibiao/.openclaw/skills/skill-vetter",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.633357"
+    },
+    "system_nano-pdf": {
+      "name": "Nano Pdf",
+      "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/nano-pdf",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.641690"
+    },
+    "system_himalaya": {
+      "name": "Himalaya",
+      "description": "\"CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language).\"",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/himalaya",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.642120"
+    },
+    "system_bear-notes": {
+      "name": "Bear Notes",
+      "description": "Create, search, and manage Bear notes via grizzly CLI.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/bear-notes",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.642475"
+    },
+    "system_peekaboo": {
+      "name": "Peekaboo",
+      "description": "Capture and automate macOS UI with the Peekaboo CLI.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/peekaboo",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.642909"
+    },
+    "system_model-usage": {
+      "name": "Model Usage",
+      "description": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.",
+      "category": "data",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/model-usage",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "data",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.643128"
+    },
+    "system_blogwatcher": {
+      "name": "Blogwatcher",
+      "description": "Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/blogwatcher",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.643321"
+    },
+    "system_discord": {
+      "name": "Discord",
+      "description": "[{ \"title\": \"Legacy\", \"description\": \"Embeds are legacy.\" }]",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/discord",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.643581"
+    },
+    "system_coding-agent": {
+      "name": "Coding Agent",
+      "description": "true workdir:/tmp/issue-78 background:true command:\"pnpm install && codex --yolo 'Fix issue #78: <description>. Commit and push.'\"",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/coding-agent",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.644025"
+    },
+    "system_openhue": {
+      "name": "Openhue",
+      "description": "Control Philips Hue lights and scenes via the OpenHue CLI.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/openhue",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.644251"
+    },
+    "system_gemini": {
+      "name": "Gemini",
+      "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/gemini",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.644433"
+    },
+    "system_gifgrep": {
+      "name": "Gifgrep",
+      "description": "Search GIF providers with CLI/TUI, download results, and extract stills/sheets.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/gifgrep",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.644632"
+    },
+    "system_session-logs": {
+      "name": "Session Logs",
+      "description": "Search and analyze your own session logs (older/parent conversations) using jq.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/session-logs",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.644852"
+    },
+    "system_ordercli": {
+      "name": "Ordercli",
+      "description": "Foodora-only CLI for checking past orders and active order status (Deliveroo WIP).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/ordercli",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.645051"
+    },
+    "system_openai-whisper": {
+      "name": "Openai Whisper",
+      "description": "Local speech-to-text with the Whisper CLI (no API key).",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/openai-whisper",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.645223"
+    },
+    "system_spotify-player": {
+      "name": "Spotify Player",
+      "description": "Terminal Spotify playback/search via spogo (preferred) or spotify_player.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/spotify-player",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.645408"
+    },
+    "system_healthcheck": {
+      "name": "Healthcheck",
+      "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/healthcheck",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.645827"
+    },
+    "system_oracle": {
+      "name": "Oracle",
+      "description": "Best practices for using the oracle CLI (prompt + file bundling, engines, sessions, and file attachment patterns).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/oracle",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.646166"
+    },
+    "system_xurl": {
+      "name": "Xurl",
+      "description": "A CLI tool for making authenticated requests to the X (Twitter) API. Use this skill when you need to post tweets, reply, quote, search, read posts, manage followers, send DMs, upload media, or interact with any X API v2 endpoint.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/xurl",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.646712"
+    },
+    "system_summarize": {
+      "name": "Summarize",
+      "description": "Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/summarize",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.646952"
+    },
+    "system_clawhub": {
+      "name": "Clawhub",
+      "description": "Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/clawhub",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.647151"
+    },
+    "system_bluebubbles": {
+      "name": "Bluebubbles",
+      "description": "Use when you need to send or manage iMessages via BlueBubbles (recommended iMessage integration). Calls go through the generic message tool with channel=\"bluebubbles\".",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/bluebubbles",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.647393"
+    },
+    "system_sherpa-onnx-tts": {
+      "name": "Sherpa Onnx Tts",
+      "description": "Local text-to-speech via sherpa-onnx (offline, no cloud)",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/sherpa-onnx-tts",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.647625"
+    },
+    "system_video-frames": {
+      "name": "Video Frames",
+      "description": "Extract frames or short clips from videos using ffmpeg.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/video-frames",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.647820"
+    },
+    "system_eightctl": {
+      "name": "Eightctl",
+      "description": "Control Eight Sleep pods (status, temperature, alarms, schedules).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/eightctl",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.648011"
+    },
+    "system_gog": {
+      "name": "Gog",
+      "description": "Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/gog",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.648249"
+    },
+    "system_canvas": {
+      "name": "Canvas",
+      "description": "canvas skill",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/canvas",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.648528"
+    },
+    "system_notion": {
+      "name": "Notion",
+      "description": "Notion API for creating and managing pages, databases, and blocks.",
+      "category": "data",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/notion",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "data",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.648800"
+    },
+    "system_goplaces": {
+      "name": "Goplaces",
+      "description": "Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup or JSON output for scripts.",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/goplaces",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.649000"
+    },
+    "system_apple-reminders": {
+      "name": "Apple Reminders",
+      "description": "Manage Apple Reminders via remindctl CLI (list, add, edit, complete, delete). Supports lists, date filters, and JSON/plain output.",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/apple-reminders",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.649235"
+    },
+    "system_imsg": {
+      "name": "Imsg",
+      "description": "iMessage/SMS CLI for listing chats, history, and sending messages via Messages.app.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/imsg",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.649477"
+    },
+    "system_skill-creator": {
+      "name": "Skill Creator",
+      "description": "\"Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. Use when Codex needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks\"",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/skill-creator",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.650021"
+    },
+    "system_camsnap": {
+      "name": "Camsnap",
+      "description": "Capture frames or clips from RTSP/ONVIF cameras.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/camsnap",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.650220"
+    },
+    "system_github": {
+      "name": "Github",
+      "description": "add feature\" --body \"Description\"",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/github",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.650476"
+    },
+    "system_things-mac": {
+      "name": "Things Mac",
+      "description": "Manage Things 3 via the `things` CLI on macOS (add/update projects+todos via URL scheme; read/search/list from the local Things database). Use when a user asks OpenClaw to add a task to Things, list inbox/today/upcoming, search tasks, or inspect projects/areas/tags.",
+      "category": "data",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/things-mac",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "data",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.650686"
+    },
+    "system_blucli": {
+      "name": "Blucli",
+      "description": "BluOS CLI (blu) for discovery, playback, grouping, and volume.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/blucli",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.650857"
+    },
+    "system_sonoscli": {
+      "name": "Sonoscli",
+      "description": "Control Sonos speakers (discover/status/play/volume/group).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/sonoscli",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.651044"
+    },
+    "system_mcporter": {
+      "name": "Mcporter",
+      "description": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/mcporter",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.651229"
+    },
+    "system_tmux": {
+      "name": "Tmux",
+      "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/tmux",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.651461"
+    },
+    "system_openai-image-gen": {
+      "name": "Openai Image Gen",
+      "description": "Batch-generate images via OpenAI Images API. Random prompt sampler + `index.html` gallery.",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/openai-image-gen",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.651671"
+    },
+    "system_sag": {
+      "name": "Sag",
+      "description": "ElevenLabs text-to-speech with mac-style say UX.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/sag",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.651868"
+    },
+    "system_slack": {
+      "name": "Slack",
+      "description": "Use when you need to control Slack from OpenClaw via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/slack",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.652092"
+    },
+    "system_weather": {
+      "name": "Weather",
+      "description": "\"Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.\"",
+      "category": "data",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/weather",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "data",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.652304"
+    },
+    "system_obsidian": {
+      "name": "Obsidian",
+      "description": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/obsidian",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.652505"
+    },
+    "system_trello": {
+      "name": "Trello",
+      "description": "Manage Trello boards, lists, and cards via the Trello REST API.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/trello",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.652711"
+    },
+    "system_wacli": {
+      "name": "Wacli",
+      "description": "Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/wacli",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.652905"
+    },
+    "system_songsee": {
+      "name": "Songsee",
+      "description": "Generate spectrograms and feature-panel visualizations from audio with the songsee CLI.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/songsee",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.653079"
+    },
+    "system_apple-notes": {
+      "name": "Apple Notes",
+      "description": "Manage Apple Notes via the `memo` CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks OpenClaw to add a note, list notes, search notes, or manage note folders.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/apple-notes",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.653276"
+    },
+    "system_openai-whisper-api": {
+      "name": "Openai Whisper Api",
+      "description": "Transcribe audio via OpenAI Audio Transcriptions API (Whisper).",
+      "category": "ai",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/openai-whisper-api",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.653454"
+    },
+    "system_gh-issues": {
+      "name": "Gh Issues",
+      "description": "\"Addressed in commit {short_sha} — {brief_description_of_change}\"}'",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/gh-issues",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.654779"
+    },
+    "system_nano-banana-pro": {
+      "name": "Nano Banana Pro",
+      "description": "Generate or edit images via Gemini 3 Pro Image (Nano Banana Pro).",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/nano-banana-pro",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.655006"
+    },
+    "system_1password": {
+      "name": "1Password",
+      "description": "Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/1password",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.655217"
+    },
+    "system_voice-call": {
+      "name": "Voice Call",
+      "description": "Start voice calls via the OpenClaw voice-call plugin.",
+      "category": "system",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/voice-call",
+      "source": "system",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "system"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-14T17:35:27.655403"
+    }
+  },
+  "categories": {
+    "system": "系统管理类skill",
+    "finance": "金融交易类skill",
+    "data": "数据处理类skill",
+    "communication": "通讯工具类skill",
+    "productivity": "生产力工具类skill",
+    "development": "开发工具类skill",
+    "media": "媒体处理类skill",
+    "ai": "人工智能类skill"
+  },
+  "statistics": {
+    "total_skills": 61,
+    "by_category": {
+      "system": 44,
+      "finance": 4,
+      "data": 4,
+      "communication": 0,
+      "productivity": 0,
+      "development": 0,
+      "media": 0,
+      "ai": 9
+    },
+    "active_skills": 61,
+    "inactive_skills": 0
+  }
+}
