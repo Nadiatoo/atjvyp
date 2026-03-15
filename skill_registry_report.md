@@ -1,6 +1,6 @@
 
 # Skill注册表报告
-生成时间: 2026-03-14 23:45:23
+生成时间: 2026-03-15 09:57:08
 
 ## 统计概览
 - 总skill数: 61
@@ -14,9 +14,9 @@
 - 人工智能类skill: 9个
 
 ## 最常用skill (前10)
-1. Biage Market Analyzer - 使用次数: 2 - 最后使用: 2026-03-14T17:37:19.377802
-2. Skill注册表管理器 - 使用次数: 1 - 最后使用: 2026-03-14T17:37:19.383359
-3. Self Improving - 使用次数: 0 - 最后使用: None
+1. Skill注册表管理器 - 使用次数: 1 - 最后使用: 2026-03-14T17:37:19.383359
+2. Self Improving - 使用次数: 0 - 最后使用: None
+3. Biage Market Analyzer - 使用次数: 0 - 最后使用: None
 4. Biage Premarket Analyzer - 使用次数: 0 - 最后使用: None
 5. Biage Report Generator - 使用次数: 0 - 最后使用: None
 6. Find Skills - 使用次数: 0 - 最后使用: None

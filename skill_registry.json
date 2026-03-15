@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-03-14T17:37:19.383367",
+  "last_updated": "2026-03-15T09:58:29.979166",
   "registry": {
     "skill_registry_manager": {
       "name": "Skill注册表管理器",
@@ -33,7 +33,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.630479"
+      "registered_at": "2026-03-15T09:58:29.953144"
     },
     "user_biage-market-analyzer": {
       "name": "Biage Market Analyzer",
@@ -48,15 +48,15 @@
         "finance",
         "user"
       ],
-      "usage_count": 2,
-      "last_used": "2026-03-14T17:37:19.377802",
-      "registered_at": "2026-03-14T17:35:27.631135"
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-15T09:58:29.954208"
     },
     "user_biage-premarket-analyzer": {
       "name": "Biage Premarket Analyzer",
-      "description": "彪哥战法盘前分析器 - 获取全球市场数据+国际财经新闻，深度分析对A股板块影响",
+      "description": "biage-premarket-analyzer skill",
       "category": "finance",
-      "location": "/Users/tuqibiao/.openclaw/skills/biage-premarket-analyzer",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/biage-premarket-analyzer",
       "source": "user",
       "status": "active",
       "version": "1.0",
@@ -67,7 +67,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.631507"
+      "registered_at": "2026-03-15T09:58:29.960500"
     },
     "user_biage-report-generator": {
       "name": "Biage Report Generator",
@@ -84,13 +84,13 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.631938"
+      "registered_at": "2026-03-15T09:58:29.954913"
     },
     "user_find-skills": {
       "name": "Find Skills",
-      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "description": "Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.",
       "category": "system",
-      "location": "/Users/tuqibiao/.openclaw/skills/find-skills",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/find-skills",
       "source": "user",
       "status": "active",
       "version": "1.0",
@@ -101,7 +101,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.632300"
+      "registered_at": "2026-03-15T09:58:29.960806"
     },
     "user_tushare-finance": {
       "name": "Tushare Finance",
@@ -118,7 +118,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.632608"
+      "registered_at": "2026-03-15T09:58:29.955511"
     },
     "user_agent-reach": {
       "name": "Agent Reach",
@@ -135,7 +135,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.633081"
+      "registered_at": "2026-03-15T09:58:29.955925"
     },
     "user_skill-vetter": {
       "name": "Skill Vetter",
@@ -152,7 +152,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.633357"
+      "registered_at": "2026-03-15T09:58:29.956190"
     },
     "system_nano-pdf": {
       "name": "Nano Pdf",
@@ -169,7 +169,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.641690"
+      "registered_at": "2026-03-15T09:58:29.968950"
     },
     "system_himalaya": {
       "name": "Himalaya",
@@ -186,7 +186,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.642120"
+      "registered_at": "2026-03-15T09:58:29.969275"
     },
     "system_bear-notes": {
       "name": "Bear Notes",
@@ -203,7 +203,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.642475"
+      "registered_at": "2026-03-15T09:58:29.969544"
     },
     "system_peekaboo": {
       "name": "Peekaboo",
@@ -220,7 +220,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.642909"
+      "registered_at": "2026-03-15T09:58:29.969922"
     },
     "system_model-usage": {
       "name": "Model Usage",
@@ -237,7 +237,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.643128"
+      "registered_at": "2026-03-15T09:58:29.970147"
     },
     "system_blogwatcher": {
       "name": "Blogwatcher",
@@ -254,7 +254,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.643321"
+      "registered_at": "2026-03-15T09:58:29.970289"
     },
     "system_discord": {
       "name": "Discord",
@@ -271,7 +271,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.643581"
+      "registered_at": "2026-03-15T09:58:29.970483"
     },
     "system_coding-agent": {
       "name": "Coding Agent",
@@ -288,7 +288,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.644025"
+      "registered_at": "2026-03-15T09:58:29.970816"
     },
     "system_openhue": {
       "name": "Openhue",
@@ -305,7 +305,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.644251"
+      "registered_at": "2026-03-15T09:58:29.970981"
     },
     "system_gemini": {
       "name": "Gemini",
@@ -322,7 +322,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.644433"
+      "registered_at": "2026-03-15T09:58:29.971116"
     },
     "system_gifgrep": {
       "name": "Gifgrep",
@@ -339,7 +339,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.644632"
+      "registered_at": "2026-03-15T09:58:29.971256"
     },
     "system_session-logs": {
       "name": "Session Logs",
@@ -356,7 +356,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.644852"
+      "registered_at": "2026-03-15T09:58:29.971408"
     },
     "system_ordercli": {
       "name": "Ordercli",
@@ -373,7 +373,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.645051"
+      "registered_at": "2026-03-15T09:58:29.971548"
     },
     "system_openai-whisper": {
       "name": "Openai Whisper",
@@ -390,7 +390,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.645223"
+      "registered_at": "2026-03-15T09:58:29.971669"
     },
     "system_spotify-player": {
       "name": "Spotify Player",
@@ -407,7 +407,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.645408"
+      "registered_at": "2026-03-15T09:58:29.971800"
     },
     "system_healthcheck": {
       "name": "Healthcheck",
@@ -424,7 +424,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.645827"
+      "registered_at": "2026-03-15T09:58:29.972108"
     },
     "system_oracle": {
       "name": "Oracle",
@@ -441,7 +441,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.646166"
+      "registered_at": "2026-03-15T09:58:29.972471"
     },
     "system_xurl": {
       "name": "Xurl",
@@ -458,7 +458,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.646712"
+      "registered_at": "2026-03-15T09:58:29.972883"
     },
     "system_summarize": {
       "name": "Summarize",
@@ -475,7 +475,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.646952"
+      "registered_at": "2026-03-15T09:58:29.973043"
     },
     "system_clawhub": {
       "name": "Clawhub",
@@ -492,7 +492,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.647151"
+      "registered_at": "2026-03-15T09:58:29.973178"
     },
     "system_bluebubbles": {
       "name": "Bluebubbles",
@@ -509,7 +509,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.647393"
+      "registered_at": "2026-03-15T09:58:29.973338"
     },
     "system_sherpa-onnx-tts": {
       "name": "Sherpa Onnx Tts",
@@ -526,7 +526,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.647625"
+      "registered_at": "2026-03-15T09:58:29.973493"
     },
     "system_video-frames": {
       "name": "Video Frames",
@@ -543,7 +543,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.647820"
+      "registered_at": "2026-03-15T09:58:29.973622"
     },
     "system_eightctl": {
       "name": "Eightctl",
@@ -560,7 +560,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.648011"
+      "registered_at": "2026-03-15T09:58:29.973754"
     },
     "system_gog": {
       "name": "Gog",
@@ -577,7 +577,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.648249"
+      "registered_at": "2026-03-15T09:58:29.973915"
     },
     "system_canvas": {
       "name": "Canvas",
@@ -594,7 +594,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.648528"
+      "registered_at": "2026-03-15T09:58:29.974101"
     },
     "system_notion": {
       "name": "Notion",
@@ -611,7 +611,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.648800"
+      "registered_at": "2026-03-15T09:58:29.974278"
     },
     "system_goplaces": {
       "name": "Goplaces",
@@ -628,7 +628,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.649000"
+      "registered_at": "2026-03-15T09:58:29.974409"
     },
     "system_apple-reminders": {
       "name": "Apple Reminders",
@@ -645,7 +645,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.649235"
+      "registered_at": "2026-03-15T09:58:29.974561"
     },
     "system_imsg": {
       "name": "Imsg",
@@ -662,7 +662,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.649477"
+      "registered_at": "2026-03-15T09:58:29.974717"
     },
     "system_skill-creator": {
       "name": "Skill Creator",
@@ -679,7 +679,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.650021"
+      "registered_at": "2026-03-15T09:58:29.975117"
     },
     "system_camsnap": {
       "name": "Camsnap",
@@ -696,7 +696,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.650220"
+      "registered_at": "2026-03-15T09:58:29.975256"
     },
     "system_github": {
       "name": "Github",
@@ -713,7 +713,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.650476"
+      "registered_at": "2026-03-15T09:58:29.975434"
     },
     "system_things-mac": {
       "name": "Things Mac",
@@ -730,7 +730,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.650686"
+      "registered_at": "2026-03-15T09:58:29.975591"
     },
     "system_blucli": {
       "name": "Blucli",
@@ -747,7 +747,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.650857"
+      "registered_at": "2026-03-15T09:58:29.975725"
     },
     "system_sonoscli": {
       "name": "Sonoscli",
@@ -764,7 +764,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.651044"
+      "registered_at": "2026-03-15T09:58:29.975869"
     },
     "system_mcporter": {
       "name": "Mcporter",
@@ -781,7 +781,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.651229"
+      "registered_at": "2026-03-15T09:58:29.975999"
     },
     "system_tmux": {
       "name": "Tmux",
@@ -798,7 +798,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.651461"
+      "registered_at": "2026-03-15T09:58:29.976163"
     },
     "system_openai-image-gen": {
       "name": "Openai Image Gen",
@@ -815,7 +815,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.651671"
+      "registered_at": "2026-03-15T09:58:29.976324"
     },
     "system_sag": {
       "name": "Sag",
@@ -832,7 +832,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.651868"
+      "registered_at": "2026-03-15T09:58:29.976478"
     },
     "system_slack": {
       "name": "Slack",
@@ -849,7 +849,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.652092"
+      "registered_at": "2026-03-15T09:58:29.976649"
     },
     "system_weather": {
       "name": "Weather",
@@ -866,7 +866,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.652304"
+      "registered_at": "2026-03-15T09:58:29.976798"
     },
     "system_obsidian": {
       "name": "Obsidian",
@@ -883,7 +883,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.652505"
+      "registered_at": "2026-03-15T09:58:29.976948"
     },
     "system_trello": {
       "name": "Trello",
@@ -900,7 +900,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.652711"
+      "registered_at": "2026-03-15T09:58:29.977097"
     },
     "system_wacli": {
       "name": "Wacli",
@@ -917,7 +917,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.652905"
+      "registered_at": "2026-03-15T09:58:29.977237"
     },
     "system_songsee": {
       "name": "Songsee",
@@ -934,7 +934,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.653079"
+      "registered_at": "2026-03-15T09:58:29.977365"
     },
     "system_apple-notes": {
       "name": "Apple Notes",
@@ -951,7 +951,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.653276"
+      "registered_at": "2026-03-15T09:58:29.977507"
     },
     "system_openai-whisper-api": {
       "name": "Openai Whisper Api",
@@ -968,7 +968,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.653454"
+      "registered_at": "2026-03-15T09:58:29.977637"
     },
     "system_gh-issues": {
       "name": "Gh Issues",
@@ -985,7 +985,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.654779"
+      "registered_at": "2026-03-15T09:58:29.978661"
     },
     "system_nano-banana-pro": {
       "name": "Nano Banana Pro",
@@ -1002,7 +1002,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.655006"
+      "registered_at": "2026-03-15T09:58:29.978817"
     },
     "system_1password": {
       "name": "1Password",
@@ -1019,7 +1019,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.655217"
+      "registered_at": "2026-03-15T09:58:29.978970"
     },
     "system_voice-call": {
       "name": "Voice Call",
@@ -1036,7 +1036,75 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-14T17:35:27.655403"
+      "registered_at": "2026-03-15T09:58:29.979101"
+    },
+    "user_skillhub-preference": {
+      "name": "Skillhub Preference",
+      "description": "Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.",
+      "category": "system",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/skillhub-preference",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-15T09:58:29.959869"
+    },
+    "user_image-read": {
+      "name": "Image Read",
+      "description": "使用智谱AI的GLM-4V-Flash免费多模态API理解图片内容。当用户需要理解图片内容、描述图片、识别图中物体时使用此skill。",
+      "category": "system",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/image-read",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-15T09:58:29.960133"
+    },
+    "user_image-content-extractor": {
+      "name": "Image Content Extractor",
+      "description": "统一图片内容提取技能。智能识别终端/文档/通用模式，自动提取内容生成Markdown。",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/image-content-extractor",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "ai",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-15T09:58:29.961278"
+    },
+    "user_qveris-official": {
+      "name": "Qveris Official",
+      "description": ">-",
+      "category": "system",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/qveris-official",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-15T09:58:29.961880"
     }
   },
   "categories": {
@@ -1050,18 +1118,18 @@
     "ai": "人工智能类skill"
   },
   "statistics": {
-    "total_skills": 61,
+    "total_skills": 65,
     "by_category": {
-      "system": 44,
+      "system": 47,
       "finance": 4,
       "data": 4,
       "communication": 0,
       "productivity": 0,
       "development": 0,
       "media": 0,
-      "ai": 9
+      "ai": 10
     },
-    "active_skills": 61,
+    "active_skills": 65,
     "inactive_skills": 0
   }
 }

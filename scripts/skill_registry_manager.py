@@ -24,6 +24,7 @@ class SkillRegistry:
             self.workspace = os.path.dirname(registry_path)
         
         self.skills_dir = os.path.expanduser("~/.openclaw/skills")
+        self.workspace_skills_dir = os.path.join(self.workspace, "skills")
         self.system_skills_dir = "/opt/homebrew/lib/node_modules/openclaw/skills"
         
         # 加载或创建注册表
@@ -85,12 +86,16 @@ class SkillRegistry:
         user_skills = self._scan_skill_directory(self.skills_dir, "user")
         print(f"发现用户skill: {len(user_skills)}个")
         
+        # 扫描workspace skill目录
+        workspace_skills = self._scan_skill_directory(self.workspace_skills_dir, "user")
+        print(f"发现workspace skill: {len(workspace_skills)}个")
+        
         # 扫描系统skill
         system_skills = self._scan_skill_directory(self.system_skills_dir, "system")
         print(f"发现系统skill: {len(system_skills)}个")
         
-        # 合并skill
-        all_skills = {**user_skills, **system_skills}
+        # 合并skill（workspace skill优先）
+        all_skills = {**user_skills, **workspace_skills, **system_skills}
         
         # 更新注册表
         updated = False
