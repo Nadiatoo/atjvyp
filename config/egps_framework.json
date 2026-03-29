@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "framework_name": "EGPS预期差发现与个股筛选框架",
+  "modules": {
+    "egps_perception": {
+      "enabled": true,
+      "script": "egps_push_simple_v2.py",
+      "schedule": "08:00工作日"
+    },
+    "biage_analysis": {
+      "enabled": true,
+      "premarket_script": "biage_premarket_qveris.py",
+      "postmarket_script": "biage_postmarket_qveris.py"
+    },
+    "data_validation": {
+      "enabled": true,
+      "sources": [
+        "qveris",
+        "simulation",
+        "historical"
+      ]
+    },
+    "stock_screening": {
+      "enabled": false,
+      "algorithm": "expectation_gap_based"
+    }
+  },
+  "output": {
+    "reports_dir": "reports",
+    "logs_dir": "logs",
+    "data_dir": "data"
+  }
+}
