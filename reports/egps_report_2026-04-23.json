@@ -1,0 +1,53 @@
+{
+  "date": "2026-04-23",
+  "time": "08:01",
+  "analysis": {
+    "economic_cycle": "温和复苏期",
+    "policy_environment": "积极支持",
+    "expectation_gaps": [
+      "市场对经济复苏的持续性预期不足",
+      "新质生产力政策支持力度超预期",
+      "AI应用落地速度被市场低估"
+    ]
+  },
+  "market_analysis": {
+    "market_status": "结构性机会",
+    "key_sectors": [
+      "人工智能",
+      "半导体",
+      "新能源",
+      "医药"
+    ],
+    "sentiment": 68
+  },
+  "stock_screening": {
+    "total_count": 6,
+    "stocks": [
+      {
+        "code": "300750",
+        "name": "宁德时代",
+        "type": "中军股"
+      },
+      {
+        "code": "002049",
+        "name": "紫光国微",
+        "type": "龙头股"
+      },
+      {
+        "code": "002475",
+        "name": "立讯精密",
+        "type": "中军股"
+      },
+      {
+        "code": "600519",
+        "name": "贵州茅台",
+        "type": "价值股"
+      },
+      {
+        "code": "000858",
+        "name": "五粮液",
+        "type": "价值股"
+      }
+    ]
+  }
+}

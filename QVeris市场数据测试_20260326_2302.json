@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-03-26T23:02:33.565479",
+  "tests": [
+    {
+      "name": "上证指数实时数据",
+      "query": "Get real-time Shanghai Composite Index (SSE) price, change, and volume for today",
+      "result": {
+        "status": "success",
+        "data": {
+          "tool_id": "ths_ifind.real_time_quotation.v1",
+          "name": "iFinD 同花顺实时行情 (THS Real-time Quotation)",
+          "description": "Query real-time quotation data for securities in the 同花顺 (THS) iFinD database, providing real-time market data for financial products including stocks, funds, bonds, and futures, such as real-time prices, trading volumes, price changes, bid/ask quotes, etc. Supports querying various real-time indicators including latest price, price change, trading volume, turnover ratio, market value, and five-level bid/ask quotes. It does not have US stock market quotes. CFFEX data queries are not supported. Latency is about 3s.",
+          "params": [
+            {
+              "name": "codes",
+              "type": "string",
+              "required": true,
+              "description": "[MANDATORY PARAMETER NAME: codes] You MUST use the plural 'codes'. The singular 'code' is STRICTLY PROHIBITED. This parameter must be a single string containing one or more codes separated by commas , e.g., '300033.SZ,600030.SH', DO NOT use JSON lists or arrays."
+            },
+            {
+              "name": "indicators",
+              "type": "string",
+              "required": false,
+              "description": "Indicator list, multiple indicators separated by commas. Options: 'common', 'all', or custom list: af_backward, amount, avgPrice, buyVolume, change, changeRatio, committee, commission_diff, downLimit, high, lastest_price, latest, latestAmount, latestVolume, low, mv, open, pb, pbr_lf, pe_ttm, preClose, riseDayCount, sellVolume, suspensionFlag, swing, thscode, time, totalCapital, totalShares, tradeDate, tradeStatus, tradeTime, turnoverRatio, upperLimit, vol_ratio, volume. Default is 'all'."
+            }
+          ],
+          "examples": {
+            "sample_parameters": {
+              "codes": "300033.SZ,600030.SH"
+            }
+          },
+          "provider_description": "同花顺 (THS) iFinD data provider, offering financial data for Chinese and international markets including stocks, securities, funds, bonds, futures, etc. Supports company announcements, intelligent stock screening, industry analysis, market trend prediction, and more, helping users conduct comprehensive financial data analysis and investment decisions.",
+          "stats": {
+            "avg_execution_time_ms": 0.0,
+            "success_rate": 1.0
+          },
+          "expected_cost": "1 credits/result"
+        }
+      }
+    },
+    {
+      "name": "A股全市场数据",
+      "query": "Get today's A-share market data: number of rising stocks, falling stocks, limit-up stocks, limit-down stocks",
+      "result": {
+        "status": "success",
+        "data": {
+          "tool_id": "mcp_gildata.marketlimitupdowncount.v1",
+          "name": "MarketLimitUpDownCount",
+          "description": "市场涨跌停家数\n\n获取沪深京市场实时上涨、下跌、涨停、跌停家数统计。",
+          "examples": {
+            "sample_parameters": {
+              "query": "示例查询"
+            }
+          },
+          "provider_description": "Gildata MCP server providing financial data including market quotes, fundamentals, and research.",
+          "expected_cost": "6.5"
+        }
+      }
+    },
+    {
+      "name": "创业板指数据",
+      "query": "Get real-time ChiNext Index (399006) price and change percentage",
+      "result": {
+        "status": "success",
+        "data": {
+          "tool_id": "deribit.index_price.retrieve.v2.93923115",
+          "name": "Get Index Price",
+          "description": "Retrieves the current index price value for given index name.",
+          "params": [
+            {
+              "name": "index_name",
+              "type": "string",
+              "required": true,
+              "description": {
+                "en": "Index identifier, matches (base) cryptocurrency with quote currency"
+              },
+              "enum": [
+                "btc_usd",
+                "eth_usd",
+                "ada_usdc",
+                "algo_usdc",
+                "avax_usdc",
+                "bch_usdc",
+                "bnb_usdc",
+                "btc_usdc",
+                "btcdvol_usdc",
+                "buidl_usdc",
+                "doge_usdc",
+                "dot_usdc",
+                "eurr_usdc",
+                "eth_usdc",
+                "ethdvol_usdc",
+                "link_usdc",
+                "ltc_usdc",
+                "near_usdc",
+                "paxg_usdc",
+                "shib_usdc",
+                "sol_usdc",
+                "steth_usdc",
+                "ton_usdc",
+                "trump_usdc",
+                "trx_usdc",
+                "uni_usdc",
+                "usde_usdc",
+                "usyc_usdc",
+                "xrp_usdc",
+                "btc_usdt",
+                "eth_usdt",
+                "eurr_usdt",
+                "sol_usdt",
+                "steth_usdt",
+                "usdc_usdt",
+                "usde_usdt",
+                "btc_eurr",
+                "btc_usde",
+                "btc_usyc",
+                "eth_btc",
+                "eth_eurr",
+                "eth_usde",
+                "eth_usyc",
+                "steth_eth",
+                "paxg_btc",
+                "drbfix-btc_usdc",
+                "drbfix-eth_usdc"
+              ]
+            }
+          ],
+          "examples": {
+            "sample_parameters": {
+              "index_name": "btc_usdc"
+            }
+          },
+          "provider_description": "API provider for deribit",
+          "stats": {
+            "avg_execution_time_ms": 1.504,
+            "success_rate": 0.518
+          },
+          "expected_cost": "6.5"
+        }
+      }
+    },
+    {
+      "name": "北向资金数据",
+      "query": "Get today's northbound capital flow data for A-share market",
+      "result": {
+        "status": "success",
+        "data": {
+          "tool_id": "mcp_gildata.astockcashflow.v1",
+          "name": "AStockCashFlow",
+          "description": "个股资金流向\n\n获取个股在指定区间内的资金流入流出情况及北向资金数据。",
+          "examples": {
+            "sample_parameters": {
+              "query": "格力电器的上市时间与所属申万行业"
+            }
+          },
+          "provider_description": "Gildata MCP server providing financial data including market quotes, fundamentals, and research.",
+          "expected_cost": "6.5"
+        }
+      }
+    },
+    {
+      "name": "A股涨停板数据",
+      "query": "Get today's limit-up stocks list in A-share market with prices and sectors",
+      "result": {
+        "status": "success",
+        "data": {
+          "tool_id": "ths_ifind.money_flow.v1",
+          "name": "iFinD Money Flow (Stock / Sector / Market)",
+          "description": "Retrieve multi-granularity fund flow data from THS iFinD for A-share market. scope=stock: individual stock fund flow over a date range — close price, change pct, main net inflow/ratio, super-large/large/medium/small active buy amounts, DDE net vol, 5/10/20-day DDE, turnover (13 indicators, date_sequence endpoint). scope=sector: sector index fund flow on a single date — sector name/category/type, change pct, main/super-large/large net inflow, rise/fall/total stock counts (10 indicators, basic_data_service endpoint). scope=market: market index fund flow over a date range — main/super-large/large/medium/small net inflow, total turnover, inflow rate (7 indicators, date_sequence endpoint).",
+          "params": [
+            {
+              "name": "scope",
+              "type": "string",
+              "required": true,
+              "description": "'stock' = individual stock, 'sector' = sector/industry index, 'market' = market index"
+            },
+            {
+              "name": "codes",
+              "type": "string",
+              "required": true,
+              "description": "Comma-separated security codes (max 50). stock: e.g. '600519.SH,000858.SZ'; sector: e.g. '801010.SL,801020.SL' (Shenwan industry indices); market: e.g. '000985.CSI' (CSI All Share Index)"
+            },
+            {
+              "name": "startdate",
+              "type": "string",
+              "required": true,
+              "description": "Start date for stock/market scope, or single query date for sector scope. Formats: YYYY-MM-DD, YYYYMMDD, YYYY/MM/DD."
+            },
+            {
+              "name": "enddate",
+              "type": "string",
+              "required": false,
+              "description": "End date. Required for stock and market scopes; ignored for sector scope."
+            }
+          ],
+          "provider_description": "同花顺 (THS) iFinD data provider, offering financial data for Chinese and international markets including stocks, securities, funds, bonds, futures, etc. Supports company announcements, intelligent stock screening, industry analysis, market trend prediction, and more, helping users conduct comprehensive financial data analysis and investment decisions.",
+          "stats": {
+            "avg_execution_time_ms": 541.16,
+            "success_rate": 0.724
+          },
+          "expected_cost": "1 credits/result"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "success_rate": 100.0
+  }
+}

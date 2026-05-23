@@ -1,0 +1,25 @@
+{
+  "industry": "半导体",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 16.0,
+    "profit_growth": 24.1,
+    "order_growth": 66.4,
+    "capacity_utilization": 76.6
+  },
+  "market_expectation": {
+    "analyst_consensus": 15.1,
+    "institution_view": "乐观",
+    "media_sentiment": "积极"
+  },
+  "fund_flow": {
+    "northbound_flow": 11.9,
+    "margin_balance": 118.9,
+    "institution_position": 98.7
+  },
+  "market_sentiment": {
+    "pe_ratio": 58.6,
+    "volume_change": 196.8,
+    "advance_decline_ratio": 1.5
+  }
+}

@@ -1,0 +1,96 @@
+============================================
+强势庄股选股公式（修正版）
+作者：富富
+日期：2026-03-26
+修正：修复变量名超过15字符限制问题
+条件：
+1. 5、8、13日均线多头排列
+2. 近5日有3天以上倍量放量
+3. 连续3日主力控盘>10
+4. 近10日出现过涨停
+============================================
+
+========== 条件1：均线多头排列 ==========
+MA5:=MA(CLOSE,5);    // 5日均线
+MA8:=MA(CLOSE,8);    // 8日均线
+MA13:=MA(CLOSE,13);  // 13日均线
+
+// 多头排列：MA5 > MA8 > MA13
+COND1:=MA5 > MA8 AND MA8 > MA13;
+
+========== 条件2：成交量倍量放量 ==========
+// 定义倍量条件：今日成交量 > 昨日成交量×2 或 今日成交量 > 前日成交量×2
+VOL_DBL1:=VOL > REF(VOL,1) * 2;   // 比昨日放量1倍
+VOL_DBL2:=VOL > REF(VOL,2) * 2;   // 比前日放量1倍
+DBL_VOL_DAY:=VOL_DBL1 OR VOL_DBL2;  // 满足任一条件即为倍量日
+
+// 统计最近5个交易日中倍量日的数量（修正：变量名缩短）
+DBL_DAY_CNT:= 
+    COUNT(DBL_VOL_DAY,1) +      // 今日
+    COUNT(REF(DBL_VOL_DAY,1),1) +  // 昨日
+    COUNT(REF(DBL_VOL_DAY,2),1) +  // 前日
+    COUNT(REF(DBL_VOL_DAY,3),1) +  // 3日前
+    COUNT(REF(DBL_VOL_DAY,4),1);   // 4日前
+
+// 条件2：5天中有3天以上倍量放量
+COND2:=DBL_DAY_CNT >= 3;
+
+========== 条件3：主力控盘连续3日>10 ==========
+// 使用通达信ZJTJ（庄家抬轿）函数
+// 注意：ZJTJ函数可能需要通达信专业版或特定版本支持
+ZJTJ_VAL:=ZJTJ(CLOSE,VOL);  // 庄家抬轿值
+
+// 检查连续3日ZJTJ值>10
+ZJTJ_C1:=ZJTJ_VAL > 10;
+ZJTJ_C2:=REF(ZJTJ_VAL,1) > 10;
+ZJTJ_C3:=REF(ZJTJ_VAL,2) > 10;
+
+COND3:=ZJTJ_C1 AND ZJTJ_C2 AND ZJTJ_C3;
+
+========== 条件4：近10日出现过涨停 ==========
+// 涨停定义：涨幅>=9.9%（考虑到四舍五入）
+LIMIT_UP:=CLOSE/REF(CLOSE,1) >= 1.099;
+
+// 检查最近10个交易日是否有涨停
+HAS_LIMIT:= 
+    COUNT(LIMIT_UP,1) +      // 今日
+    COUNT(REF(LIMIT_UP,1),1) +  // 昨日
+    COUNT(REF(LIMIT_UP,2),1) +  // 前日
+    COUNT(REF(LIMIT_UP,3),1) +  // 3日前
+    COUNT(REF(LIMIT_UP,4),1) +  // 4日前
+    COUNT(REF(LIMIT_UP,5),1) +  // 5日前
+    COUNT(REF(LIMIT_UP,6),1) +  // 6日前
+    COUNT(REF(LIMIT_UP,7),1) +  // 7日前
+    COUNT(REF(LIMIT_UP,8),1) +  // 8日前
+    COUNT(REF(LIMIT_UP,9),1);   // 9日前
+
+COND4:=HAS_LIMIT >= 1;
+
+========== 综合选股条件 ==========
+SELECTION:=COND1 AND COND2 AND COND3 AND COND4;
+
+// 输出选股结果
+SELECTION;
+
+============================================
+使用说明：
+1. 打开通达信软件
+2. 按 Ctrl+F 打开公式管理器
+3. 选择"条件选股公式" → "新建"
+4. 复制粘贴上面的代码
+5. 公式名称：强势庄股选股
+6. 点击"确定"保存
+7. 按 Ctrl+T 执行选股
+
+============================================
+修正说明：
+1. 原变量名 DOUBLE_DAY_COUNT (16字符) 改为 DBL_DAY_CNT (11字符)
+2. 原变量名 VOL_DOUBLE1 改为 VOL_DBL1
+3. 原变量名 VOL_DOUBLE2 改为 VOL_DBL2
+4. 原变量名 DOUBLE_VOL_DAY 改为 DBL_VOL_DAY
+5. 原变量名 ZJTJ_VALUE 改为 ZJTJ_VAL
+6. 原变量名 ZJTJ_COND1/2/3 改为 ZJTJ_C1/2/3
+7. 原变量名 HAS_LIMIT_UP 改为 HAS_LIMIT
+
+所有变量名现在都符合通达信15字符限制。
+============================================

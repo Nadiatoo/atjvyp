@@ -1,0 +1,25 @@
+{
+  "industry": "金融",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 8.3,
+    "profit_growth": 42.8,
+    "order_growth": 69.2,
+    "capacity_utilization": 90.0
+  },
+  "market_expectation": {
+    "analyst_consensus": 10.2,
+    "institution_view": "乐观",
+    "media_sentiment": "积极"
+  },
+  "fund_flow": {
+    "northbound_flow": -46.4,
+    "margin_balance": 147.1,
+    "institution_position": 48.8
+  },
+  "market_sentiment": {
+    "pe_ratio": 59.9,
+    "volume_change": 48.4,
+    "advance_decline_ratio": 1.1
+  }
+}

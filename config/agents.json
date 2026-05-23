@@ -1,0 +1,29 @@
+{
+  "premarket": {
+    "name": "盘前数据采集",
+    "description": "08:00 采集全球市场数据和隔夜新闻",
+    "skill": "biage-premarket-analyzer",
+    "schedule": "0 8 * * 1-5",
+    "command": "python3 /Users/tuqibiao/.openclaw/skills/biage-premarket-analyzer/analyze.py",
+    "model": "deepseek/deepseek-chat",
+    "enabled": true
+  },
+  "market": {
+    "name": "盘后分析引擎",
+    "description": "17:00 运行统一引擎 + 飞书推送",
+    "skill": "biage-market-analyzer",
+    "schedule": "0 17 * * 1-5",
+    "command": "python3 /Users/tuqibiao/.openclaw/workspace/biage_engine.py -o /Users/tuqibiao/.openclaw/workspace/reports/biage_report_$(date +%Y%m%d).md",
+    "model": "deepseek/deepseek-chat",
+    "enabled": true
+  },
+  "skill_maintainer": {
+    "name": "技能维护Agent",
+    "description": "每周日 10:00 技能健康检查",
+    "skill": "self-improving",
+    "schedule": "0 10 * * 0",
+    "command": "python3 /Users/tuqibiao/.openclaw/skills/self-improving/scripts/analyze.py suggest",
+    "model": "deepseek/deepseek-reasoner",
+    "enabled": true
+  }
+}

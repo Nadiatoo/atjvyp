@@ -1,0 +1,68 @@
+[
+  {
+    "data_need": "涨跌停家数",
+    "api_endpoint": "http://push2.eastmoney.com/api/qt/clist/get",
+    "description": "获取沪深A股涨跌停家数",
+    "example_data": {
+      "涨停家数": 99,
+      "跌停家数": 0,
+      "检查股票数": 100,
+      "数据时间": "2026-03-29 01:11:30"
+    }
+  },
+  {
+    "data_need": "成交量数据",
+    "api_endpoint": "http://push2.eastmoney.com/api/qt/ulist.np/get",
+    "description": "获取市场总成交量和成交额",
+    "example_data": {
+      "总成交量(亿手)": 18532.73,
+      "总成交额(亿元)": 0.0,
+      "数据时间": "2026-03-29 01:11:30"
+    }
+  },
+  {
+    "data_need": "板块热度",
+    "api_endpoint": "http://push2.eastmoney.com/api/qt/clist/get",
+    "description": "获取板块热度排行",
+    "example_data": {
+      "热门板块": [
+        {
+          "name": "锂",
+          "change_percent": 8.88,
+          "code": "BK1621"
+        },
+        {
+          "name": "能源金属",
+          "change_percent": 7.36,
+          "code": "BK1015"
+        },
+        {
+          "name": "医疗研发外包",
+          "change_percent": 5.72,
+          "code": "BK1600"
+        },
+        {
+          "name": "钨",
+          "change_percent": 5.35,
+          "code": "BK1625"
+        },
+        {
+          "name": "钾肥",
+          "change_percent": 5.28,
+          "code": "BK1434"
+        }
+      ],
+      "数据时间": "2026-03-29 01:11:30"
+    }
+  },
+  {
+    "data_need": "市场情绪",
+    "api_endpoint": "http://push2.eastmoney.com/api/qt/ulist.np/get",
+    "description": "通过指数涨跌幅判断市场情绪",
+    "example_data": {
+      "上证指数涨跌幅": 63,
+      "市场情绪": "乐观",
+      "数据时间": "2026-03-29 01:11:30"
+    }
+  }
+]

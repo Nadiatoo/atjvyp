@@ -1,0 +1,63 @@
+📊 【彪哥战法】盘后总结 [QVeris数据源]
+时间: 2026-04-14 17:12
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 季节判断：冬藏（评分：40分）
+📈 涨跌统计：涨50家 / 跌50家
+📊 上涨比例：1.6%
+💰 数据源：QVeris/FMP (真实数据)
+
+🔥 涨幅榜 TOP5：
+1. RMSG（Real Messenger Corpo...） +475.1%
+   价格：$2.70 交易所：NASDAQ
+
+2. CMCT（Creative Media & Com...） +86.2%
+   价格：$0.92 交易所：NASDAQ
+
+3. RECT（Rectitude Holdings L...） +85.8%
+   价格：$2.23 交易所：NASDAQ
+
+4. RCT（RedCloud Holdings pl...） +77.2%
+   价格：$1.01 交易所：NASDAQ
+
+5. VRAX（Virax Biolabs Group ...） +59.8%
+   价格：$0.17 交易所：NASDAQ
+
+📉 跌幅榜 TOP5：
+1. REPL（Replimune Group, Inc...） -64.3%
+   价格：$1.70 交易所：NASDAQ
+
+2. WORX（SCWorx Corp....） -30.7%
+   价格：$1.06 交易所：NASDAQ
+
+3. PLCE（The Children's Place...） -28.5%
+   价格：$2.84 交易所：NASDAQ
+
+4. AFJK（Aimei Health Technol...） -27.9%
+   价格：$40.40 交易所：NASDAQ
+
+5. ONCO（Onconetix, Inc....） -26.6%
+   价格：$0.80 交易所：NASDAQ
+
+📊 市场特征分析：
+  • 最大涨幅：475.1%
+  • 平均涨幅：156.8%
+  • 最大跌幅：-64.3%
+  • 平均跌幅：-35.6%
+  • 涨跌比：50:50
+
+💡 明日策略：
+  • 市场处于冬藏期，建议20-30%仓位
+  • 关注今日强势板块的持续性
+  • 监控资金流向变化
+  • 设置合理止损位
+
+⚠️ 风险提示：
+  • 以上分析基于QVeris/FMP (真实数据)
+  • 投资有风险，决策需谨慎
+  • 建议结合其他分析工具综合判断
+
+✅ 系统状态：
+  • 分析时间：2026-04-14 17:12
+  • 数据源：QVeris/FMP (真实数据)
+  • 数据质量：真实股票数据

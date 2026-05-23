@@ -1,0 +1,216 @@
+{
+  "backtest_date": "2026-03-26 20:56:32",
+  "total_nodes": 11,
+  "overall_accuracy": 0.9090909090909091,
+  "results": [
+    {
+      "node": {
+        "date": "2021-02-18",
+        "name": "2021年春节后行情",
+        "expected": "winter_hiding",
+        "condition": "大幅调整"
+      },
+      "predicted_state": "winter_hiding",
+      "confidence": 0.8,
+      "position_range": [
+        0,
+        20
+      ],
+      "match_score": 1.0,
+      "actual_performance": -2.9589865097898826,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "冬藏期",
+      "predicted_chinese": "冬藏期"
+    },
+    {
+      "node": {
+        "date": "2021-07-28",
+        "name": "2021年夏季反弹",
+        "expected": "spring_sowing",
+        "condition": "政策底反弹"
+      },
+      "predicted_state": "spring_sowing",
+      "confidence": 0.7,
+      "position_range": [
+        30,
+        50
+      ],
+      "match_score": 1.0,
+      "actual_performance": 2.555942005459088,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "春播期",
+      "predicted_chinese": "春播期"
+    },
+    {
+      "node": {
+        "date": "2022-03-15",
+        "name": "2022年俄乌冲突低点",
+        "expected": "winter_hiding",
+        "condition": "极端恐慌"
+      },
+      "predicted_state": "winter_hiding",
+      "confidence": 0.8,
+      "position_range": [
+        0,
+        20
+      ],
+      "match_score": 1.0,
+      "actual_performance": -2.6652267921403654,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "冬藏期",
+      "predicted_chinese": "冬藏期"
+    },
+    {
+      "node": {
+        "date": "2022-10-31",
+        "name": "2022年政策底",
+        "expected": "winter_spring_transition",
+        "condition": "政策预期改善"
+      },
+      "predicted_state": "autumn_winter_transition",
+      "confidence": 0.7,
+      "position_range": [
+        10,
+        30
+      ],
+      "match_score": 0.3,
+      "actual_performance": 0.5693683616265934,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "冬末春初过渡期",
+      "predicted_chinese": "秋入冬过渡期"
+    },
+    {
+      "node": {
+        "date": "2023-01-30",
+        "name": "2023年春节后行情",
+        "expected": "spring_summer_transition",
+        "condition": "AI概念爆发"
+      },
+      "predicted_state": "spring_summer_transition",
+      "confidence": 0.75,
+      "position_range": [
+        40,
+        60
+      ],
+      "match_score": 1.0,
+      "actual_performance": 4.700422419188599,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "春入夏过渡期",
+      "predicted_chinese": "春入夏过渡期"
+    },
+    {
+      "node": {
+        "date": "2023-08-28",
+        "name": "2023年政策组合拳",
+        "expected": "spring_sowing",
+        "condition": "政策利好密集"
+      },
+      "predicted_state": "spring_sowing",
+      "confidence": 0.7,
+      "position_range": [
+        30,
+        50
+      ],
+      "match_score": 1.0,
+      "actual_performance": 2.5841143884043323,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "春播期",
+      "predicted_chinese": "春播期"
+    },
+    {
+      "node": {
+        "date": "2024-02-05",
+        "name": "2024年小微盘股危机",
+        "expected": "winter_hiding",
+        "condition": "流动性危机"
+      },
+      "predicted_state": "winter_hiding",
+      "confidence": 0.8,
+      "position_range": [
+        0,
+        20
+      ],
+      "match_score": 1.0,
+      "actual_performance": -2.5674505181650202,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "冬藏期",
+      "predicted_chinese": "冬藏期"
+    },
+    {
+      "node": {
+        "date": "2024-09-24",
+        "name": "2024年史诗级政策刺激",
+        "expected": "spring_summer_transition",
+        "condition": "暴力反弹"
+      },
+      "predicted_state": "spring_summer_transition",
+      "confidence": 0.75,
+      "position_range": [
+        40,
+        60
+      ],
+      "match_score": 1.0,
+      "actual_performance": 4.067342792467805,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "春入夏过渡期",
+      "predicted_chinese": "春入夏过渡期"
+    },
+    {
+      "node": {
+        "date": "2025-01-27",
+        "name": "2025年春季躁动",
+        "expected": "spring_sowing",
+        "condition": "春季行情"
+      },
+      "predicted_state": "spring_sowing",
+      "confidence": 0.7,
+      "position_range": [
+        30,
+        50
+      ],
+      "match_score": 1.0,
+      "actual_performance": 2.5743795033921333,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "春播期",
+      "predicted_chinese": "春播期"
+    },
+    {
+      "node": {
+        "date": "2025-07-28",
+        "name": "2025年夏季调整",
+        "expected": "autumn_harvest",
+        "condition": "业绩分化"
+      },
+      "predicted_state": "chaotic_period",
+      "confidence": 0.65,
+      "position_range": [
+        10,
+        30
+      ],
+      "match_score": 0.7,
+      "actual_performance": -0.9366784983116406,
+      "analysis": "⚠️ 基本匹配",
+      "expected_chinese": "秋收期",
+      "predicted_chinese": "混沌期"
+    },
+    {
+      "node": {
+        "date": "2026-02-03",
+        "name": "2026年春节前调整",
+        "expected": "autumn_winter_transition",
+        "condition": "节前调整"
+      },
+      "predicted_state": "autumn_winter_transition",
+      "confidence": 0.7,
+      "position_range": [
+        10,
+        30
+      ],
+      "match_score": 1.0,
+      "actual_performance": -3.037260306232861,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "秋入冬过渡期",
+      "predicted_chinese": "秋入冬过渡期"
+    }
+  ]
+}

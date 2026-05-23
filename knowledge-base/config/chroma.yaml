@@ -1,0 +1,36 @@
+# ChromaDB 配置
+chroma:
+  # 数据库配置
+  persist_directory: "./vectors/chroma"
+  db_implementation: "duckdb+parquet"
+  
+  # 集合配置
+  collection:
+    name: "knowledge_base"
+    metadata:
+      description: "彪哥战法知识库向量索引"
+      version: "1.0.0"
+      created: "2026-04-08"
+    
+  # 性能配置
+  performance:
+    batch_size: 100  # 批量处理大小
+    cache_size: 1000  # 缓存向量数量
+    persist_interval: 60  # 持久化间隔（秒）
+    
+  # 嵌入配置
+  embedding:
+    dimension: 384  # 向量维度（all-MiniLM-L6-v2）
+    distance_function: "cosine"  # 距离函数：cosine/l2/ip
+    
+  # 搜索配置
+  search:
+    default_limit: 10  # 默认返回结果数
+    max_limit: 100  # 最大返回结果数
+    score_threshold: 0.5  # 相似度阈值
+    
+  # 监控配置
+  monitoring:
+    enabled: true
+    log_level: "INFO"
+    metrics_interval: 300  # 指标收集间隔（秒）

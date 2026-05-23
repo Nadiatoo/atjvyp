@@ -1,0 +1,53 @@
+📊 【彪哥战法】盘后总结 [QVeris真实数据]
+时间: 2026-04-13 17:08
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 季节判断：冬藏（评分：40分）
+📊 平均涨幅：0% / 平均跌幅：0%
+💰 数据源：QVeris/FMP（真实数据 - 手动输入）
+
+🔥 涨幅榜 TOP5：
+1. PN（Skycorp Solar Group ...） +1813.9%
+   价格：$3.60 交易所：NASDAQ
+
+2. JEM（707 Cayman Holdings ...） +1538.2%
+   价格：$2.25 交易所：NASDAQ
+
+3. QNCX（Quince Therapeutics,...） +1001.9%
+   价格：$1.36 交易所：NASDAQ
+
+📉 跌幅榜 TOP5：
+1. YDDL（One and one Green Te...） -62.9%
+   价格：$5.16 交易所：NASDAQ
+
+2. KWM（K Wave Media Ltd.） -33.8%
+   价格：$0.45 交易所：NASDAQ
+
+3. DKI（DarkIris Inc.） -33.5%
+   价格：$0.64 交易所：NASDAQ
+
+📈 高成交量股票 TOP5：
+1. CREG（Smart Powerr Corp.） 📈85.4%
+   价格：$0.63
+
+2. RAYA（Erayak Power Solutio...） 📈107.9%
+   价格：$0.95
+
+3. NVDA（NVIDIA Corporation） 📈2.6%
+   价格：$188.63
+
+💡 明日策略：
+  • 市场处于冬藏期，建议20-30%仓位
+  • 关注今日强势股票的持续性
+  • 监控成交量变化
+  • 设置合理止损位
+
+⚠️ 风险提示：
+  • 以上分析基于QVeris/FMP（真实数据 - 手动输入）
+  • 数据为美股市场实时数据
+  • 投资有风险，决策需谨慎
+
+✅ 系统状态：
+  • 数据源：QVeris/FMP（真实数据 - 手动输入）
+  • 分析时间：2026-04-13 17:08
+  • 彪哥战法：盘后分析完成

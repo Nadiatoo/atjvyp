@@ -1,0 +1,68 @@
+{
+  "version": "1.0",
+  "last_cleanup": null,
+  "rules": {
+    "backup_files": {
+      "enabled": true,
+      "patterns": [
+        "*_backup_*",
+        "*_old_*",
+        "*backup*",
+        "*old*"
+      ],
+      "max_age_days": 30,
+      "action": "move_to_archive"
+    },
+    "temporary_files": {
+      "enabled": true,
+      "patterns": [
+        "temp_*",
+        "tmp_*",
+        "*_temp",
+        "*_tmp"
+      ],
+      "max_age_days": 7,
+      "action": "delete"
+    },
+    "log_files": {
+      "enabled": true,
+      "patterns": [
+        "*.log",
+        "log_*",
+        "*_log"
+      ],
+      "max_age_days": 14,
+      "action": "compress"
+    },
+    "report_files": {
+      "enabled": true,
+      "patterns": [
+        "report_*",
+        "*_report",
+        "*分析报告*",
+        "*对比报告*"
+      ],
+      "max_age_days": 90,
+      "action": "move_to_archive"
+    },
+    "duplicate_files": {
+      "enabled": true,
+      "patterns": [
+        "*v[0-9]*",
+        "*版本*",
+        "*副本*"
+      ],
+      "action": "keep_latest"
+    }
+  },
+  "archive_structure": {
+    "base_path": "/Users/tuqibiao/.openclaw/workspace/archive",
+    "organize_by": [
+      "year",
+      "month",
+      "type"
+    ],
+    "keep_months": 12
+  },
+  "last_updated": "2026-03-20T11:10:34.567023"
+}

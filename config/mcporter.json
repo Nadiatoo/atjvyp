@@ -2,6 +2,14 @@
   "mcpServers": {
     "exa": {
       "baseUrl": "https://mcp.exa.ai/mcp"
+    },
+    "hermes": {
+      "command": "/Users/tuqibiao/.local/bin/hermes",
+      "args": [
+        "mcp",
+        "serve"
+      ],
+      "description": "Hermes Agent via MCP"
     }
   },
   "imports": []

@@ -1,0 +1,68 @@
+// ============================================
+// 强势庄股选股公式（通达信专用格式）
+// 作者：富富
+// 日期：2026-03-26
+// 格式说明：每行代码独立，避免自动换行问题
+// ============================================
+
+// ========== 条件1：均线多头排列 ==========
+MA5:=MA(CLOSE,5);
+MA8:=MA(CLOSE,8);
+MA13:=MA(CLOSE,13);
+COND1:=MA5 > MA8 AND MA8 > MA13;
+
+// ========== 条件2：成交量倍量放量 ==========
+VOL_DBL1:=VOL > REF(VOL,1) * 2;
+VOL_DBL2:=VOL > REF(VOL,2) * 2;
+DBL_VOL_DAY:=VOL_DBL1 OR VOL_DBL2;
+DBL_DAY_CNT:=COUNT(DBL_VOL_DAY,1);
+DBL_DAY_CNT:=DBL_DAY_CNT+COUNT(REF(DBL_VOL_DAY,1),1);
+DBL_DAY_CNT:=DBL_DAY_CNT+COUNT(REF(DBL_VOL_DAY,2),1);
+DBL_DAY_CNT:=DBL_DAY_CNT+COUNT(REF(DBL_VOL_DAY,3),1);
+DBL_DAY_CNT:=DBL_DAY_CNT+COUNT(REF(DBL_VOL_DAY,4),1);
+COND2:=DBL_DAY_CNT >= 3;
+
+// ========== 条件3：主力控盘连续3日>10 ==========
+ZJTJ_VAL:=ZJTJ(CLOSE,VOL);
+ZJTJ_C1:=ZJTJ_VAL > 10;
+ZJTJ_C2:=REF(ZJTJ_VAL,1) > 10;
+ZJTJ_C3:=REF(ZJTJ_VAL,2) > 10;
+COND3:=ZJTJ_C1 AND ZJTJ_C2 AND ZJTJ_C3;
+
+// ========== 条件4：近10日出现过涨停 ==========
+LIMIT_UP:=CLOSE/REF(CLOSE,1) >= 1.099;
+HAS_LIMIT:=COUNT(LIMIT_UP,1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,1),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,2),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,3),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,4),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,5),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,6),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,7),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,8),1);
+HAS_LIMIT:=HAS_LIMIT+COUNT(REF(LIMIT_UP,9),1);
+COND4:=HAS_LIMIT >= 1;
+
+// ========== 综合选股条件 ==========
+SELECTION:=COND1 AND COND2 AND COND3 AND COND4;
+SELECTION;
+
+// ============================================
+// 使用说明：
+// 1. 打开通达信软件
+// 2. 按 Ctrl+F 打开公式管理器
+// 3. 选择"条件选股公式" → "新建"
+// 4. 复制粘贴上面的所有代码
+// 5. 公式名称：强势庄股选股
+// 6. 点击"确定"保存
+// 7. 按 Ctrl+T 执行选股
+// ============================================
+
+// ============================================
+// 通达信复制粘贴技巧：
+// 1. 在通达信公式编辑器中，按 Ctrl+A 全选原有内容
+// 2. 按 Delete 键删除
+// 3. 按 Ctrl+V 粘贴新代码
+// 4. 确保每行代码都独立显示
+// 5. 如果仍有换行问题，可以手动在通达信中调整
+// ============================================

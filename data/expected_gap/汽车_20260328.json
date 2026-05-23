@@ -1,0 +1,25 @@
+{
+  "industry": "汽车",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 6.8,
+    "profit_growth": 36.4,
+    "order_growth": 82.9,
+    "capacity_utilization": 80.9
+  },
+  "market_expectation": {
+    "analyst_consensus": 12.9,
+    "institution_view": "谨慎乐观",
+    "media_sentiment": "积极"
+  },
+  "fund_flow": {
+    "northbound_flow": 40.9,
+    "margin_balance": 123.5,
+    "institution_position": 32.0
+  },
+  "market_sentiment": {
+    "pe_ratio": 47.3,
+    "volume_change": -49.6,
+    "advance_decline_ratio": 0.5
+  }
+}

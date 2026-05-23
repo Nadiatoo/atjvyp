@@ -1,0 +1,117 @@
+{
+  "date": "2026-04-10",
+  "time": "08:03",
+  "framework_name": "EGPS预期差发现与个股筛选框架",
+  "analysis": {
+    "economic_cycle": {
+      "position": "复苏期",
+      "strength": 68,
+      "trend": "温和向上",
+      "description": "经济处于温和复苏期，PMI重回扩张区间，但复苏基础仍需巩固"
+    },
+    "policy_environment": {
+      "direction": "稳健偏宽松",
+      "intensity": 72,
+      "focus": "新质生产力与科技创新",
+      "description": "政策聚焦新质生产力，加大对科技创新和产业升级支持力度"
+    },
+    "perception_dimensions": {
+      "economic_fundamentals": 65,
+      "policy_environment": 70,
+      "market_sentiment": 45,
+      "capital_flow": 62,
+      "industry_trend": 75,
+      "social_culture": 58
+    },
+    "expectation_gaps": [
+      "市场对经济复苏强度预期过高，实际复苏较为温和",
+      "AI技术应用落地速度超预期，产业影响被低估",
+      "新能源储能需求增长超预期，产业链机会被忽视",
+      "半导体设备国产化率提升速度超预期"
+    ],
+    "market_status": {
+      "overall": "结构性震荡",
+      "sentiment_score": 45,
+      "key_sectors": [
+        "人工智能",
+        "半导体",
+        "新能源",
+        "医药"
+      ],
+      "description": "市场呈现结构性分化，科技板块相对强势，传统板块承压"
+    },
+    "capital_flow": {
+      "inflow_sectors": [
+        "半导体设备",
+        "AI算力",
+        "新能源储能",
+        "创新药"
+      ],
+      "outflow_sectors": [
+        "房地产",
+        "传统基建",
+        "煤炭",
+        "钢铁"
+      ],
+      "northbound": "净流入",
+      "main_fund": "净流出",
+      "description": "资金流向新经济板块，传统板块资金流出明显"
+    },
+    "stock_screening": {
+      "total_screened": 6,
+      "dragon_stocks": 3,
+      "zhongjun_stocks": 3,
+      "screening_criteria": "彪哥战法+EGPS预期差+资金流向"
+    },
+    "key_stocks": [
+      {
+        "code": "300750",
+        "name": "宁德时代",
+        "type": "中军股",
+        "reason": "新能源储能需求超预期，技术领先优势明显"
+      },
+      {
+        "code": "002049",
+        "name": "紫光国微",
+        "type": "龙头股",
+        "reason": "半导体国产替代加速，FPGA芯片技术突破"
+      },
+      {
+        "code": "603501",
+        "name": "韦尔股份",
+        "type": "龙头股",
+        "reason": "CIS传感器需求回暖，汽车电子业务增长强劲"
+      },
+      {
+        "code": "300760",
+        "name": "迈瑞医疗",
+        "type": "中军股",
+        "reason": "医疗设备国产替代，海外市场拓展顺利"
+      },
+      {
+        "code": "002415",
+        "name": "海康威视",
+        "type": "中军股",
+        "reason": "AI视觉应用落地加速，安防智能化升级"
+      },
+      {
+        "code": "300059",
+        "name": "东方财富",
+        "type": "龙头股",
+        "reason": "资本市场改革受益，金融科技业务增长"
+      }
+    ],
+    "investment_strategy": {
+      "allocation_direction": "聚焦新质生产力，配置人工智能、半导体、新能源、医药",
+      "position_suggestion": "中等仓位（50%-60%），灵活调整",
+      "risk_control": "关注外部环境变化，控制单一行业仓位",
+      "time_horizon": "中期布局（3-6个月）"
+    },
+    "risk_warnings": [
+      "经济复苏不及预期风险",
+      "外部环境变化风险",
+      "市场情绪波动风险",
+      "政策调整风险"
+    ]
+  }
+}

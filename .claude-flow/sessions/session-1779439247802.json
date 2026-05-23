@@ -1,0 +1,14 @@
+{
+  "id": "session-1779439247802",
+  "startedAt": "2026-05-22T08:40:47.802Z",
+  "cwd": "/Users/tuqibiao/.openclaw/workspace",
+  "context": {},
+  "metrics": {
+    "edits": 0,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-05-22T08:48:34.671Z",
+  "duration": 466875
+}

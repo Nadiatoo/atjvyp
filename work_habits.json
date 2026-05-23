@@ -1,0 +1,52 @@
+{
+  "user_profile": {
+    "name": "老涂",
+    "profession": "证券公司投资顾问",
+    "style_preference": "专业为先，语言通俗易懂，语气轻松随意",
+    "privacy_boundary": "可与客户本人交互，但客户信息严格隔离"
+  },
+  "work_preferences": {
+    "analysis_style": "专业、务实、反应快",
+    "report_format": "直接给出最终答案，不输出思考过程",
+    "data_requirement": "真实数据，具体分析，战法应用",
+    "automation_level": "完全自动化，主动监控，自我修复"
+  },
+  "work_patterns": {
+    "morning_routine": [
+      "08:00盘前分析",
+      "关注全球市场"
+    ],
+    "afternoon_routine": [
+      "17:00盘后分析",
+      "总结全天表现"
+    ],
+    "review_habits": [
+      "读取复盘文件",
+      "系统化分析"
+    ],
+    "optimization_focus": [
+      "强化量能验证",
+      "集成连板分析"
+    ]
+  },
+  "system_interactions": {
+    "frequent_commands": [
+      "调用Hermes分析工作流程优化"
+    ],
+    "preferred_outputs": [
+      "记住工作习惯，自动优化流程"
+    ],
+    "corrections_made": [],
+    "feature_requests": [
+      {
+        "timestamp": "2026-04-14 17:14:07",
+        "request": "建立工作习惯学习和自适应优化系统"
+      }
+    ]
+  },
+  "learning_history": {
+    "last_updated": "2026-04-14 17:14:07",
+    "total_interactions": 3,
+    "optimizations_applied": 0
+  }
+}

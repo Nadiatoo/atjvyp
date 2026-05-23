@@ -1,0 +1,7 @@
+# OpenClaw workspace — transient files
+*.log
+.cache/
+*.tmp
+*.swp
+*~
+.DS_Store

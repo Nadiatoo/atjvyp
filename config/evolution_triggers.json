@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "description": "Self-evolution trigger rules for the multi-agent system",
+  "triggers": [
+    {
+      "id": "repeated-task-failure",
+      "condition": "3 consecutive task failures in same task_type",
+      "action": {
+        "type": "kanban_card",
+        "priority": "high",
+        "assignee": "performance_monitor",
+        "title": "Root cause analysis: {task_type} failures",
+        "description": "3 consecutive failures detected in {task_type}. Investigate and fix."
+      },
+      "cooldown_minutes": 60,
+      "enabled": true
+    },
+    {
+      "id": "pattern-cluster",
+      "condition": "LEARNINGS.md contains 5+ entries with same pattern_key within 7 days",
+      "action": {
+        "type": "skill_improve_task",
+        "target_executor": "claude-code",
+        "priority": "normal",
+        "title": "Consolidate pattern: {pattern_key}",
+        "description": "5+ learnings from {pattern_key} in past week. Consolidate into permanent rule or skill improvement."
+      },
+      "cooldown_minutes": 1440,
+      "enabled": true
+    },
+    {
+      "id": "stale-memory-bridge",
+      "condition": "memory_bridge_sync_count < 1 for 24 hours",
+      "action": {
+        "type": "alert",
+        "channel": "feishu",
+        "priority": "critical",
+        "message": "Memory bridge sync has not run in 24 hours. Cross-system knowledge propagation may be broken."
+      },
+      "cooldown_minutes": 120,
+      "enabled": true
+    },
+    {
+      "id": "claude-backlog-overflow",
+      "condition": "claude-code task inbox count > 10 pending",
+      "action": {
+        "type": "alert",
+        "channel": "feishu",
+        "priority": "high",
+        "message": "Claude Code task backlog: {count} pending tasks. Hermes orchestrator should re-prioritize.",
+        "secondary_action": {
+          "type": "kanban_card",
+          "priority": "high",
+          "assignee": "task_scheduler",
+          "title": "Re-prioritize Claude Code task backlog"
+        }
+      },
+      "cooldown_minutes": 30,
+      "enabled": true
+    },
+    {
+      "id": "hermes-gateway-down",
+      "condition": "Hermes gateway not responding for 10 minutes",
+      "action": {
+        "type": "alert",
+        "channel": "feishu",
+        "priority": "critical",
+        "message": "Hermes gateway appears down. No response for 10 minutes."
+      },
+      "cooldown_minutes": 15,
+      "enabled": true
+    },
+    {
+      "id": "error-spike",
+      "condition": "ERRORS.md new entries > 3 in 1 hour",
+      "action": {
+        "type": "kanban_card",
+        "priority": "critical",
+        "assignee": "performance_monitor",
+        "title": "Error spike detected: {count} new errors in 1 hour",
+        "description": "Error rate abnormal. Immediate investigation required."
+      },
+      "cooldown_minutes": 30,
+      "enabled": true
+    }
+  ],
+  "global_settings": {
+    "check_interval_seconds": 300,
+    "max_alerts_per_hour": 10,
+    "quiet_hours": {
+      "start": "23:00",
+      "end": "07:00",
+      "only_critical": true
+    }
+  }
+}

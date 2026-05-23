@@ -1,0 +1,99 @@
+{
+  "version": "1.0",
+  "description": "Cross-system memory propagation configuration for OpenClaw + Hermes + Claude Code",
+  "shared_categories": [
+    "technical",
+    "decisions",
+    "lessons",
+    "projects",
+    "preferences",
+    "goals",
+    "work"
+  ],
+  "private_categories": [
+    "identity",
+    "relationships",
+    "routines",
+    "life_events",
+    "health"
+  ],
+  "namespaces": {
+    "openclaw": {
+      "mem0_agent_id": "main",
+      "description": "Primary OpenClaw agent (富富)",
+      "memory_files": "~/.openclaw/workspace/memory/",
+      "long_term": "~/.openclaw/workspace/MEMORY.md"
+    },
+    "hermes": {
+      "mem0_agent_id": "hermes-orchestrator",
+      "description": "Hermes orchestrator agent",
+      "memory_files": "~/.hermes/memory_store.db",
+      "long_term": "~/.hermes/memory/"
+    },
+    "claude-code": {
+      "mem0_agent_id": "claude-code",
+      "description": "Claude Code execution engine",
+      "memory_files": "~/.claude/tasks/",
+      "long_term": "~/.claude/projects/-Users-tuqibiao/memory/"
+    }
+  },
+  "propagation_rules": [
+    {
+      "from": "claude-code",
+      "to": "openclaw",
+      "trigger": "task_completed",
+      "action": "store execution_result in OpenClaw memory",
+      "category": "technical",
+      "importance_threshold": 0.5
+    },
+    {
+      "from": "claude-code",
+      "to": "hermes",
+      "trigger": "task_completed",
+      "action": "update kanban task status",
+      "category": "projects"
+    },
+    {
+      "from": "hermes",
+      "to": "openclaw",
+      "trigger": "decision_made",
+      "action": "store decision with rationale",
+      "category": "decisions",
+      "importance_threshold": 0.6
+    },
+    {
+      "from": "hermes",
+      "to": "claude-code",
+      "trigger": "task_dispatched",
+      "action": "write task file + inject relevant prior context",
+      "category": "projects"
+    },
+    {
+      "from": "openclaw",
+      "to": "hermes",
+      "trigger": "cron_completed",
+      "action": "store analysis result for Hermes planning context",
+      "category": "projects"
+    },
+    {
+      "from": "openclaw",
+      "to": "claude-code",
+      "trigger": "review_completed",
+      "action": "store review feedback in memory for future executions",
+      "category": "lessons",
+      "importance_threshold": 0.7
+    }
+  ],
+  "sync_mechanism": {
+    "primary": "file-based (write to shared workspace memory files)",
+    "secondary": "mem0 cross-namespace query via agentId parameter",
+    "cron_sync": {
+      "script": "~/.hermes/cron/scripts/cross_memory_sync.sh",
+      "frequency": "every 2 hours"
+    }
+  },
+  "dedup_policy": {
+    "method": "content hash + importance score comparison",
+    "action": "update existing memory if new score higher, skip if lower"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-15",
+  "indices": {
+    "上证指数": {"close": 4135.39, "change_pct": -1.02},
+    "深证成指": {"close": 15561.37, "change_pct": -1.17},
+    "创业板指": {"close": 3929.06, "change_pct": -0.56},
+    "沪深300": {"close": 4859.59, "change_pct": -1.12}
+  },
+  "market_stats": {
+    "rising": 1815,
+    "falling": 3701,
+    "rising_ratio": 32.9,
+    "limit_up": 93,
+    "limit_down": 30,
+    "turnover": "3.4万亿"
+  },
+  "top10_gainers": [
+    {"name": "锐翔智能", "code": "920178.BJ", "change_pct": 490.40},
+    {"name": "维通利", "code": "001393.SZ", "change_pct": 297.20},
+    {"name": "中巨芯", "code": "688549.SH", "change_pct": 20.01},
+    {"name": "三瑞智能", "code": "301696.SZ", "change_pct": 20.00},
+    {"name": "纽威数控", "code": "688697.SH", "change_pct": 20.00},
+    {"name": "隆华科技", "code": "300263.SZ", "change_pct": 20.00},
+    {"name": "维康药业", "code": "300878.SZ", "change_pct": 19.99},
+    {"name": "怡达股份", "code": "300721.SZ", "change_pct": 19.98},
+    {"name": "严牌股份", "code": "301081.SZ", "change_pct": 19.98},
+    {"name": "三丰智能", "code": "300276.SZ", "change_pct": 19.94}
+  ],
+  "top10_losers": [
+    {"name": "*ST元道", "code": "301139.SZ", "change_pct": -20.00},
+    {"name": "*ST清越", "code": "688496.SH", "change_pct": -19.82},
+    {"name": "恒宇信通", "code": "300965.SZ", "change_pct": -16.90},
+    {"name": "凌玮科技", "code": "301373.SZ", "change_pct": -14.28},
+    {"name": "赛意信息", "code": "300687.SZ", "change_pct": -14.03},
+    {"name": "春光集团", "code": "301531.SZ", "change_pct": -13.47},
+    {"name": "海泰新光", "code": "688677.SH", "change_pct": -13.31},
+    {"name": "科创信息", "code": "300730.SZ", "change_pct": -13.27},
+    {"name": "爱迪特", "code": "301580.SZ", "change_pct": -13.19},
+    {"name": "科创新材", "code": "920580.BJ", "change_pct": -11.84}
+  ],
+  "top10_turnover": [
+    {"name": "中际旭创", "code": "300308.SZ", "amount": 292.8, "change_pct": -2.61},
+    {"name": "澜起科技", "code": "688008.SH", "amount": 291.7, "change_pct": -6.45},
+    {"name": "天孚通信", "code": "300394.SZ", "amount": 269.3, "change_pct": 2.04},
+    {"name": "阳光电源", "code": "300274.SZ", "amount": 252.7, "change_pct": 13.27},
+    {"name": "工业富联", "code": "601138.SH", "amount": 238.0, "change_pct": -1.43},
+    {"name": "兆易创新", "code": "603986.SH", "amount": 227.9, "change_pct": 5.38},
+    {"name": "新易盛", "code": "300502.SZ", "amount": 216.8, "change_pct": -1.27},
+    {"name": "东山精密", "code": "002384.SZ", "amount": 209.1, "change_pct": -5.37},
+    {"name": "寒武纪", "code": "688256.SH", "amount": 199.0, "change_pct": -4.09},
+    {"name": "胜宏科技", "code": "300476.SZ", "amount": 184.7, "change_pct": -4.12}
+  ],
+  "top10_sectors": [
+    {"name": "减速器", "change_pct": 3.04},
+    {"name": "氟化工概念", "change_pct": 2.46},
+    {"name": "工业母机", "change_pct": 1.75},
+    {"name": "人形机器人", "change_pct": 1.72},
+    {"name": "PEEK材料", "change_pct": 1.49},
+    {"name": "光刻胶", "change_pct": 1.47},
+    {"name": "科创次新股", "change_pct": 1.46},
+    {"name": "一体化压铸", "change_pct": 1.43},
+    {"name": "中芯国际概念", "change_pct": 1.40},
+    {"name": "丙烯酸", "change_pct": 1.40}
+  ],
+  "biage_analysis": {
+    "season": "冬藏",
+    "score": 40,
+    "position_advice": "0-20%",
+    "leaders": ["锐翔智能(+490%)", "维通利(+297%)", "盛合晶微(+18.76%)", "绿的谐波(+15.28%)", "长盈通(+18.12%)"]
+  }
+}

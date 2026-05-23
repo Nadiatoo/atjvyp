@@ -1,0 +1,79 @@
+================================================================================
+同花顺数据文件深度分析报告
+================================================================================
+
+分析文件: /Users/tuqibiao/Library/Containers/cn.com.10jqka.macstockPro/Data/Documents/MarketData/MarketDataFile
+
+总对象数: 384
+
+对象类型分布:
+  str: 253
+  dict: 130
+  int: 1
+
+顶层键:
+  - MarketDataDecodeKey
+  - VersionDecodeKey
+
+字符串样本 (可能是股票代码/名称):
+  1. $null
+  2. MarketStr
+  3. BigMarket
+  4. SmallMarket
+  5. UFXO
+  6. 96
+  7. 102
+  8. UHKM
+  9. 176
+  10. 177
+  11. UFXC
+  12. 98
+  13. USWZ
+  14. 104
+  15. 110
+  16. 
+  17. 48
+  18. 55
+  19. UNQQ
+  20. 184
+  21. 185
+  22. UFXR
+  23. 99
+  24. UOTS
+  25. 192
+  26. 193
+  27. UZOI
+  28. 56
+  29. UHKG
+  30. 178
+
+字典样本:
+  [1] 类: N/A
+       键: ['NS.objects', '$class']
+  [2] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+  [9] 类: NSDictionary
+       键: ['$classname', '$classes']
+  [10] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+  [14] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+  [17] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+  [21] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+  [25] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+  [29] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+  [32] 类: N/A
+       键: ['NS.keys', 'NS.objects', '$class']
+
+顶层结构:
+{
+  "MarketDataDecodeKey": "UID(1)",
+  "VersionDecodeKey": "UID(383)"
+}
+
+查找股票代码...
+未找到符合格式的股票代码

@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-03-27T08:03:20.568705",
+  "us_market": {
+    "Russell 2000 Futures": {
+      "price": 2522.4,
+      "change": -29.400146,
+      "change_pct": -1.1521336
+    },
+    "Dow Futures": {
+      "price": 46393,
+      "change": -318,
+      "change_pct": -0.68078184
+    },
+    "VIX": {
+      "price": 27.52,
+      "change": 2.1900005,
+      "change_pct": 8.642465
+    },
+    "Gold": {
+      "price": 4438.1,
+      "change": -114.19971,
+      "change_pct": -2.5086157
+    }
+  },
+  "asia_market": {
+    "SSE Composite Index": {
+      "price": 3889.0835,
+      "change": -42.753906,
+      "change_pct": -1.0873773
+    },
+    "Nikkei 225": {
+      "price": 53603.65,
+      "change": -145.97266,
+      "change_pct": -0.27157894
+    },
+    "Hang Seng": {
+      "price": 24856.43,
+      "change": -479.51953,
+      "change_pct": -1.8926449
+    },
+    "S&P/ASX 200 [XJO]": {
+      "price": 8514.8,
+      "change": -10.900391,
+      "change_pct": -0.1278623
+    },
+    "The Asia Dow (USD)": {
+      "price": 5364.21,
+      "change": -81.33008,
+      "change_pct": -1.4935172
+    },
+    "USD/JPY": {
+      "price": 159.669,
+      "change": 0.035003662,
+      "change_pct": 0.021927036
+    }
+  },
+  "analysis": {
+    "global_trend": "偏空",
+    "a股预期": "低开概率大，注意风险",
+    "key_points": [
+      "上证指数昨日下跌，市场可能承压"
+    ],
+    "news_analysis": []
+  }
+}

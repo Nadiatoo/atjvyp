@@ -1,0 +1,227 @@
+{
+  "backtest_date": "2026-03-26 21:05:15",
+  "total_nodes": 11,
+  "overall_accuracy": 0.49090909090909085,
+  "results": [
+    {
+      "node": {
+        "date": "2021-02-18",
+        "name": "2021年春节后行情",
+        "expected": "winter_hiding"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "autumn_winter_transition",
+      "confidence": 0.63,
+      "position_range": [
+        10,
+        30
+      ],
+      "match_score": 0.3,
+      "actual_performance": -2.656,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "冬藏期",
+      "predicted_chinese": "秋入冬过渡期"
+    },
+    {
+      "node": {
+        "date": "2021-07-28",
+        "name": "2021年夏季反弹",
+        "expected": "spring_sowing"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "spring_sowing",
+      "confidence": 0.63,
+      "position_range": [
+        30,
+        50
+      ],
+      "match_score": 1.0,
+      "actual_performance": 3.3000000000000003,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "春播期",
+      "predicted_chinese": "春播期"
+    },
+    {
+      "node": {
+        "date": "2022-03-15",
+        "name": "2022年俄乌冲突低点",
+        "expected": "winter_hiding"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "winter_hiding",
+      "confidence": 0.7200000000000001,
+      "position_range": [
+        0,
+        20
+      ],
+      "match_score": 1.0,
+      "actual_performance": -2.471,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "冬藏期",
+      "predicted_chinese": "冬藏期"
+    },
+    {
+      "node": {
+        "date": "2022-10-31",
+        "name": "2022年政策底",
+        "expected": "winter_spring_transition"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "spring_sowing",
+      "confidence": 0.63,
+      "position_range": [
+        30,
+        50
+      ],
+      "match_score": 0.3,
+      "actual_performance": 0.5026,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "冬末春初过渡期",
+      "predicted_chinese": "春播期"
+    },
+    {
+      "node": {
+        "date": "2023-01-30",
+        "name": "2023年春节后行情",
+        "expected": "spring_summer_transition"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "autumn_winter_transition",
+      "confidence": 0.63,
+      "position_range": [
+        10,
+        30
+      ],
+      "match_score": 0.3,
+      "actual_performance": 4.890000000000001,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "春入夏过渡期",
+      "predicted_chinese": "秋入冬过渡期"
+    },
+    {
+      "node": {
+        "date": "2023-08-28",
+        "name": "2023年政策组合拳",
+        "expected": "spring_sowing"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "winter_hiding",
+      "confidence": 0.7200000000000001,
+      "position_range": [
+        0,
+        20
+      ],
+      "match_score": 0.3,
+      "actual_performance": 2.4048000000000003,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "春播期",
+      "predicted_chinese": "冬藏期"
+    },
+    {
+      "node": {
+        "date": "2024-02-05",
+        "name": "2024年小微盘股危机",
+        "expected": "winter_hiding"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "autumn_winter_transition",
+      "confidence": 0.63,
+      "position_range": [
+        10,
+        30
+      ],
+      "match_score": 0.3,
+      "actual_performance": -2.713,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "冬藏期",
+      "predicted_chinese": "秋入冬过渡期"
+    },
+    {
+      "node": {
+        "date": "2024-09-24",
+        "name": "2024年史诗级政策刺激",
+        "expected": "spring_summer_transition"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "spring_summer_transition",
+      "confidence": 0.675,
+      "position_range": [
+        40,
+        60
+      ],
+      "match_score": 1.0,
+      "actual_performance": 5.382,
+      "analysis": "✅ 准确匹配",
+      "expected_chinese": "春入夏过渡期",
+      "predicted_chinese": "春入夏过渡期"
+    },
+    {
+      "node": {
+        "date": "2025-01-27",
+        "name": "2025年春季躁动",
+        "expected": "spring_sowing"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "chaotic_period",
+      "confidence": 0.5850000000000001,
+      "position_range": [
+        10,
+        30
+      ],
+      "match_score": 0.3,
+      "actual_performance": 2.9616000000000002,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "春播期",
+      "predicted_chinese": "混沌期"
+    },
+    {
+      "node": {
+        "date": "2025-07-28",
+        "name": "2025年夏季调整",
+        "expected": "autumn_harvest"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "spring_sowing",
+      "confidence": 0.63,
+      "position_range": [
+        30,
+        50
+      ],
+      "match_score": 0.3,
+      "actual_performance": -1.098,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "秋收期",
+      "predicted_chinese": "春播期"
+    },
+    {
+      "node": {
+        "date": "2026-02-03",
+        "name": "2026年春节前调整",
+        "expected": "autumn_winter_transition"
+      },
+      "market_data_source": "akshare",
+      "market_data_quality": "estimated_from_index",
+      "predicted_state": "spring_sowing",
+      "confidence": 0.63,
+      "position_range": [
+        30,
+        50
+      ],
+      "match_score": 0.3,
+      "actual_performance": -3.582,
+      "analysis": "❌ 匹配度低",
+      "expected_chinese": "秋入冬过渡期",
+      "predicted_chinese": "春播期"
+    }
+  ]
+}

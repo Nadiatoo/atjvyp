@@ -1,0 +1,56 @@
+# 嵌入模型配置
+embeddings:
+  # 模型选择
+  model:
+    name: "all-MiniLM-L6-v2"
+    provider: "sentence-transformers"
+    version: "2.2.0"
+    
+  # 模型参数
+  parameters:
+    device: "cpu"  # cpu/cuda
+    batch_size: 32
+    normalize_embeddings: true
+    show_progress_bar: false
+    
+  # 文本处理
+  text_processing:
+    chunk_size: 512  # 文本分块大小（字符）
+    chunk_overlap: 50  # 分块重叠
+    max_length: 512  # 最大文本长度
+    
+    # 预处理
+    preprocess:
+      lowercase: true
+      remove_punctuation: false
+      remove_stopwords: false
+      strip_whitespace: true
+      
+  # 缓存配置
+  cache:
+    enabled: true
+    directory: "./vectors/embeddings"
+    max_size: 10000  # 最大缓存向量数
+    ttl: 86400  # 缓存有效期（秒，24小时）
+    
+  # 性能优化
+  optimization:
+    preload: false  # 启动时预加载模型
+    warmup_batches: 10  # 预热批次
+    thread_pool_size: 4  # 线程池大小
+    
+  # 备用模型（主模型失败时使用）
+  fallback_models:
+    - name: "paraphrase-MiniLM-L3-v2"
+      dimension: 384
+    - name: "all-mpnet-base-v2"
+      dimension: 768
+      
+  # 质量监控
+  quality:
+    enabled: true
+    test_phrases:
+      - "彪哥战法"
+      - "市场分析"
+      - "交易策略"
+    expected_similarity: 0.8  # 测试短语期望相似度

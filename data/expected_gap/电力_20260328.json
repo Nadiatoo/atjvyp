@@ -1,0 +1,25 @@
+{
+  "industry": "电力",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 6.7,
+    "profit_growth": 21.4,
+    "order_growth": 72.0,
+    "capacity_utilization": 56.9
+  },
+  "market_expectation": {
+    "analyst_consensus": 13.8,
+    "institution_view": "乐观",
+    "media_sentiment": "积极"
+  },
+  "fund_flow": {
+    "northbound_flow": 96.0,
+    "margin_balance": -47.5,
+    "institution_position": 59.8
+  },
+  "market_sentiment": {
+    "pe_ratio": 24.4,
+    "volume_change": 95.5,
+    "advance_decline_ratio": 3.0
+  }
+}

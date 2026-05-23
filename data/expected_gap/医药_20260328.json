@@ -1,0 +1,25 @@
+{
+  "industry": "医药",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 29.1,
+    "profit_growth": 40.9,
+    "order_growth": 13.2,
+    "capacity_utilization": 91.6
+  },
+  "market_expectation": {
+    "analyst_consensus": 18.7,
+    "institution_view": "谨慎乐观",
+    "media_sentiment": "中性"
+  },
+  "fund_flow": {
+    "northbound_flow": 0.1,
+    "margin_balance": 27.5,
+    "institution_position": 6.4
+  },
+  "market_sentiment": {
+    "pe_ratio": 37.5,
+    "volume_change": 196.2,
+    "advance_decline_ratio": 0.8
+  }
+}

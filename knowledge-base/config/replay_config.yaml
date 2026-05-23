@@ -1,0 +1,114 @@
+# 复盘内容处理配置
+
+# 输入目录配置
+input_dirs:
+  - /Users/tuqibiao/Downloads/2026复盘  # 主要复盘目录
+  # 请添加您的图片思考文件目录
+  # - /path/to/your/thinking/images
+
+# 输出目录配置
+output_dir: raw/processed/replays
+knowledge_base_dir: raw/domains
+
+# 文件处理配置
+file_patterns:
+  pdf: "*.pdf"
+  images: ["*.jpg", "*.jpeg", "*.png", "*.bmp", "*.gif"]
+
+# 解析器配置
+parser:
+  # 章节识别模式
+  section_patterns:
+    market_overview: ["市场概况", "指数分析", "大盘走势", "市场概览"]
+    technical_analysis: ["技术面分析", "技术分析", "图表分析", "技术指标"]
+    emotion_analysis: ["情绪分析", "市场情绪", "投资者心理", "情绪面"]
+    fund_flow: ["资金流向", "资金分析", "北向资金", "主力资金"]
+    risk_warning: ["风险提示", "风险分析", "注意事项", "风险控制"]
+    strategy: ["操作策略", "明日策略", "投资建议", "交易计划"]
+    macro_analysis: ["宏观分析", "宏观环境", "政策分析", "经济数据"]
+    sector_analysis: ["板块分析", "行业分析", "题材分析", "热点板块"]
+  
+  # 分块配置
+  chunking:
+    chunk_size: 500      # 每个块的字数
+    overlap: 50          # 块之间的重叠字数
+  
+  # OCR配置
+  ocr:
+    language: "chi_sim+eng"  # 中文简体+英文
+    timeout: 30              # 超时时间（秒）
+
+# 分类规则
+classification:
+  # 领域映射
+  domains:
+    trading: ["复盘", "策略", "风险", "资金", "板块", "龙头"]
+    methodology: ["框架", "模板", "思维", "方法", "模型"]
+    personal: ["思考", "心得", "体会", "总结", "反思"]
+  
+  # 子领域映射
+  subdomains:
+    trading:
+      market_analysis: ["复盘", "分析", "总结"]
+      daily_replay: ["每日", "日报", "日复盘"]
+      weekly_replay: ["周", "周报", "周复盘"]
+      monthly_replay: ["月", "月报", "月复盘"]
+      deep_analysis: ["深度", "深度分析", "专题"]
+      strategies: ["策略", "战法", "方法"]
+      risk_management: ["风险", "风控", "控制"]
+    
+    methodology:
+      frameworks: ["框架", "模板", "结构"]
+      probability_thinking: ["概率", "随机", "不确定性"]
+      system_thinking: ["系统", "网络", "复杂", "关联"]
+      data_analysis: ["数据", "统计", "分析", "量化"]
+    
+    personal:
+      thinking: ["思维", "思考", "想法", "观点"]
+      insights: ["洞察", "发现", "领悟"]
+      mistakes: ["错误", "教训", "失败"]
+      improvements: ["改进", "优化", "提升"]
+  
+  # 优先级规则
+  priority:
+    high: ["重要", "核心", "关键", "主要"]
+    medium: []  # 默认中等优先级
+    low: ["草稿", "临时", "初步", "测试"]
+
+# 知识库配置
+knowledge_base:
+  # 向量数据库配置
+  vector_db:
+    collection_name: "replay_knowledge"
+    embedding_model: "all-MiniLM-L6-v2"
+    distance_metric: "cosine"
+  
+  # 同步配置
+  sync:
+    auto_sync: true
+    sync_interval: 300  # 5分钟
+  
+  # 搜索配置
+  search:
+    default_limit: 10
+    similarity_threshold: 0.7
+
+# 日志配置
+logging:
+  level: "INFO"
+  file: "logs/replay_processing.log"
+  max_size_mb: 10
+  backup_count: 5
+
+# 性能配置
+performance:
+  max_workers: 4
+  batch_size: 10
+  timeout_seconds: 300
+
+# 备份配置
+backup:
+  enabled: true
+  backup_dir: "backups/replays"
+  keep_days: 30
+  compress: true

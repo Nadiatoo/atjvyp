@@ -1,0 +1,17 @@
+{
+  "name": "彪哥战法-盘前分析-QVeris",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 8 * * 1-5",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "agentTurn",
+    "message": "执行彪哥战法盘前分析 (QVeris数据源)",
+    "model": "deepseek/deepseek-chat"
+  },
+  "sessionTarget": "isolated",
+  "delivery": {
+    "mode": "announce"
+  }
+}

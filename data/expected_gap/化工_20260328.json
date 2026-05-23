@@ -1,0 +1,25 @@
+{
+  "industry": "化工",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 15.4,
+    "profit_growth": 40.0,
+    "order_growth": 20.0,
+    "capacity_utilization": 82.3
+  },
+  "market_expectation": {
+    "analyst_consensus": 18.8,
+    "institution_view": "谨慎乐观",
+    "media_sentiment": "消极"
+  },
+  "fund_flow": {
+    "northbound_flow": -36.0,
+    "margin_balance": 163.8,
+    "institution_position": 54.0
+  },
+  "market_sentiment": {
+    "pe_ratio": 41.6,
+    "volume_change": 22.8,
+    "advance_decline_ratio": 2.6
+  }
+}

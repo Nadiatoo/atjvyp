@@ -1,0 +1,249 @@
+{
+  "version": "1.1.0",
+  "created_at": "2026-03-16T11:58:00+08:00",
+  "updated_at": "2026-04-16T11:58:00+08:00",
+  "manager": {
+    "id": "main_agent",
+    "name": "主Agent",
+    "display_name": "总舵",
+    "icon": "🚀",
+    "role": "总负责人",
+    "permissions": ["full_access", "skill_approval", "agent_management", "system_config"]
+  },
+  "agents": {
+    "market_analyst": {
+      "id": "market_analyst",
+      "name": "市场分析Agent",
+      "display_name": "智研",
+      "icon": "📈",
+      "status": "active",
+      "created_at": "2026-04-16T00:48:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/market_analyst",
+      "role": "执行层-专业Agent（证券分析师视角）",
+      "responsibilities": [
+        "深度市场研究分析",
+        "基本面分析与估值",
+        "行业趋势与竞争格局",
+        "政策影响评估",
+        "投资逻辑构建",
+        "研究报告撰写"
+      ],
+      "permissions": ["read_skill_registry", "execute_tasks", "write_own_memory"],
+      "restrictions": ["cannot_create_skills", "cannot_modify_others"],
+      "schedule": "按需",
+      "model": "deepseek/deepseek-reasoner",
+      "memory_file": "agent_memory.md",
+      "skills": ["qveris-official", "tushare-finance", "data-analyst", "web_fetch"]
+    },
+    "trading_strategist": {
+      "id": "trading_strategist",
+      "name": "交易策略Agent",
+      "display_name": "速锋",
+      "icon": "⚡",
+      "status": "active",
+      "created_at": "2026-04-16T00:48:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/trading_strategist",
+      "role": "执行层-专业Agent（顶级短线交易员视角）",
+      "responsibilities": [
+        "市场节奏与情绪把握",
+        "短线交易机会识别",
+        "风险控制与仓位管理",
+        "交易执行策略制定",
+        "技术分析与图表识别",
+        "交易信号生成与验证"
+      ],
+      "permissions": ["read_skill_registry", "execute_tasks", "write_own_memory"],
+      "restrictions": ["cannot_create_skills", "cannot_modify_others"],
+      "schedule": "按需",
+      "model": "deepseek/deepseek-chat",
+      "memory_file": "agent_memory.md",
+      "skills": ["stock-analysis", "stock-watcher", "qveris-official", "data-analyst"]
+    },
+    "data_collector": {
+      "id": "data_collector",
+      "name": "数据收集Agent",
+      "display_name": "数捕",
+      "icon": "📡",
+      "status": "active",
+      "created_at": "2026-03-16T11:58:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/data_collector",
+      "role": "执行层-专业Agent",
+      "responsibilities": [
+        "实时市场数据收集",
+        "新闻资讯抓取",
+        "财务数据更新",
+        "技术指标计算",
+        "数据清洗整理",
+        "数据质量检查"
+      ],
+      "permissions": ["read_skill_registry", "execute_tasks", "write_own_memory", "access_external_apis"],
+      "restrictions": ["cannot_create_skills", "cannot_modify_core_data"],
+      "schedule": "实时",
+      "model": "deepseek/deepseek-chat",
+      "memory_file": "agent_memory.md",
+      "skills": ["qveris-official", "agent-reach", "web_fetch", "data_processing"]
+    },
+    "tool_developer": {
+      "id": "tool_developer",
+      "name": "工具开发Agent",
+      "display_name": "码匠",
+      "icon": "🔧",
+      "status": "active",
+      "created_at": "2026-04-16T00:48:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/tool_developer",
+      "role": "执行层-专业Agent（量化编程专家视角）",
+      "responsibilities": [
+        "量化模型开发与优化",
+        "数据管道与ETL设计",
+        "API接口开发集成",
+        "自动化脚本编写",
+        "系统架构设计",
+        "技术方案实现与测试"
+      ],
+      "permissions": ["read_skill_registry", "execute_tasks", "write_own_memory", "propose_new_skills"],
+      "restrictions": ["cannot_approve_skills", "cannot_modify_core_systems"],
+      "schedule": "按需",
+      "model": "deepseek/deepseek-chat",
+      "memory_file": "agent_memory.md",
+      "skills": ["skill-creator", "data-analyst", "qveris-official", "web_fetch", "python_development"]
+    },
+    "client_service": {
+      "id": "client_service",
+      "name": "客户服务Agent",
+      "display_name": "顾伴",
+      "icon": "🤝",
+      "status": "active",
+      "created_at": "2026-04-16T00:48:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/client_service",
+      "role": "执行层-专业Agent（顶级投资顾问视角）",
+      "responsibilities": [
+        "客户持仓分析与诊断",
+        "个性化资产配置建议",
+        "投资组合风险评估",
+        "定期投资报告生成",
+        "客户需求沟通理解",
+        "服务方案设计与优化"
+      ],
+      "permissions": ["read_skill_registry", "execute_tasks", "write_own_memory"],
+      "restrictions": ["cannot_create_skills", "cannot_modify_client_data"],
+      "schedule": "按需",
+      "model": "deepseek/deepseek-chat",
+      "memory_file": "agent_memory.md",
+      "skills": ["stock-watcher", "stock-analysis", "data-analyst", "qveris-official"]
+    },
+    "spec_reviewer": {
+      "id": "spec_reviewer",
+      "name": "规范评审Agent",
+      "display_name": "规审",
+      "icon": "✅",
+      "status": "active",
+      "created_at": "2026-03-16T11:58:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/spec_reviewer",
+      "role": "评审层-质量保障",
+      "responsibilities": [
+        "任务规范符合性评审",
+        "需求完整性检查",
+        "功能正确性验证",
+        "规范偏差识别",
+        "评审报告生成",
+        "改进建议提供"
+      ],
+      "permissions": ["read_tasks", "read_outputs", "write_reviews"],
+      "restrictions": ["cannot_execute_tasks", "cannot_modify_code"],
+      "schedule": "按需",
+      "model": "deepseek/deepseek-reasoner",
+      "memory_file": "agent_memory.md",
+      "skills": ["code_review", "spec_analysis", "quality_assurance"]
+    },
+    "quality_reviewer": {
+      "id": "quality_reviewer",
+      "name": "质量评审Agent",
+      "display_name": "质检",
+      "icon": "🔍",
+      "status": "active",
+      "created_at": "2026-03-16T11:58:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/quality_reviewer",
+      "role": "评审层-质量保障",
+      "responsibilities": [
+        "代码质量评审",
+        "最佳实践检查",
+        "性能优化建议",
+        "可维护性评估",
+        "安全漏洞检查",
+        "质量评分生成"
+      ],
+      "permissions": ["read_code", "read_outputs", "write_reviews"],
+      "restrictions": ["cannot_execute_tasks", "cannot_modify_code"],
+      "schedule": "按需",
+      "model": "deepseek/deepseek-reasoner",
+      "memory_file": "agent_memory.md",
+      "skills": ["code_review", "static_analysis", "security_scan", "performance_analysis"]
+    },
+    "task_scheduler": {
+      "id": "task_scheduler",
+      "name": "任务调度Agent",
+      "display_name": "调序",
+      "icon": "🔄",
+      "status": "active",
+      "created_at": "2026-03-16T11:58:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/task_scheduler",
+      "role": "管理层-协调监控",
+      "responsibilities": [
+        "任务队列管理",
+        "Agent资源调度",
+        "优先级分配",
+        "依赖关系处理",
+        "负载均衡",
+        "调度优化"
+      ],
+      "permissions": ["read_tasks", "assign_tasks", "monitor_status"],
+      "restrictions": ["cannot_execute_tasks", "cannot_modify_outputs"],
+      "schedule": "持续",
+      "model": "deepseek/deepseek-chat",
+      "memory_file": "agent_memory.md",
+      "skills": ["task_management", "resource_scheduling", "workflow_optimization"]
+    },
+    "performance_monitor": {
+      "id": "performance_monitor",
+      "name": "绩效监控Agent",
+      "display_name": "效监",
+      "icon": "📊",
+      "status": "active",
+      "created_at": "2026-03-16T11:58:00+08:00",
+      "workdir": "/Users/tuqibiao/.openclaw/workspace/agents/performance_monitor",
+      "role": "管理层-协调监控",
+      "responsibilities": [
+        "Agent性能监控",
+        "任务执行统计",
+        "质量指标跟踪",
+        "成本分析报告",
+        "异常检测告警",
+        "优化建议提供"
+      ],
+      "permissions": ["read_logs", "read_metrics", "write_reports"],
+      "restrictions": ["cannot_modify_config", "cannot_stop_agents"],
+      "schedule": "持续",
+      "model": "deepseek/deepseek-chat",
+      "memory_file": "agent_memory.md",
+      "skills": ["monitoring", "analytics", "reporting", "alerting"]
+    }
+  },
+  "skill_management": {
+    "registry_integration": true,
+    "approval_required": true,
+    "approver": "main_agent",
+    "review_process": ["proposal", "technical_review", "security_review", "approval"],
+    "permission_levels": {
+      "public": "所有Agent可读",
+      "restricted": "特定Agent可读",
+      "private": "仅创建者和管理员可读"
+    }
+  },
+  "system_config": {
+    "workspace_root": "/Users/tuqibiao/.openclaw/workspace",
+    "agents_dir": "/Users/tuqibiao/.openclaw/workspace/agents",
+    "skill_registry_path": "/Users/tuqibiao/.openclaw/workspace/skill_registry.json",
+    "task_queue_path": "/Users/tuqibiao/.openclaw/workspace/task_queue.json",
+    "performance_logs_dir": "/Users/tuqibiao/.openclaw/workspace/performance_logs"
+  }
+}

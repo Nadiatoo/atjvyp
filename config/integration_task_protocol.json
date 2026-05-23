@@ -1,0 +1,123 @@
+{
+  "version": "1.0",
+  "protocol_name": "Multi-Agent Task Dispatch Protocol v1",
+  "task_id_format": "{source_prefix}-{YYYYMMDD}-{counter}",
+  "source_prefixes": {
+    "OC": "openclaw",
+    "HR": "hermes",
+    "CC": "claude-code"
+  },
+  "task_lifecycle": {
+    "states": ["pending", "assigned", "executing", "reviewing", "completed", "failed", "blocked"],
+    "transitions": {
+      "pending -> assigned": {
+        "actor": "Hermes orchestrator",
+        "action": "Assigns task to executor based on type and availability"
+      },
+      "assigned -> executing": {
+        "actor": "Executor (Claude Code / sub-agent)",
+        "action": "Acknowledges task, moves to in_progress/"
+      },
+      "executing -> reviewing": {
+        "actor": "Executor",
+        "action": "Submits results, moves task to completed/"
+      },
+      "reviewing -> completed": {
+        "actor": "Reviewer (spec_reviewer / quality_reviewer)",
+        "action": "Approves results, stores to ClawMem"
+      },
+      "reviewing -> executing": {
+        "actor": "Reviewer",
+        "action": "Requests changes, returns task to executor"
+      },
+      "executing -> failed": {
+        "actor": "Executor",
+        "action": "Marks unrecoverable error, moves to completed/ with status: failed"
+      },
+      "* -> blocked": {
+        "actor": "Any agent",
+        "action": "External dependency prevents progress"
+      }
+    }
+  },
+  "task_types": {
+    "code_write": {
+      "executor": "claude-code",
+      "reviewer": "quality_reviewer",
+      "description": "New code, refactoring, or bug fixes"
+    },
+    "code_review": {
+      "executor": "claude-code",
+      "reviewer": "spec_reviewer",
+      "description": "Code review and quality checks"
+    },
+    "data_analysis": {
+      "executor": "market_analyst|data_collector",
+      "reviewer": "quality_reviewer",
+      "description": "Market analysis, data pipeline work"
+    },
+    "report_generate": {
+      "executor": "claude-code|tool_developer",
+      "reviewer": "spec_reviewer",
+      "description": "Formatted report generation"
+    },
+    "memory_update": {
+      "executor": "any",
+      "reviewer": "main_agent",
+      "description": "Memory consolidation and cleanup"
+    },
+    "skill_improve": {
+      "executor": "claude-code|tool_developer",
+      "reviewer": "quality_reviewer",
+      "description": "Skill code improvements"
+    }
+  },
+  "communication_channels": {
+    "real_time": {
+      "method": "MCP (stdio JSON-RPC)",
+      "connections": [
+        "hermes <-> openclaw (bidirectional, configured)",
+        "claude-code <-> hermes (.mcp.json)",
+        "claude-code <-> openclaw (.mcp.json)"
+      ],
+      "use_for": "queries, status checks, urgent dispatch, memory search"
+    },
+    "async_task": {
+      "method": "File-based (task inbox directories)",
+      "paths": {
+        "claude_inbox": "~/.claude/tasks/inbox/",
+        "claude_in_progress": "~/.claude/tasks/in_progress/",
+        "claude_completed": "~/.claude/tasks/completed/"
+      },
+      "use_for": "task dispatch, results delivery"
+    },
+    "broadcast": {
+      "method": "Hermes messaging via feishu",
+      "use_for": "alerts, status updates, human notifications"
+    },
+    "persistence": {
+      "method": "ClawMem mem0 + workspace memory files",
+      "use_for": "long-term knowledge, decisions, learnings"
+    }
+  },
+  "priority_matrix": {
+    "critical": {
+      "max_response_time": "5 minutes",
+      "requires_ack": true,
+      "notify_channel": "feishu"
+    },
+    "high": {
+      "max_response_time": "30 minutes",
+      "requires_ack": true,
+      "notify_channel": "feishu"
+    },
+    "normal": {
+      "max_response_time": "4 hours",
+      "requires_ack": false
+    },
+    "low": {
+      "max_response_time": "24 hours",
+      "requires_ack": false
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "memory": {
+    "dreaming": {
+      "enabled": true,
+      "frequency": "daily",
+      "recencyHalfLifeDays": 7,
+      "maxAgeDays": 30
+    },
+    "notes": {
+      "directory": "/Users/tuqibiao/.openclaw/workspace/memory",
+      "dailyFormat": "YYYY-MM-DD.md"
+    }
+  },
+  "cache": {
+    "promptCache": {
+      "enabled": true,
+      "maxSize": 1000,
+      "ttl": 86400
+    },
+    "kvCache": {
+      "enabled": true
+    }
+  },
+  "ui": {
+    "language": "zh-CN",
+    "assistant": {
+      "avatar": "/Users/tuqibiao/.openclaw/workspace/avatars/openclaw.png"
+    }
+  },
+  "agents": {
+    "defaults": {
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokens": 30000,
+        "keepRecentTokens": 15000,
+        "maxHistoryShare": 0.5,
+        "recentTurnsPreserve": 10
+      }
+    }
+  }
+}

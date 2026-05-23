@@ -1,0 +1,341 @@
+#!/usr/bin/env python3
+"""
+生成市场分析PPT
+"""
+
+import json
+from datetime import datetime
+
+def create_ppt_content():
+    """创建PPT内容"""
+    
+    # 获取当前时间
+    current_time = datetime.now().strftime("%Y年%m月%d日 %H:%M")
+    
+    # PPT结构
+    ppt_structure = {
+        "title": "市场行情分析报告",
+        "subtitle": "2026年3月22-23日市场综合分析",
+        "author": "彪哥战法量化分析团队",
+        "date": current_time,
+        "slides": []
+    }
+    
+    # 幻灯片1: 封面
+    ppt_structure["slides"].append({
+        "title": "市场行情分析报告",
+        "content": [
+            "2026年3月22-23日市场综合分析",
+            "彪哥战法量化分析团队",
+            current_time
+        ],
+        "type": "cover"
+    })
+    
+    # 幻灯片2: 目录
+    ppt_structure["slides"].append({
+        "title": "目录",
+        "content": [
+            "1. 市场概况与指数表现",
+            "2. 季节判断与仓位建议", 
+            "3. 热点板块分析",
+            "4. 龙头股与中军股表现",
+            "5. 风险提示与明日策略",
+            "6. 总结与展望"
+        ],
+        "type": "toc"
+    })
+    
+    # 幻灯片3: 市场概况
+    ppt_structure["slides"].append({
+        "title": "市场概况",
+        "content": [
+            "### 3月23日收盘数据",
+            "- **上证指数**: 3813.28 🔴 -3.63%",
+            "- **深证成指**: 13345.51 🔴 -3.76%", 
+            "- **创业板指**: 3235.22 🔴 -3.49%",
+            "- **两市成交额**: 约1.23万亿元",
+            "",
+            "### 3月22日对比",
+            "- 上证指数: -1.24%",
+            "- 深证成指: -0.25%",
+            "- 创业板指: +1.30%",
+            "",
+            "**结论**: 市场连续两日下跌，3月23日跌幅显著扩大"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片4: 技术分析
+    ppt_structure["slides"].append({
+        "title": "技术面分析",
+        "content": [
+            "### 关键点位",
+            "- 上证指数: 跌破3800点重要支撑",
+            "- 深证成指: 跌破13500点关口", 
+            "- 创业板指: 相对抗跌，但仍下跌3.49%",
+            "",
+            "### 成交量分析",
+            "- 成交量维持万亿级别",
+            "- 下跌放量，显示抛压较重",
+            "- 资金流出明显",
+            "",
+            "### 市场结构",
+            "- 三大指数全线下跌",
+            "- 权重股领跌",
+            "- 中小盘股跟随下跌"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片5: 季节判断
+    ppt_structure["slides"].append({
+        "title": "季节判断与仓位建议",
+        "content": [
+            "### 季节判断系统",
+            "- **当前季节**: 冬藏期",
+            "- **评分**: 25分（满分100）",
+            "- **判断依据**:",
+            "  1. 指数连续下跌",
+            "  2. 市场情绪极度悲观", 
+            "  3. 成交量萎缩",
+            "  4. 技术面破位",
+            "",
+            "### 仓位建议",
+            "- **建议仓位**: 20-30%",
+            "- **操作策略**: 防守为主，轻仓试探",
+            "- **风险控制**: 严格止损，控制回撤"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片6: 热点板块
+    ppt_structure["slides"].append({
+        "title": "热点板块分析",
+        "content": [
+            "### 强势板块",
+            "1. **芯片概念**",
+            "   - 催化剂: 马斯克宣布建全球最大芯片厂",
+            "   - 相关个股: 芯片设计、制造、设备",
+            "",
+            "2. **电力能源**",
+            "   - 催化剂: 能源政策支持",
+            "   - 相关个股: 华电辽能、华电能源",
+            "",
+            "3. **防御性板块**",
+            "   - 消费、医药、公用事业",
+            "   - 市场下跌时的避风港",
+            "",
+            "### 弱势板块",
+            "- 高估值科技股",
+            "- 周期股", 
+            "- 前期涨幅过大个股"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片7: 龙头股表现
+    ppt_structure["slides"].append({
+        "title": "龙头股表现",
+        "content": [
+            "### 连板龙头",
+            "1. **深华发Ａ (000020)**",
+            "   - 连板: 5.0板 | 涨幅: 10.00%",
+            "   - 逻辑: 强势龙头，资金抱团",
+            "",
+            "2. **华电辽能 (600396)**",
+            "   - 连板: 5.0板 | 涨幅: 10.02%", 
+            "   - 逻辑: 电力改革，政策支持",
+            "",
+            "3. **大胜达 (603687)**",
+            "   - 连板: 3.0板 | 涨幅: 10.02%",
+            "   - 逻辑: 细分行业龙头",
+            "",
+            "### 龙头股特征",
+            "- 连板效应明显",
+            "- 资金集中度高",
+            "- 风险收益比需谨慎评估"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片8: 中军股跟踪
+    ppt_structure["slides"].append({
+        "title": "中军股跟踪",
+        "content": [
+            "### 趋势中军",
+            "1. **华电能源 (600726)**",
+            "   - 市值: 412.64亿 | 成交: 29.63亿",
+            "   - 逻辑: 大资金参与，趋势稳健",
+            "",
+            "2. **云南锗业 (002428)**",
+            "   - 市值: 283.81亿 | 成交: 8.41亿",
+            "   - 逻辑: 机构关注，资源属性", 
+            "",
+            "3. **石大胜华 (603026)**",
+            "   - 市值: 175.48亿 | 成交: 14.04亿",
+            "   - 逻辑: 新能源材料，机构重仓",
+            "",
+            "### 中军股作用",
+            "- 稳定市场情绪",
+            "- 反映机构动向", 
+            "- 提供趋势参考"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片9: 风险提示
+    ppt_structure["slides"].append({
+        "title": "风险提示",
+        "content": [
+            "### 系统性风险",
+            "1. **市场风险**",
+            "   - 指数连续下跌",
+            "   - 技术面破位",
+            "   - 情绪面悲观",
+            "",
+            "2. **外部风险**",
+            "   - 全球市场波动",
+            "   - 地缘政治因素", 
+            "   - 汇率波动",
+            "",
+            "3. **政策风险**",
+            "   - 监管政策变化",
+            "   - 货币政策调整",
+            "   - 产业政策影响",
+            "",
+            "### 操作风险**",
+            "- 追高风险 | 止损不及时",
+            "- 仓位过重 | 情绪化交易"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片10: 明日策略
+    ppt_structure["slides"].append({
+        "title": "明日策略",
+        "content": [
+            "### 短期策略（1-3天）",
+            "- **仓位控制**: 20-30%",
+            "- **操作方向**: 防御为主",
+            "- **关注板块**: 消费、医药、公用事业",
+            "- **回避板块**: 高估值、周期股",
+            "",
+            "### 中期策略（1-2周）",
+            "- 等待企稳信号",
+            "- 观察成交量变化", 
+            "- 关注政策面动向",
+            "- 逐步布局优质标的",
+            "",
+            "### 具体操作建议",
+            "**买入条件**:",
+            "- 指数连续3日收阳",
+            "- 成交量放大",
+            "- 龙头股企稳"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片11: 总结
+    ppt_structure["slides"].append({
+        "title": "总结与展望",
+        "content": [
+            "### 核心观点",
+            "1. 市场进入冬藏期，防守为主",
+            "2. 控制仓位在20-30%", 
+            "3. 关注防御性板块",
+            "4. 等待市场企稳信号",
+            "",
+            "### 关键指标",
+            "- 上证指数3800点支撑",
+            "- 成交量变化",
+            "- 龙头股表现", 
+            "- 政策面动向",
+            "",
+            "### 风险收益比",
+            "- 当前风险: 高",
+            "- 预期收益: 低", 
+            "- 建议: 谨慎操作，控制风险"
+        ],
+        "type": "content"
+    })
+    
+    # 幻灯片12: 结束页
+    ppt_structure["slides"].append({
+        "title": "谢谢",
+        "content": [
+            "彪哥战法量化分析团队",
+            "2026年3月23日",
+            "",
+            "**风险提示**:",
+            "本报告仅供参考，不构成投资建议",
+            "投资有风险，入市需谨慎"
+        ],
+        "type": "end"
+    })
+    
+    return ppt_structure
+
+def save_ppt_formats(ppt_data):
+    """保存PPT为不同格式"""
+    
+    # 1. 保存为JSON格式
+    with open('/Users/tuqibiao/.openclaw/workspace/market_analysis_ppt.json', 'w', encoding='utf-8') as f:
+        json.dump(ppt_data, f, ensure_ascii=False, indent=2)
+    
+    # 2. 保存为Markdown格式（可直接导入PPT）
+    md_content = "# 市场行情分析PPT\n\n"
+    
+    for i, slide in enumerate(ppt_data["slides"], 1):
+        md_content += f"## 幻灯片{i}: {slide['title']}\n\n"
+        for line in slide["content"]:
+            md_content += f"{line}\n"
+        md_content += "\n---\n\n"
+    
+    with open('/Users/tuqibiao/.openclaw/workspace/market_analysis_ppt_slides.md', 'w', encoding='utf-8') as f:
+        f.write(md_content)
+    
+    # 3. 保存为文本格式（简单版）
+    txt_content = "市场行情分析PPT\n"
+    txt_content += "=" * 50 + "\n\n"
+    
+    for i, slide in enumerate(ppt_data["slides"], 1):
+        txt_content += f"幻灯片{i}: {slide['title']}\n"
+        txt_content += "-" * 30 + "\n"
+        for line in slide["content"]:
+            if line.strip():
+                txt_content += f"{line}\n"
+        txt_content += "\n"
+    
+    with open('/Users/tuqibiao/.openclaw/workspace/market_analysis_ppt.txt', 'w', encoding='utf-8') as f:
+        f.write(txt_content)
+    
+    return {
+        "json": "/Users/tuqibiao/.openclaw/workspace/market_analysis_ppt.json",
+        "markdown": "/Users/tuqibiao/.openclaw/workspace/market_analysis_ppt_slides.md",
+        "text": "/Users/tuqibiao/.openclaw/workspace/market_analysis_ppt.txt"
+    }
+
+def main():
+    """主函数"""
+    print("🚀 正在生成市场行情分析PPT...")
+    
+    # 创建PPT内容
+    ppt_data = create_ppt_content()
+    
+    # 保存为不同格式
+    files = save_ppt_formats(ppt_data)
+    
+    print("✅ PPT生成完成！")
+    print(f"📊 总幻灯片数: {len(ppt_data['slides'])}")
+    print(f"📁 生成的文件:")
+    print(f"  1. JSON格式: {files['json']}")
+    print(f"  2. Markdown格式: {files['markdown']}")
+    print(f"  3. 文本格式: {files['text']}")
+    print("\n🎯 使用建议:")
+    print("  1. 使用Markdown文件直接导入PPT软件")
+    print("  2. JSON文件可用于程序化处理")
+    print("  3. 文本文件便于快速查看")
+
+if __name__ == "__main__":
+    main()

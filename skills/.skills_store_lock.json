@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "image-content-extractor": {
+      "name": "Image Content Extractor",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=image-content-extractor",
+      "source": "skillhub",
+      "version": "2.0.0"
+    },
+    "image-read": {
+      "name": "explain image",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=image-read",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "vision-tagger": {
+      "name": "Vision Tagger",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=vision-tagger",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "vision-bot": {
+      "name": "Vision Bot",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=vision-bot",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "subagent-driven-development": {
+      "name": "Subagent Driven Development",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=subagent-driven-development",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "summarize": {
+      "name": "Summarize",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=summarize",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "data-analyst": {
+      "name": "Data Analyst",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=data-analyst",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-news-collectors": {
+      "name": "ai-news-collectors",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-news-collectors",
+      "source": "skillhub",
+      "version": "1.0.0"
+    }
+  }
+}

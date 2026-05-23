@@ -1,0 +1,25 @@
+{
+  "industry": "房地产",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 6.9,
+    "profit_growth": 16.5,
+    "order_growth": 54.1,
+    "capacity_utilization": 79.2
+  },
+  "market_expectation": {
+    "analyst_consensus": 0.7,
+    "institution_view": "中性",
+    "media_sentiment": "积极"
+  },
+  "fund_flow": {
+    "northbound_flow": -99.3,
+    "margin_balance": 37.0,
+    "institution_position": 55.0
+  },
+  "market_sentiment": {
+    "pe_ratio": 59.5,
+    "volume_change": -10.0,
+    "advance_decline_ratio": 2.1
+  }
+}

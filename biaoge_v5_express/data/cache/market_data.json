@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-26T20:08:19.439079",
+  "source": "eastmoney",
+  "total_stocks": 3,
+  "rise_count": 0,
+  "fall_count": 3,
+  "rise_ratio": 0.0,
+  "average_change": -1.2733333333333334,
+  "data_quality": "partial",
+  "note": "从东方财富获取的简化数据"
+}

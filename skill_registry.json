@@ -1,74 +1,7 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-03-15T09:58:29.979166",
+  "last_updated": "2026-05-13T21:29:11.319001",
   "registry": {
-    "skill_registry_manager": {
-      "name": "Skill注册表管理器",
-      "description": "管理所有skill的注册表系统，提供skill发现、调用、状态监控功能",
-      "category": "system",
-      "location": "workspace/skill_registry.json",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "system",
-        "management",
-        "registry"
-      ],
-      "usage_count": 1,
-      "last_used": "2026-03-14T17:37:19.383359"
-    },
-    "user_self-improving": {
-      "name": "Self Improving",
-      "description": "Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and improves permanently.",
-      "category": "ai",
-      "location": "/Users/tuqibiao/.openclaw/skills/self-improving",
-      "source": "user",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "ai",
-        "user"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.953144"
-    },
-    "user_biage-market-analyzer": {
-      "name": "Biage Market Analyzer",
-      "description": "彪哥战法全市场分析器 - 基于akshare获取全市场数据，实时季节判断，识别龙头/中军候选。",
-      "category": "finance",
-      "location": "/Users/tuqibiao/.openclaw/skills/biage-market-analyzer",
-      "source": "user",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "finance",
-        "user"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.954208"
-    },
-    "user_biage-premarket-analyzer": {
-      "name": "Biage Premarket Analyzer",
-      "description": "biage-premarket-analyzer skill",
-      "category": "finance",
-      "location": "/Users/tuqibiao/.openclaw/workspace/skills/biage-premarket-analyzer",
-      "source": "user",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "finance",
-        "user"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.960500"
-    },
     "user_biage-report-generator": {
       "name": "Biage Report Generator",
       "description": "彪哥战法报告生成器 - 自动生成周报（JPG图片）和观点包（Word文档），保存到桌面。",
@@ -84,45 +17,14 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.954913"
-    },
-    "user_find-skills": {
-      "name": "Find Skills",
-      "description": "Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.",
-      "category": "system",
-      "location": "/Users/tuqibiao/.openclaw/workspace/skills/find-skills",
-      "source": "user",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "system",
-        "user"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.960806"
-    },
-    "user_tushare-finance": {
-      "name": "Tushare Finance",
-      "description": "获取中国金融市场数据（A股、港股、美股、基金、期货、债券）。支持220+个Tushare Pro接口：股票行情、财务报表、宏观经济指标。当用户请求股价数据、财务分析、指数行情、GDP/CPI等宏观数据时使用。",
-      "category": "finance",
-      "location": "/Users/tuqibiao/.openclaw/skills/tushare-finance",
-      "source": "user",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "finance",
-        "user"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.955511"
+      "registered_at": "2026-03-30T18:25:14.315889",
+      "health_score": 87,
+      "health_status": "healthy",
+      "last_health_check": "2026-05-13T21:29:11.319001"
     },
     "user_agent-reach": {
       "name": "Agent Reach",
-      "description": ">",
+      "description": "[Agent Reach] (description pending)",
       "category": "system",
       "location": "/Users/tuqibiao/.openclaw/skills/agent-reach",
       "source": "user",
@@ -135,24 +37,10 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.955925"
-    },
-    "user_skill-vetter": {
-      "name": "Skill Vetter",
-      "description": "skill-vetter skill",
-      "category": "system",
-      "location": "/Users/tuqibiao/.openclaw/skills/skill-vetter",
-      "source": "user",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "system",
-        "user"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.956190"
+      "registered_at": "2026-03-30T18:25:14.317619",
+      "health_score": 75,
+      "health_status": "healthy",
+      "last_health_check": "2026-05-13T21:29:11.319001"
     },
     "system_nano-pdf": {
       "name": "Nano Pdf",
@@ -169,7 +57,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.968950"
+      "registered_at": "2026-03-30T18:25:14.330814"
     },
     "system_himalaya": {
       "name": "Himalaya",
@@ -186,7 +74,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.969275"
+      "registered_at": "2026-03-30T18:25:14.331190"
     },
     "system_bear-notes": {
       "name": "Bear Notes",
@@ -203,7 +91,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.969544"
+      "registered_at": "2026-03-30T18:25:14.331462"
     },
     "system_peekaboo": {
       "name": "Peekaboo",
@@ -220,7 +108,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.969922"
+      "registered_at": "2026-03-30T18:25:14.331792"
     },
     "system_model-usage": {
       "name": "Model Usage",
@@ -237,7 +125,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.970147"
+      "registered_at": "2026-03-30T18:25:14.332055"
     },
     "system_blogwatcher": {
       "name": "Blogwatcher",
@@ -254,7 +142,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.970289"
+      "registered_at": "2026-03-30T18:25:14.332343"
     },
     "system_discord": {
       "name": "Discord",
@@ -271,7 +159,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.970483"
+      "registered_at": "2026-03-30T18:25:14.333166"
     },
     "system_coding-agent": {
       "name": "Coding Agent",
@@ -288,7 +176,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.970816"
+      "registered_at": "2026-03-30T18:25:14.333570"
     },
     "system_openhue": {
       "name": "Openhue",
@@ -305,7 +193,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.970981"
+      "registered_at": "2026-03-30T18:25:14.333744"
     },
     "system_gemini": {
       "name": "Gemini",
@@ -322,7 +210,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.971116"
+      "registered_at": "2026-03-30T18:25:14.333899"
     },
     "system_gifgrep": {
       "name": "Gifgrep",
@@ -339,7 +227,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.971256"
+      "registered_at": "2026-03-30T18:25:14.334060"
     },
     "system_session-logs": {
       "name": "Session Logs",
@@ -356,7 +244,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.971408"
+      "registered_at": "2026-03-30T18:25:14.334245"
     },
     "system_ordercli": {
       "name": "Ordercli",
@@ -373,7 +261,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.971548"
+      "registered_at": "2026-03-30T18:25:14.334693"
     },
     "system_openai-whisper": {
       "name": "Openai Whisper",
@@ -390,7 +278,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.971669"
+      "registered_at": "2026-03-30T18:25:14.334819"
     },
     "system_spotify-player": {
       "name": "Spotify Player",
@@ -407,7 +295,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.971800"
+      "registered_at": "2026-03-30T18:25:14.334973"
     },
     "system_healthcheck": {
       "name": "Healthcheck",
@@ -424,7 +312,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.972108"
+      "registered_at": "2026-03-30T18:25:14.335325"
     },
     "system_oracle": {
       "name": "Oracle",
@@ -441,7 +329,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.972471"
+      "registered_at": "2026-03-30T18:25:14.335516"
     },
     "system_xurl": {
       "name": "Xurl",
@@ -458,24 +346,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.972883"
-    },
-    "system_summarize": {
-      "name": "Summarize",
-      "description": "Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).",
-      "category": "system",
-      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/summarize",
-      "source": "system",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "system",
-        "system"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.973043"
+      "registered_at": "2026-03-30T18:25:14.335956"
     },
     "system_clawhub": {
       "name": "Clawhub",
@@ -492,7 +363,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.973178"
+      "registered_at": "2026-03-30T18:25:14.336265"
     },
     "system_bluebubbles": {
       "name": "Bluebubbles",
@@ -509,7 +380,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.973338"
+      "registered_at": "2026-03-30T18:25:14.336445"
     },
     "system_sherpa-onnx-tts": {
       "name": "Sherpa Onnx Tts",
@@ -526,7 +397,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.973493"
+      "registered_at": "2026-03-30T18:25:14.336636"
     },
     "system_video-frames": {
       "name": "Video Frames",
@@ -543,7 +414,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.973622"
+      "registered_at": "2026-03-30T18:25:14.336779"
     },
     "system_eightctl": {
       "name": "Eightctl",
@@ -560,7 +431,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.973754"
+      "registered_at": "2026-03-30T18:25:14.336936"
     },
     "system_gog": {
       "name": "Gog",
@@ -577,7 +448,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.973915"
+      "registered_at": "2026-03-30T18:25:14.337308"
     },
     "system_canvas": {
       "name": "Canvas",
@@ -594,7 +465,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.974101"
+      "registered_at": "2026-03-30T18:25:14.337532"
     },
     "system_notion": {
       "name": "Notion",
@@ -611,7 +482,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.974278"
+      "registered_at": "2026-03-30T18:25:14.337724"
     },
     "system_goplaces": {
       "name": "Goplaces",
@@ -628,7 +499,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.974409"
+      "registered_at": "2026-03-30T18:25:14.337863"
     },
     "system_apple-reminders": {
       "name": "Apple Reminders",
@@ -645,7 +516,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.974561"
+      "registered_at": "2026-03-30T18:25:14.338027"
     },
     "system_imsg": {
       "name": "Imsg",
@@ -662,7 +533,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.974717"
+      "registered_at": "2026-03-30T18:25:14.338180"
     },
     "system_skill-creator": {
       "name": "Skill Creator",
@@ -679,7 +550,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.975117"
+      "registered_at": "2026-03-30T18:25:14.338906"
     },
     "system_camsnap": {
       "name": "Camsnap",
@@ -696,7 +567,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.975256"
+      "registered_at": "2026-03-30T18:25:14.339025"
     },
     "system_github": {
       "name": "Github",
@@ -713,7 +584,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.975434"
+      "registered_at": "2026-03-30T18:25:14.339188"
     },
     "system_things-mac": {
       "name": "Things Mac",
@@ -730,7 +601,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.975591"
+      "registered_at": "2026-03-30T18:25:14.339319"
     },
     "system_blucli": {
       "name": "Blucli",
@@ -747,7 +618,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.975725"
+      "registered_at": "2026-03-30T18:25:14.339428"
     },
     "system_sonoscli": {
       "name": "Sonoscli",
@@ -764,7 +635,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.975869"
+      "registered_at": "2026-03-30T18:25:14.339546"
     },
     "system_mcporter": {
       "name": "Mcporter",
@@ -781,7 +652,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.975999"
+      "registered_at": "2026-03-30T18:25:14.339663"
     },
     "system_tmux": {
       "name": "Tmux",
@@ -798,7 +669,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.976163"
+      "registered_at": "2026-03-30T18:25:14.339833"
     },
     "system_openai-image-gen": {
       "name": "Openai Image Gen",
@@ -832,7 +703,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.976478"
+      "registered_at": "2026-03-30T18:25:14.339959"
     },
     "system_slack": {
       "name": "Slack",
@@ -849,7 +720,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.976649"
+      "registered_at": "2026-03-30T18:25:14.340110"
     },
     "system_weather": {
       "name": "Weather",
@@ -866,7 +737,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.976798"
+      "registered_at": "2026-03-30T18:25:14.340255"
     },
     "system_obsidian": {
       "name": "Obsidian",
@@ -883,7 +754,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.976948"
+      "registered_at": "2026-03-30T18:25:14.340382"
     },
     "system_trello": {
       "name": "Trello",
@@ -900,7 +771,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.977097"
+      "registered_at": "2026-03-30T18:25:14.340517"
     },
     "system_wacli": {
       "name": "Wacli",
@@ -917,7 +788,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.977237"
+      "registered_at": "2026-03-30T18:25:14.340639"
     },
     "system_songsee": {
       "name": "Songsee",
@@ -934,7 +805,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.977365"
+      "registered_at": "2026-03-30T18:25:14.340749"
     },
     "system_apple-notes": {
       "name": "Apple Notes",
@@ -951,7 +822,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.977507"
+      "registered_at": "2026-03-30T18:25:14.340872"
     },
     "system_openai-whisper-api": {
       "name": "Openai Whisper Api",
@@ -968,7 +839,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.977637"
+      "registered_at": "2026-03-30T18:25:14.340987"
     },
     "system_gh-issues": {
       "name": "Gh Issues",
@@ -985,7 +856,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.978661"
+      "registered_at": "2026-03-30T18:25:14.341676"
     },
     "system_nano-banana-pro": {
       "name": "Nano Banana Pro",
@@ -1019,7 +890,7 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.978970"
+      "registered_at": "2026-03-30T18:25:14.341827"
     },
     "system_voice-call": {
       "name": "Voice Call",
@@ -1036,13 +907,33 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.979101"
+      "registered_at": "2026-03-30T18:25:14.341935"
     },
-    "user_skillhub-preference": {
-      "name": "Skillhub Preference",
-      "description": "Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.",
+    "user_a-stock-watcher": {
+      "name": "A Stock Watcher",
+      "description": "a-stock-watcher skill",
+      "category": "finance",
+      "location": "/Users/tuqibiao/.openclaw/skills/a-stock-watcher",
+      "source": "user",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "finance",
+        "user"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-03-30T18:25:14.316357",
+      "health_score": 87,
+      "health_status": "healthy",
+      "last_health_check": "2026-05-13T21:29:11.319001"
+    },
+    "user_openclaw-agent-optimize": {
+      "name": "Openclaw Agent Optimize",
+      "description": "[Openclaw Agent Optimize] (description pending)",
       "category": "system",
-      "location": "/Users/tuqibiao/.openclaw/workspace/skills/skillhub-preference",
+      "location": "/Users/tuqibiao/.openclaw/skills/openclaw-agent-optimize",
       "source": "user",
       "status": "active",
       "version": "1.0",
@@ -1053,58 +944,505 @@
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.959869"
+      "registered_at": "2026-03-30T18:25:14.314396",
+      "health_score": 75,
+      "health_status": "healthy",
+      "last_health_check": "2026-05-13T21:29:11.319001"
     },
-    "user_image-read": {
-      "name": "Image Read",
-      "description": "使用智谱AI的GLM-4V-Flash免费多模态API理解图片内容。当用户需要理解图片内容、描述图片、识别图中物体时使用此skill。",
-      "category": "system",
-      "location": "/Users/tuqibiao/.openclaw/workspace/skills/image-read",
-      "source": "user",
-      "status": "active",
-      "version": "1.0",
-      "dependencies": [],
-      "tags": [
-        "system",
-        "user"
-      ],
-      "usage_count": 0,
-      "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.960133"
-    },
-    "user_image-content-extractor": {
-      "name": "Image Content Extractor",
-      "description": "统一图片内容提取技能。智能识别终端/文档/通用模式，自动提取内容生成Markdown。",
+    "system_node-connect": {
+      "name": "Node Connect",
+      "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
       "category": "ai",
-      "location": "/Users/tuqibiao/.openclaw/workspace/skills/image-content-extractor",
-      "source": "user",
+      "location": "/opt/homebrew/lib/node_modules/openclaw/skills/node-connect",
+      "source": "system",
       "status": "active",
       "version": "1.0",
       "dependencies": [],
       "tags": [
         "ai",
-        "user"
+        "system"
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.961278"
+      "registered_at": "2026-03-30T18:25:14.334536"
     },
-    "user_qveris-official": {
-      "name": "Qveris Official",
-      "description": ">-",
-      "category": "system",
-      "location": "/Users/tuqibiao/.openclaw/workspace/skills/qveris-official",
-      "source": "user",
+    "workspace_vision-bot": {
+      "name": "Vision Bot",
+      "description": "Analyze images via URL or base64. Auto-detects mode: OCR, object counting, or full description.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/vision-bot",
+      "source": "workspace",
       "status": "active",
       "version": "1.0",
       "dependencies": [],
       "tags": [
         "system",
-        "user"
+        "workspace",
+        "user",
+        "ai"
       ],
       "usage_count": 0,
       "last_used": null,
-      "registered_at": "2026-03-15T09:58:29.961880"
+      "registered_at": "2026-04-15T13:02:53.334746",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.334754",
+      "merged_at": "2026-04-15T15:34:59.030683",
+      "merged_from": [
+        "user_vision-bot"
+      ]
+    },
+    "workspace_create-openclaw-agent": {
+      "name": "Create Openclaw Agent",
+      "description": "** 一键创建新的 OpenClaw agent，包含完整的身份定义、团队集成和配置",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/create-openclaw-agent",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.335001",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.335003",
+      "merged_at": "2026-04-15T15:34:59.030676",
+      "merged_from": [
+        "user_create-openclaw-agent"
+      ]
+    },
+    "workspace_agent-browser": {
+      "name": "Agent Browser",
+      "description": "A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/agent-browser",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.336492",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.336494"
+    },
+    "workspace_stock-analysis": {
+      "name": "Stock Analysis",
+      "description": "Analyze stocks and cryptocurrencies using Yahoo Finance data. Supports portfolio management, watchlists with alerts, dividend analysis, 8-dimension stock scoring, viral trend detection (Hot Scanner), and rumor/early signal detection. Use for stock analysis, portfolio tracking, earnings reactions, crypto monitoring, trending stocks, or finding rumors before they hit mainstream.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/stock-analysis",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "finance",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.336772",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.336773",
+      "merged_at": "2026-04-15T15:34:59.030692",
+      "merged_from": [
+        "user_stock-analysis"
+      ]
+    },
+    "workspace_self-improving-agent": {
+      "name": "Self Improving Agent",
+      "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), ...",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/self-improving-agent",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.337040",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.337042"
+    },
+    "workspace_skillhub-preference": {
+      "name": "Skillhub Preference",
+      "description": "Prefer `skillhub` for skill discovery/install/update, then fallback to `clawhub` when unavailable or no match. Use when users ask about skills, 插件, or capability extension.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/skillhub-preference",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.338436",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.338437",
+      "merged_at": "2026-04-15T15:34:59.030643",
+      "merged_from": [
+        "user_skillhub-preference"
+      ]
+    },
+    "workspace_image-read": {
+      "name": "Image Read",
+      "description": "使用智谱AI的GLM-4V-Flash免费多模态API理解图片内容。当用户需要理解图片内容、描述图片、识别图中物体时使用此skill。",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/image-read",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.338635",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.338637",
+      "merged_at": "2026-04-15T15:34:59.030652",
+      "merged_from": [
+        "user_image-read"
+      ]
+    },
+    "workspace_biage-premarket-analyzer": {
+      "name": "Biage Premarket Analyzer",
+      "description": "biage-premarket-analyzer skill",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/biage-premarket-analyzer",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "finance",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.338830",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.338832",
+      "merged_at": "2026-04-15T15:34:59.030602",
+      "merged_from": [
+        "user_biage-premarket-analyzer"
+      ]
+    },
+    "workspace_data-analyst": {
+      "name": "Data Analyst",
+      "description": "Data visualization, report generation, SQL queries, and spreadsheet automation. Transform your AI agent into a data-savvy analyst that turns raw data into actionable insights.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/data-analyst",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "data",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.339115",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.339117",
+      "merged_at": "2026-04-15T15:34:59.030699",
+      "merged_from": [
+        "user_data-analyst"
+      ]
+    },
+    "workspace_summarize": {
+      "name": "Summarize",
+      "description": "Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/summarize",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.340710",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.340712",
+      "merged_at": "2026-04-15T15:34:59.030634",
+      "merged_from": [
+        "user_summarize",
+        "system_summarize"
+      ]
+    },
+    "workspace_find-skills": {
+      "name": "Find Skills",
+      "description": "Highest-priority skill discovery flow. MUST trigger when users ask to find/install skills (e.g. 技能, 找技能, find-skill, find-skills, install skill). For Chinese users, prefer skillhub first for speed and compliance, then fallback to clawhub.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/find-skills",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.340881",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.340882",
+      "merged_at": "2026-04-15T15:34:59.030622",
+      "merged_from": [
+        "user_find-skills"
+      ]
+    },
+    "workspace_ontology": {
+      "name": "Ontology",
+      "description": "Typed knowledge graph for structured agent memory and composable skills. Use when creating/querying entities (Person, Project, Task, Event, Document), linking related objects, enforcing constraints, p...",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/ontology",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.341096",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.341098"
+    },
+    "workspace_vision-tagger": {
+      "name": "Vision Tagger",
+      "description": "Tag and annotate images using Apple Vision framework (macOS only). Detects faces, bodies, hands, text (OCR), barcodes, objects, scene labels, and saliency regions. Use for image analysis, photo tagging, posture monitoring, or any task requiring computer vision on images.",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/vision-tagger",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.341275",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.341277",
+      "merged_at": "2026-04-15T15:34:59.030707",
+      "merged_from": [
+        "user_vision-tagger"
+      ]
+    },
+    "workspace_image-content-extractor": {
+      "name": "Image Content Extractor",
+      "description": "统一图片内容提取技能。智能识别终端/文档/通用模式，自动提取内容生成Markdown。",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/image-content-extractor",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.341493",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.341495",
+      "merged_at": "2026-04-15T15:34:59.030660",
+      "merged_from": [
+        "user_image-content-extractor"
+      ]
+    },
+    "workspace_proactive-agent": {
+      "name": "Proactive Agent",
+      "description": "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer, Autonomous Crons, and battle-tested patterns. Par...",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/proactive-agent",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.341750",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.341752"
+    },
+    "workspace_mem0": {
+      "name": "Mem0",
+      "description": "专业的长期记忆管理系统 - 为AI Agent提供向量化记忆存储和智能检索",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/mem0",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.341986",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.341988"
+    },
+    "workspace_ai-news-collectors": {
+      "name": "Ai News Collectors",
+      "description": "AI 新闻聚合与热度排序工具。当用户询问 AI 领域最新动态时触发，如：\"今天有什么 AI 新闻？\"\"总结一下这周的 AI 动态\"\"最近有什么火的 AI 产品？\"\"AI 圈最近在讨论什么？\"。覆盖：新产品发布、研究论文、行业动态、融资新闻、开源项目更新、社区病毒传播现象、AI 工具/Agent 热门项目。输出中文摘要列表，按热度排序，附带原文链接。",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/ai-news-collectors",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.342206",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.342208"
+    },
+    "workspace_notebooklm-cli": {
+      "name": "Notebooklm Cli",
+      "description": "Comprehensive CLI for Google NotebookLM including notebooks, sources, audio podcasts, reports, quizzes, flashcards, mind maps, slides, infographics, videos, and data tables. Use when working with Note...",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/notebooklm-cli",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "workspace",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.342411",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.342413"
+    },
+    "workspace_subagent-driven-development": {
+      "name": "Subagent Driven Development",
+      "description": "Use when executing implementation plans with independent tasks in the current session",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/subagent-driven-development",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.342628",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.342629",
+      "merged_at": "2026-04-15T15:34:59.030715",
+      "merged_from": [
+        "user_subagent-driven-development"
+      ]
+    },
+    "workspace_qveris-official": {
+      "name": "Qveris Official",
+      "description": "[Qveris Official] (description pending)",
+      "category": "ai",
+      "location": "/Users/tuqibiao/.openclaw/workspace/skills/qveris-official",
+      "source": "workspace",
+      "status": "active",
+      "version": "1.0",
+      "dependencies": [],
+      "tags": [
+        "system",
+        "workspace",
+        "user",
+        "ai"
+      ],
+      "usage_count": 0,
+      "last_used": null,
+      "registered_at": "2026-04-15T13:02:53.342865",
+      "health_score": 80,
+      "health_status": "healthy",
+      "last_health_check": "2026-04-15T13:02:53.342867",
+      "merged_at": "2026-04-15T15:34:59.030668",
+      "merged_from": [
+        "user_qveris-official"
+      ]
     }
   },
   "categories": {
@@ -1118,18 +1456,25 @@
     "ai": "人工智能类skill"
   },
   "statistics": {
-    "total_skills": 65,
+    "total_skills": 76,
     "by_category": {
-      "system": 47,
-      "finance": 4,
-      "data": 4,
-      "communication": 0,
-      "productivity": 0,
-      "development": 0,
-      "media": 0,
-      "ai": 10
+      "finance": 2,
+      "system": 41,
+      "ai": 29,
+      "data": 4
     },
-    "active_skills": 65,
+    "active_skills": 76,
     "inactive_skills": 0
+  },
+  "usage_stats": {
+    "user_biage-market-analyzer": {
+      "total_calls": 1,
+      "successful_calls": 1,
+      "failed_calls": 0,
+      "total_duration_ms": 1500,
+      "last_called": "2026-03-20T11:08:43.421397",
+      "success_rate": 1.0,
+      "avg_duration_ms": 1500.0
+    }
   }
 }

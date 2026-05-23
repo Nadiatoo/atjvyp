@@ -1,0 +1,25 @@
+{
+  "industry": "消费电子",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 13.0,
+    "profit_growth": 14.5,
+    "order_growth": 4.7,
+    "capacity_utilization": 57.2
+  },
+  "market_expectation": {
+    "analyst_consensus": 18.7,
+    "institution_view": "谨慎",
+    "media_sentiment": "中性"
+  },
+  "fund_flow": {
+    "northbound_flow": -38.5,
+    "margin_balance": 119.4,
+    "institution_position": 89.8
+  },
+  "market_sentiment": {
+    "pe_ratio": 26.0,
+    "volume_change": 80.3,
+    "advance_decline_ratio": 2.2
+  }
+}

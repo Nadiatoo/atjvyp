@@ -1,0 +1,25 @@
+{
+  "industry": "教育",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 6.0,
+    "profit_growth": 32.6,
+    "order_growth": 52.2,
+    "capacity_utilization": 72.5
+  },
+  "market_expectation": {
+    "analyst_consensus": 1.7,
+    "institution_view": "悲观",
+    "media_sentiment": "积极"
+  },
+  "fund_flow": {
+    "northbound_flow": -43.5,
+    "margin_balance": -44.5,
+    "institution_position": 10.1
+  },
+  "market_sentiment": {
+    "pe_ratio": 43.1,
+    "volume_change": 41.2,
+    "advance_decline_ratio": 1.4
+  }
+}

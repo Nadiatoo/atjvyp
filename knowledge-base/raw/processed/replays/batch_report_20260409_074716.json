@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-04-09T07:47:16.026579",
+  "elapsed_seconds": 0.73,
+  "stats": {
+    "total": 5,
+    "success": 5,
+    "failed": 0,
+    "processed_files": [
+      "/Users/tuqibiao/Downloads/2026复盘/4.6复盘.pdf",
+      "/Users/tuqibiao/Downloads/2026复盘/4.7复盘.pdf",
+      "/Users/tuqibiao/Downloads/2026复盘/4.8复盘.pdf",
+      "/Users/tuqibiao/Downloads/2026复盘/4.2复盘.pdf",
+      "/Users/tuqibiao/Downloads/2026复盘/4.1.pdf"
+    ],
+    "kb_files": [
+      "raw/domains/trading/market_analysis/46复盘.md",
+      "raw/domains/trading/market_analysis/47复盘.md",
+      "raw/domains/trading/market_analysis/48复盘.md",
+      "raw/domains/trading/market_analysis/42复盘.md",
+      "raw/domains/unknown/unknown/41.md"
+    ]
+  },
+  "summary": {
+    "total_files": 5,
+    "success_rate": 100.0,
+    "files_per_second": 6.81,
+    "average_time_per_file": 0.15
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "system": "彪哥战法v5.0",
+  "data_source": "QVeris/EODHD",
+  "status": "configured",
+  "date": "2026-03-27 07:29:29",
+  "components": {
+    "primary": "eodhd.screener.query.v1.f890c0dc",
+    "backup": [
+      "模拟数据引擎"
+    ],
+    "features": [
+      "季节分析",
+      "市场概况",
+      "股票筛选",
+      "资金流向估算"
+    ]
+  },
+  "replaces": [
+    "AkShare",
+    "Tushare"
+  ],
+  "advantages": [
+    "更稳定",
+    "免费使用",
+    "实时数据",
+    "全球覆盖"
+  ]
+}

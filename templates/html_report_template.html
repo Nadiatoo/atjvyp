@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投资组合分析报告 - {{ client_name }}</title>
+    <style>
+        body { font-family: 'Microsoft YaHei', Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+        .section { background: white; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: #2c3e50; }
+        .highlight { background: #f8f9fa; padding: 15px; border-left: 4px solid #3498db; margin: 15px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f2f2f2; font-weight: bold; }
+        .warning { background: #fff3cd; border-left: 4px solid #ffc107; }
+        .success { background: #d4edda; border-left: 4px solid #28a745; }
+        .chart-container { text-align: center; margin: 20px 0; }
+        .chart-container img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px; }
+        .footer { text-align: center; margin-top: 50px; padding: 20px; color: #666; font-size: 0.9em; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>投资组合分析报告</h1>
+            <p>客户: {{ client_name }} | 分析日期: {{ analysis_date }} | 报告版本: {{ report_version }}</p>
+        </div>
+        
+        {% for section in sections %}
+        <div class="section">
+            <h2>{{ section.title }}</h2>
+            {{ section.content|safe }}
+        </div>
+        {% endfor %}
+        
+        <div class="footer">
+            <p>报告生成时间: {{ generation_time }} | 分析团队: {{ team_name }} | 免责声明: 本报告仅供参考，不构成投资建议</p>
+        </div>
+    </div>
+</body>
+</html>

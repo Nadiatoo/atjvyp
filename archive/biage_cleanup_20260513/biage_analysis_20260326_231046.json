@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-26T23:10:46.909152",
+  "market_data": {
+    "shanghai_index": {
+      "price": 3889.08,
+      "change": -42.76000000000022,
+      "change_pct": -1.0875315373972545,
+      "volume": 615973980.0,
+      "amount": 848361340000.0,
+      "high": 3937.1,
+      "low": 3880.57,
+      "open": 3924.96
+    },
+    "cyb_index": {
+      "price": 3272.488,
+      "change_pct": -1.341084822136244
+    }
+  },
+  "analysis": {
+    "market_state": "混沌期",
+    "total_score": 0.18000000000000002,
+    "position": "0-10%",
+    "strategy": "空仓等待",
+    "tech_features": [
+      "指数下跌",
+      "涨停家数少"
+    ],
+    "emotion_status": "数据不足"
+  }
+}

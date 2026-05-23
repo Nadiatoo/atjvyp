@@ -1,0 +1,137 @@
+{
+  "date": "2026-04-09",
+  "time": "08:30",
+  "framework_name": "EGPS预期差发现与个股筛选框架",
+  "analysis": {
+    "economic_cycle": {
+      "position": "扩张期",
+      "strength": 78,
+      "trend": "向上",
+      "description": "经济处于扩张期，制造业PMI连续4个月保持在扩张区间，出口数据超预期"
+    },
+    "policy_environment": {
+      "direction": "积极支持",
+      "intensity": 75,
+      "focus": "科技创新与数字经济",
+      "description": "政策聚焦科技创新，加大对新兴产业支持力度，数字经济政策密集出台"
+    },
+    "perception_dimensions": {
+      "economic_fundamentals": 75,
+      "policy_environment": 72,
+      "market_sentiment": 68,
+      "capital_flow": 82,
+      "industry_trend": 85,
+      "social_culture": 65
+    },
+    "expectation_gaps": [
+      "市场对AI大模型应用落地速度预期不足",
+      "新能源车智能化升级趋势被低估",
+      "半导体设备国产替代进程加速超预期",
+      "数字经济与传统产业融合深度被忽视",
+      "绿色能源转型带来的产业链重构机会"
+    ]
+  },
+  "market_analysis": {
+    "market_status": "震荡上行",
+    "key_sectors": [
+      "人工智能",
+      "新能源车",
+      "半导体",
+      "数字经济",
+      "绿色能源"
+    ],
+    "capital_flow": {
+      "inflow_sectors": [
+        "半导体设备",
+        "AI算力",
+        "新能源",
+        "数字经济"
+      ],
+      "outflow_sectors": [
+        "房地产",
+        "传统基建",
+        "传统能源"
+      ]
+    },
+    "sentiment_indicator": 68,
+    "recommended_focus": [
+      "AI大模型应用落地带来的产业链机会",
+      "新能源车智能化升级趋势",
+      "半导体设备国产替代加速",
+      "数字经济与传统产业融合",
+      "绿色能源产业链重构"
+    ]
+  },
+  "stock_screening": {
+    "screened_stocks": [
+      {
+        "code": "300750",
+        "name": "宁德时代",
+        "type": "中军股",
+        "reason": "动力电池全球龙头，受益新能源车高增长和储能需求",
+        "sector": "新能源",
+        "score": 88
+      },
+      {
+        "code": "002049",
+        "name": "紫光国微",
+        "type": "龙头股",
+        "reason": "芯片设计领先，国产替代核心标的，受益AI算力需求",
+        "sector": "半导体",
+        "score": 85
+      },
+      {
+        "code": "002475",
+        "name": "立讯精密",
+        "type": "中军股",
+        "reason": "消费电子龙头，受益AI硬件创新和汽车电子布局",
+        "sector": "消费电子",
+        "score": 82
+      },
+      {
+        "code": "603986",
+        "name": "兆易创新",
+        "type": "龙头股",
+        "reason": "存储芯片龙头，AI算力需求增长，国产替代加速",
+        "sector": "半导体",
+        "score": 84
+      },
+      {
+        "code": "300782",
+        "name": "卓胜微",
+        "type": "龙头股",
+        "reason": "射频芯片龙头，5G+AI双轮驱动，汽车电子新增长点",
+        "sector": "半导体",
+        "score": 83
+      },
+      {
+        "code": "002230",
+        "name": "科大讯飞",
+        "type": "龙头股",
+        "reason": "AI大模型应用领先，教育、医疗等多场景落地",
+        "sector": "人工智能",
+        "score": 86
+      },
+      {
+        "code": "002594",
+        "name": "比亚迪",
+        "type": "中军股",
+        "reason": "新能源车全产业链龙头，智能化转型加速",
+        "sector": "新能源车",
+        "score": 87
+      }
+    ],
+    "total_count": 7,
+    "by_type": {
+      "龙头股": 4,
+      "中军股": 3
+    },
+    "by_sector": {
+      "半导体": 3,
+      "新能源": 1,
+      "消费电子": 1,
+      "人工智能": 1,
+      "新能源车": 1
+    }
+  }
+}

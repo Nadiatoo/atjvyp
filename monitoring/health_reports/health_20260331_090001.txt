@@ -1,0 +1,39 @@
+=== OpenClaw系统健康检查报告 ===
+检查时间: 2026-03-31 09:00:01
+
+1. 系统基本信息:
+   主机名: 192.168.2.8
+   当前用户: tuqibiao
+   检查时间: Tue Mar 31 09:00:01 CST 2026
+
+2. 磁盘空间检查:
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   157Gi    44Gi    79%    1.4M  460M    0%   /System/Volumes/Data
+
+3. 内存使用检查:
+   free命令不可用
+
+4. OpenClaw进程检查:
+   运行中的OpenClaw进程数:        7
+   ✅ OpenClaw进程运行正常
+
+5. 工作区关键文件检查:
+   ✅ 今日记忆文件: 存在 (大小:  40K)
+   ✅ Agent注册表: 存在 (大小: 8.0K)
+   ✅ 紧急工作清单: 存在 (大小: 8.0K)
+
+6. 备份检查:
+   ✅ 备份文件数:        5
+       最新备份: workspace_backup_20260331_020000.tar.gz
+       备份时间: Mar 31 02:00:00 2026
+       备份大小: 340K
+
+7. 监控日志检查:
+   ✅ 监控日志行数:       86
+       最后记录时间: 未知
+
+8. 总体评估:
+   ✅ 系统状态良好，未发现问题
+
+=== 报告生成完成 ===
+报告文件: /Users/tuqibiao/.openclaw/workspace/monitoring/health_reports/health_20260331_090001.txt

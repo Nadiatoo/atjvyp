@@ -1,0 +1,102 @@
+============================================
+强势庄股选股公式
+作者：富富
+日期：2026-03-22
+条件：
+1. 5、8、13日均线多头排列
+2. 近5日有3天以上倍量放量
+3. 连续3日主力控盘>10
+4. 近10日出现过涨停
+============================================
+
+========== 条件1：均线多头排列 ==========
+MA5:=MA(CLOSE,5);    // 5日均线
+MA8:=MA(CLOSE,8);    // 8日均线
+MA13:=MA(CLOSE,13);  // 13日均线
+
+// 多头排列：MA5 > MA8 > MA13
+COND1:=MA5 > MA8 AND MA8 > MA13;
+
+========== 条件2：成交量倍量放量 ==========
+// 定义倍量条件：今日成交量 > 昨日成交量×2 或 今日成交量 > 前日成交量×2
+VOL_DOUBLE1:=VOL > REF(VOL,1) * 2;   // 比昨日放量1倍
+VOL_DOUBLE2:=VOL > REF(VOL,2) * 2;   // 比前日放量1倍
+DOUBLE_VOL_DAY:=VOL_DOUBLE1 OR VOL_DOUBLE2;  // 满足任一条件即为倍量日
+
+// 统计最近5个交易日中倍量日的数量
+DOUBLE_DAY_COUNT:= 
+    COUNT(DOUBLE_VOL_DAY,1) +      // 今日
+    COUNT(REF(DOUBLE_VOL_DAY,1),1) +  // 昨日
+    COUNT(REF(DOUBLE_VOL_DAY,2),1) +  // 前日
+    COUNT(REF(DOUBLE_VOL_DAY,3),1) +  // 3日前
+    COUNT(REF(DOUBLE_VOL_DAY,4),1);   // 4日前
+
+// 条件2：5天中有3天以上倍量放量
+COND2:=DOUBLE_DAY_COUNT >= 3;
+
+========== 条件3：主力控盘连续3日>10 ==========
+// 使用通达信ZJTJ（庄家抬轿）函数
+// 注意：ZJTJ函数可能需要通达信专业版或特定版本支持
+ZJTJ_VALUE:=ZJTJ(CLOSE,VOL);  // 庄家抬轿值
+
+// 检查连续3日ZJTJ值>10
+ZJTJ_COND1:=ZJTJ_VALUE > 10;
+ZJTJ_COND2:=REF(ZJTJ_VALUE,1) > 10;
+ZJTJ_COND3:=REF(ZJTJ_VALUE,2) > 10;
+
+COND3:=ZJTJ_COND1 AND ZJTJ_COND2 AND ZJTJ_COND3;
+
+========== 条件4：近10日出现过涨停 ==========
+// 涨停定义：涨幅>=9.9%（考虑到四舍五入）
+LIMIT_UP:=CLOSE/REF(CLOSE,1) >= 1.099;
+
+// 检查最近10个交易日是否有涨停
+HAS_LIMIT_UP:= 
+    COUNT(LIMIT_UP,1) +      // 今日
+    COUNT(REF(LIMIT_UP,1),1) +  // 昨日
+    COUNT(REF(LIMIT_UP,2),1) +  // 前日
+    COUNT(REF(LIMIT_UP,3),1) +  // 3日前
+    COUNT(REF(LIMIT_UP,4),1) +  // 4日前
+    COUNT(REF(LIMIT_UP,5),1) +  // 5日前
+    COUNT(REF(LIMIT_UP,6),1) +  // 6日前
+    COUNT(REF(LIMIT_UP,7),1) +  // 7日前
+    COUNT(REF(LIMIT_UP,8),1) +  // 8日前
+    COUNT(REF(LIMIT_UP,9),1);   // 9日前
+
+COND4:=HAS_LIMIT_UP >= 1;
+
+========== 综合选股条件 ==========
+SELECTION:=COND1 AND COND2 AND COND3 AND COND4;
+
+// 输出选股结果
+SELECTION;
+
+============================================
+使用说明：
+1. 打开通达信软件
+2. 按 Ctrl+F 打开公式管理器
+3. 选择"条件选股公式" → "新建"
+4. 复制粘贴上面的代码
+5. 公式名称：强势庄股选股
+6. 点击"确定"保存
+7. 按 Ctrl+T 执行选股
+
+============================================
+参数调整建议：
+
+1. 条件1调整（更严格）：
+MA5_UP:=MA5 > REF(MA5,1);
+MA8_UP:=MA8 > REF(MA8,1);
+MA13_UP:=MA13 > REF(MA13,1);
+COND1_STRICT:=COND1 AND MA5_UP AND MA8_UP AND MA13_UP;
+
+2. 条件2调整：
+更宽松：COND2_LOOSE:=DOUBLE_DAY_COUNT >= 2;
+更严格：COND2_STRICT:=DOUBLE_VOL_DAY AND REF(DOUBLE_VOL_DAY,1) AND REF(DOUBLE_VOL_DAY,2);
+
+3. 条件3调整（更严格）：
+COND3_STRICT:=ZJTJ_VALUE > 20 AND REF(ZJTJ_VALUE,1) > 20 AND REF(ZJTJ_VALUE,2) > 20;
+
+4. 条件4调整（更严格）：
+COND4_STRICT:=COUNT(LIMIT_UP,5) >= 1;
+============================================

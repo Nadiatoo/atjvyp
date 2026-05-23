@@ -1,0 +1,25 @@
+{
+  "industry": "机械",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 16.6,
+    "profit_growth": 10.0,
+    "order_growth": 17.5,
+    "capacity_utilization": 67.9
+  },
+  "market_expectation": {
+    "analyst_consensus": 18.1,
+    "institution_view": "乐观",
+    "media_sentiment": "消极"
+  },
+  "fund_flow": {
+    "northbound_flow": -47.1,
+    "margin_balance": 143.9,
+    "institution_position": 68.6
+  },
+  "market_sentiment": {
+    "pe_ratio": 52.0,
+    "volume_change": 23.0,
+    "advance_decline_ratio": 2.7
+  }
+}

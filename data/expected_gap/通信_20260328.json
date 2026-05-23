@@ -1,0 +1,25 @@
+{
+  "industry": "通信",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 12.8,
+    "profit_growth": 28.0,
+    "order_growth": 73.9,
+    "capacity_utilization": 90.3
+  },
+  "market_expectation": {
+    "analyst_consensus": 9.6,
+    "institution_view": "悲观",
+    "media_sentiment": "积极"
+  },
+  "fund_flow": {
+    "northbound_flow": -95.0,
+    "margin_balance": 75.8,
+    "institution_position": 99.5
+  },
+  "market_sentiment": {
+    "pe_ratio": 20.8,
+    "volume_change": 13.5,
+    "advance_decline_ratio": 1.5
+  }
+}

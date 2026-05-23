@@ -1,0 +1,72 @@
+📊 【彪哥战法】盘后总结 [QVeris真实数据]
+时间: 2026-04-13 17:11
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 季节判断：春播期
+📊 市场趋势：温和上涨
+💰 仓位建议：50-70%（评分：65分）
+📈 数据源：QVeris/FMP（真实数据 - 缓存）
+
+🔥 今日强势股（涨幅榜）：
+1. PN（Skycorp Solar G...）
+   📈 +1813.9% | 💰 $3.60 | 🏢 NASDAQ
+
+2. JEM（707 Cayman Hold...）
+   📈 +1538.2% | 💰 $2.25 | 🏢 NASDAQ
+
+3. QNCX（Quince Therapeu...）
+   📈 +1001.9% | 💰 $1.36 | 🏢 NASDAQ
+
+4. WFF（WF Holding Limi...）
+   📈 +397.6% | 💰 $1.05 | 🏢 NASDAQ
+
+5. FUSE（Fusemachines In...）
+   📈 +115.3% | 💰 $1.83 | 🏢 NASDAQ
+
+📉 今日弱势股（跌幅榜）：
+1. YDDL（One and one Gre...）
+   📉 -62.9% | 💰 $5.16 | 🏢 NASDAQ
+
+2. KWM（K Wave Media Lt...）
+   📉 -33.8% | 💰 $0.45 | 🏢 NASDAQ
+
+3. DKI（DarkIris Inc. C...）
+   📉 -33.5% | 💰 $0.64 | 🏢 NASDAQ
+
+4. LUD（Luda Technology...）
+   📉 -32.5% | 💰 $5.72 | 🏢 AMEX
+
+5. CDT（CDT Equity Inc.）
+   📉 -30.7% | 💰 $4.08 | 🏢 NASDAQ
+
+📊 高关注度股票（成交量）：
+1. CREG（Smart Powerr Co...）
+   📈 85.4% | 💰 $0.63
+
+2. RAYA（Erayak Power So...）
+   📈 107.9% | 💰 $0.95
+
+3. NVDA（NVIDIA Corporat...）
+   📈 2.6% | 💰 $188.63
+
+4. PLTR（Palantir Techno...）
+   📉 1.9% | 💰 $128.06
+
+5. TSLA（Tesla, Inc.）
+   📈 1.0% | 💰 $348.95
+
+💡 彪哥战法策略：
+  • 当前市场：春播期 - 温和上涨
+  • 操作建议：50-70%仓位参与
+  • 重点关注：今日强势板块的持续性
+  • 风险控制：设置合理止损，避免追高
+
+⚠️ 风险提示：
+  • 以上分析基于QVeris/FMP（真实数据 - 缓存）实时数据
+  • 美股市场波动较大，注意时差影响
+  • 投资有风险，决策需谨慎
+
+✅ 系统状态：
+  • 数据源：QVeris/FMP（真实数据 - 缓存）
+  • 分析时间：2026-04-13 17:11
+  • 彪哥战法：盘后分析完成

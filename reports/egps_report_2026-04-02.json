@@ -1,0 +1,103 @@
+{
+  "date": "2026-04-02",
+  "time": "08:30",
+  "framework_name": "EGPS预期差发现与个股筛选框架",
+  "analysis": {
+    "economic_cycle": {
+      "position": "扩张期",
+      "strength": 75,
+      "trend": "向上",
+      "description": "经济处于扩张期，制造业PMI连续3个月保持在扩张区间"
+    },
+    "policy_environment": {
+      "direction": "中性偏宽松",
+      "intensity": 70,
+      "focus": "科技创新与产业升级",
+      "description": "政策聚焦科技创新，加大对新兴产业支持力度"
+    },
+    "perception_dimensions": {
+      "economic_fundamentals": 72,
+      "policy_environment": 68,
+      "market_sentiment": 65,
+      "capital_flow": 78,
+      "industry_trend": 82,
+      "social_culture": 60
+    },
+    "expectation_gaps": [
+      "市场对AI技术突破的产业影响预期不足",
+      "新能源车渗透率提升速度超预期",
+      "半导体国产替代进程加速被低估",
+      "消费电子创新周期重启信号被忽视"
+    ]
+  },
+  "market_analysis": {
+    "market_status": "震荡上行",
+    "key_sectors": [
+      "人工智能",
+      "新能源车",
+      "半导体",
+      "消费电子"
+    ],
+    "capital_flow": {
+      "inflow_sectors": [
+        "半导体",
+        "新能源",
+        "AI算力"
+      ],
+      "outflow_sectors": [
+        "房地产",
+        "传统基建"
+      ]
+    },
+    "sentiment_indicator": 65,
+    "recommended_focus": [
+      "AI技术突破带来的产业链机会",
+      "新能源车智能化升级趋势",
+      "半导体设备国产替代加速"
+    ]
+  },
+  "stock_screening": {
+    "screened_stocks": [
+      {
+        "code": "300750",
+        "name": "宁德时代",
+        "type": "中军股",
+        "reason": "动力电池全球龙头，受益新能源车高增长",
+        "sector": "新能源"
+      },
+      {
+        "code": "002049",
+        "name": "紫光国微",
+        "type": "龙头股",
+        "reason": "芯片设计领先，国产替代核心标的",
+        "sector": "半导体"
+      },
+      {
+        "code": "002475",
+        "name": "立讯精密",
+        "type": "中军股",
+        "reason": "消费电子龙头，受益AI硬件创新",
+        "sector": "消费电子"
+      },
+      {
+        "code": "603986",
+        "name": "兆易创新",
+        "type": "龙头股",
+        "reason": "存储芯片龙头，AI算力需求增长",
+        "sector": "半导体"
+      },
+      {
+        "code": "300782",
+        "name": "卓胜微",
+        "type": "龙头股",
+        "reason": "射频芯片龙头，5G+AI双轮驱动",
+        "sector": "半导体"
+      }
+    ],
+    "total_count": 5,
+    "by_type": {
+      "龙头股": 3,
+      "中军股": 2
+    }
+  }
+}

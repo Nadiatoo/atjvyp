@@ -1,0 +1,25 @@
+{
+  "industry": "农业",
+  "date": "2026-03-28",
+  "fundamental": {
+    "revenue_growth": 22.4,
+    "profit_growth": 5.5,
+    "order_growth": 92.9,
+    "capacity_utilization": 53.0
+  },
+  "market_expectation": {
+    "analyst_consensus": 17.1,
+    "institution_view": "中性",
+    "media_sentiment": "中性"
+  },
+  "fund_flow": {
+    "northbound_flow": 82.1,
+    "margin_balance": -5.4,
+    "institution_position": 91.1
+  },
+  "market_sentiment": {
+    "pe_ratio": 33.2,
+    "volume_change": 198.0,
+    "advance_decline_ratio": 2.6
+  }
+}

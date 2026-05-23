@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市场行情分析报告 - 2026年3月23日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .presentation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .slide {
+            display: none;
+            padding: 60px;
+            min-height: 600px;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        .slide-cover {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide-toc {
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+            color: white;
+        }
+        
+        .slide-content {
+            background: white;
+        }
+        
+        .slide-end {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: inherit;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: inherit;
+            border-bottom: 3px solid currentColor;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            margin: 25px 0 15px;
+            color: inherit;
+        }
+        
+        .subtitle {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .author {
+            font-size: 1.5em;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+        
+        .date {
+            font-size: 1.2em;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+        
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+        
+        li {
+            margin: 12px 0;
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+        
+        .content-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #ff9800;
+        }
+        
+        .red {
+            color: #f44336;
+        }
+        
+        .green {
+            color: #4caf50;
+        }
+        
+        .highlight {
+            background: #fff3e0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-btn {
+            background: #2196f3;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: #1976d2;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn:disabled {
+            background: #90caf9;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .slide-counter {
+            color: white;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .index-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .index-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .index-dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        .data-table th, .data-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .data-table th {
+            background: #f5f5f5;
+            font-weight: bold;
+        }
+        
+        .data-table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px;
+                min-height: 400px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            li {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- 幻灯片1: 封面 -->
+        <div class="slide slide-cover active" id="slide1">
+            <h1>市场行情分析报告</h1>
+            <div class="subtitle">2026年3月22-23日市场综合分析</div>
+            <div class="author">彪哥战法量化分析团队</div>
+            <div class="date">2026年3月23日</div>
+            <div class="index-indicators">
+                <div class="index-dot active" data-slide="1"></div>
+                <div class="index-dot" data-slide="2"></div>
+                <div class="index-dot" data-slide="3"></div>
+                <div class="index-dot" data-slide="4"></div>
+                <div class="index-dot" data-slide="5"></div>
+                <div class="index-dot" data-slide="6"></div>
+                <div class="index-dot" data-slide="7"></div>
+                <div class="index-dot" data-slide="8"></div>
+                <div class="index-dot" data-slide="9"></div>
+                <div class="index-dot" data-slide="10"></div>
+                <div class="index-dot" data-slide="11"></div>
+                <div class="index-dot" data-slide="12"></div>
+            </div>
+        </div>
+        
+        <!-- 幻灯片2: 目录 -->
+        <div class="slide slide-toc" id="slide2">
+            <h2>目录</h2>
+            <ol>
+                <li>市场概况与指数表现</li>
+                <li>季节判断与仓位建议</li>
+                <li>热点板块分析</li>
+                <li>龙头股与中军股表现</li>
+                <li>风险提示与明日策略</li>
+                <li>总结与展望</li>
+            </ol>
+        </div>
+        
+        <!-- 幻灯片3: 两日市场对比 -->
+        <div class="slide slide-content" id="slide3">
+            <h2>两日市场表现对比</h2>
+            
+            <h3>3月22日（周五）</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>指数</th>
+                        <th>涨跌幅</th>
+                        <th>特征</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>上证指数</td>
+                        <td class="red">-1.24%</td>
+                        <td>权重股下跌</td>
+                    </tr>
+                    <tr>
+                        <td>深证成指</td>
+                        <td class="red">-0.25%</td>
+                        <td>相对抗跌</td>
+                    </tr>
+                    <tr>
+                        <td>创业板指</td>
+                        <td class="green">+1.30%</td>
+                        <td>逆势上涨</td>
+                    </tr>
+                    <tr>
+                        <td>涨停家数</td>
+                        <td class="green">28家</td>
+                        <td>局部活跃</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>3月23日（周一）</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>指数</th>
+                        <th>收盘点位</th>
+                        <th>涨跌幅</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>上证指数</td>
+                        <td>3813.28</td>
+                        <td class="red">🔴 -3.63%</td>
+                    </tr>
+                    <tr>
+                        <td>深证成指</td>
+                        <td>13345.51</td>
+                        <td class="red">🔴 -3.76%</td>
+                    </tr>
+                    <tr>
+                        <td>创业板指</td>
+                        <td>3235.22</td>
+                        <td class="red">🔴 -3.49%</td>
+                    </tr>
+                    <tr>
+                        <td>两市成交额</td>
+                        <td colspan="2">约1.23万亿元</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="content-box">
+                <strong>核心变化:</strong> 从分化上涨转为全线大跌，市场情绪急剧恶化
+            </div>
+        </div>
+        
+        <!-- 幻灯片4: 技术分析 -->
+        <div class="slide slide-content" id="slide4">
+            <h2>技术面分析</h2>
+            
+            <h3>关键点位</h3>
+            <ul>
+                <li>上证指数: 跌破3800点重要支撑</li>
+                <li>深证成指: 跌破13500点关口</li>
+                <li>创业板指: 相对抗跌，但仍下跌3.49%</li>
+            </ul>
+            
+            <h3>成交量分析</h3>
+            <ul>
+                <li>成交量维持万亿级别</li>
+                <li>下跌放量，显示抛压较重</li>
+                <li>资金流出明显</li>
+            </ul>
+            
+            <h3>市场结构</h3>
+            <ul>
+                <li>三大指数全线下跌</li>
+                <li>权重股领跌</li>
+                <li>中小盘股跟随下跌</li>
+            </ul>
+        </div>
+        
+        <!-- 幻灯片5: 季节判断 -->
+        <div class="slide slide-content" id="slide5">
+            <h2>季节判断与仓位建议</h2>
+            
+            <h3>季节判断系统</h3>
+            <ul>
+                <li><span class="highlight">当前季节</span>: 冬藏期</li>
+                <li><span class="highlight">评分</span>: 25分（满分100）</li>
+                <li><span class="highlight">判断依据</span>:
+                    <ol>
+                        <li>指数连续下跌</li>
+                        <li>市场情绪极度悲观</li>
+                        <li>成交量萎缩</li>
+                        <li>技术面破位</li>
+                    </ol>
+                </li>
+            </ul>
+            
+            <h3>仓位建议</h3>
+            <ul>
+                <li><span class="highlight">建议仓位</span>: 20-30%</li>
+                <li><span class="highlight">操作策略</span>: 防守为主，轻仓试探</li>
+                <li><span class="highlight">风险控制</span>: 严格止损，控制回撤</li>
+            </ul>
+        </div>
+        
+        <!-- 幻灯片6: 热点板块 -->
+        <div class="slide slide-content" id="slide6">
+            <h2>热点板块分析</h2>
+            
+            <h3>强势板块</h3>
+            <ol>
+                <li><span class="highlight">芯片概念</span>
+                    <ul>
+                        <li>催化剂: 马斯克宣布建全球最大芯片厂</li>
+                        <li>相关个股: 芯片设计、制造、设备</li>
+                    </ul>
+                </li>
+                <li><span class="highlight">电力能源</span>
+                    <ul>
+                        <li>催化剂: 能源政策支持</li>
+                        <li>相关个股: 华电辽能、华电能源</li>
+                    </ul>
+                </li>
+                <li><span class="highlight">防御性板块</span>
+                    <ul>
+                        <li>消费、医药、公用事业</li>
+                        <li>市场下跌时的避风港</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h3>弱势板块</h3>
+            <ul>
+                <li>高估值科技股</li>
+                <li>周期股</li>
+                <li>前期涨幅过大个股</li>
+            </ul>
+        </div>
+        
+        <!-- 幻灯片7: 龙头股 -->
+        <div class="slide slide-content" id="slide7">
+            <h2>龙头股表现</h2>
+            
+            <h3>连板龙头</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>股票</th>
+                        <th>连板</th>
+                        <th>涨幅</th>
+                        <th>逻辑</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="highlight">深华发Ａ (000020)</span></td>
+                        <td>5.0板</td>
+                        <td class="green">10.00%</td>
+                        <td>强势龙头，资金抱团</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">华电辽能 (600396)</span></td>
+                        <td>5.0板</td>
+                        <td class="green">10.02%</td>
+                        <td>电力改革，政策支持</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">大胜达 (603687)</span></td>
+                        <td>3.0板</td>
+                        <td class="green">10.02%</td>
+                        <td>细分行业龙头</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>龙头股特征</h3>
+            <ul>
+                <li>连板效应明显</li>
+                <li>资金集中度高</li>
+                <li>风险收益比需谨慎评估</li>
+            </ul>
+        </div>
+        
+        <!-- 幻灯片8: 中军股 -->
+        <div class="slide slide-content" id="slide8">
+            <h2>中军股跟踪</h2>
+            
+            <h3>趋势中军</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>股票</th>
+                        <th>市值</th>
+                        <th>成交额</th>
+                        <th>逻辑</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="highlight">华电能源 (600726)</span></td>
+                        <td>412.64亿</td>
+                        <td>29.63亿</td>
+                        <td>大资金参与，趋势稳健</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">云南锗业 (002428)</span></td>
+                        <td>283.81亿</td>
+                        <td>8.41亿</td>
+                        <td>机构关注，资源属性</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">石大胜华 (603026)</span></td>
+                        <td>175.48亿</td>
+                        <td>14.04亿</td>
+                        <td>新能源材料，机构重仓</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>中军股作用</h3>
+            <ul>
+                <li>稳定市场情绪</li>
+                <li>反映机构动向</li>
+                <li>提供趋势参考</li>
+            </ul>
+        </div>
+        
+        <!-- 幻灯片9: 风险提示 -->
+        <div class="slide slide-content" id="slide9">
+            <h2>风险提示</h2>
+            
+            <h3>系统性风险</h3>
+            <ol>
+                <li><span class="highlight">市场风险</span>
+                    <ul>
+                        <li>指数连续下跌</li>
+                        <li>技术面破位</li>
+                        <li>情绪面悲观</li>
+                    </ul>
+                </li>
+                <li><span class="highlight">外部风险</span>
+                    <ul>
+                        <li>全球市场波动</li>
+                        <li>地缘政治因素</li>
+                        <li>汇率波动</li>
+                    </ul>
+                </li>
+                <li><span class="highlight">政策风险</span>
+                    <ul>
+                        <li>监管政策变化</li>
+                        <li>货币政策调整</li>
+                        <li>产业政策影响</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h3>操作风险</h3>
+            <ul>
+                <li>追高风险</li>
+                <li>止损不及时</li>
+                <li>仓位过重</li>
+                <li>情绪化交易</li>
+            </ul>
+        </div>
+        
+        <!-- 幻灯片10: 明日策略 -->
+        <div class="slide slide-content" id="slide10">
+            <h2>明日策略</h2>
+            
+            <h3>短期策略（1-3天）</h3>
+            <ul>
+                <li><span class="highlight">仓位控制</span>: 20-30%</li>
+                <li><span class="highlight">操作方向</span>: 防御为主</li>
+                <li><span class="highlight">关注板块</span>: 消费、医药、公用事业</li>
+                <li><span class="highlight">回避板块</span>: 高估值、周期股</li>
+            </ul>
+            
+            <h3>中期策略（1-2周）</h3>
+            <ul>
+                <li>等待企稳信号</li>
+                <li>观察成交量变化</li>
+                <li>关注政策面动向</li>
+                <li>逐步布局优质标的</li>
+            </ul>
+            
+            <h3>具体操作建议</h3>
+            <div class="content-box">
+                <strong>买入条件:</strong>
+                <ul>
+                    <li>指数连续3日收阳</li>
+                    <li>成交量放大</li>
+                    <li>龙头股企稳</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 幻灯片11: 总结 -->
+        <div class="slide slide-content" id="slide11">
+            <h2>总结与展望</h2>
+            
+            <h3>核心观点</h3>
+            <ol>
+                <li>市场进入冬藏期，防守为主</li>
+                <li>控制仓位在20-30%</li>
+                <li>关注防御性板块</li>
+                <li>等待市场企稳信号</li>
+            </ol>
+            
+            <h3>关键指标</h3>
+            <ul>
+                <li>上证指数3800点支撑</li>
+                <li>成交量变化</li>
+                <li>龙头股表现</li>
+                <li>政策面动向</li>
+            </ul>
+            
+            <h3>风险收益比</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>指标</th>
+                        <th>评估</th>
+                        <th>建议</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>当前风险</td>
+                        <td class="red">高</td>
+                        <td>谨慎操作</td>
+                    </tr>
+                    <tr>
+                        <td>预期收益</td>
+                        <td class="red">低</td>
+                        <td>控制仓位</td>
+                    </tr>
+                    <tr>
+                        <td>操作建议</td>
+                        <td>-</td>
+                        <td class="highlight">控制风险，等待时机</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 幻灯片12: 结束页 -->
+        <div class="slide slide-end" id="slide12">
+            <h1>谢谢</h1>
+            <div class="subtitle">彪哥战法量化分析团队</div>
+            <div class="date">2026年3月23日</div>
+            
+            <div class="content-box" style="margin-top: 40px; max-width: 600px;">
+                <h3>风险提示</h3>
+                <p>本报告仅供参考，不构成投资建议</p>
+                <p>投资有风险，入市需谨慎</p>
+            </div>
+        </div>
+        
+        <!-- 导航栏 -->
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn" disabled>上一页</button>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">12</span>
+            </div>
+            <button class="nav-btn" id="nextBtn">下一页</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            let currentSlide = 0;
+            
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const currentSlideSpan = document.getElementById('currentSlide');
+            const totalSlidesSpan = document.getElementById('totalSlides');
+            const indexDots = document.querySelectorAll('.index-dot');
+            
+            // 初始化
+            totalSlidesSpan.textContent = totalSlides;
+            updateNavigation();
+            
+            // 更新导航状态
+            function updateNavigation() {
+                currentSlideSpan.textContent = currentSlide + 1;
+                
+                // 更新按钮状态
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+                
+                // 更新幻灯片显示
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === currentSlide);
+                });
+                
+                // 更新指示点
+                indexDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            // 上一页
+            prevBtn.addEventListener('click', function() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateNavigation();
+                }
+            });
+            
+            // 下一页
+            nextBtn.addEventListener('click', function() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateNavigation();
+                }
+            });
+            
+            // 键盘导航
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        updateNavigation();
+                    }
+                } else if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+                    if (currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                        updateNavigation();
+                    }
+                } else if (e.key === 'Home') {
+                    currentSlide = 0;
+                    updateNavigation();
+                } else if (e.key === 'End') {
+                    currentSlide = totalSlides - 1;
+                    updateNavigation();
+                }
+            });
+            
+            // 点击指示点跳转
+            indexDots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    currentSlide = index;
+                    updateNavigation();
+                });
+            });
+            
+            // 触摸滑动支持
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            document.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0 && currentSlide < totalSlides - 1) {
+                        // 向左滑动，下一页
+                        currentSlide++;
+                    } else if (diff < 0 && currentSlide > 0) {
+                        // 向右滑动，上一页
+                        currentSlide--;
+                    }
+                    updateNavigation();
+                }
+            }
+            
+            // 全屏支持
+            document.addEventListener('dblclick', function() {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(err => {
+                        console.log(`全屏请求失败: ${err.message}`);
+                    });
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
