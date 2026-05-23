@@ -1,9 +1,40 @@
-# OpenClaw workspace — transient files
-*.log
+# OpenClaw workspace — 文件管理规范（2026-05-23 整理）
+# 规则：不需要进仓库的临时/缓存/生成文件
+
+# === 缓存目录 ===
+__pycache__/
+*.pyc
 .cache/
+.datapipeline_cache/
+image_cache/
+formation_cache/
+
+# === 会话记录 ===
+.claude-flow/sessions/
+.claude-flow/data/
+session_backup_*/
+
+# === 日志 ===
+*.log
+*.error.log
+
+# === 临时文件 ===
 *.tmp
 *.swp
 *~
+temp_fupan/
+
+# === macOS ===
 .DS_Store
-.claude/worktrees/
+
+# === git子仓库 ===
 egps-system/
+
+# === 环境隔离 ===
+venv/
+.venv/
+node_modules/
+
+# === 大数据目录（由富富确认去留） ===
+# biaoge_v5_express/
+# position_analysis/
