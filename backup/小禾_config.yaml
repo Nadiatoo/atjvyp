@@ -529,6 +529,14 @@ mcp_servers:
   agentmemory:
     command: /Users/tuqibiao/.local/bin/hermes-agentmemory-mcp
     enabled: true
+  tushare:
+    command: npx
+    args:
+    - -y
+    - '@tushare/mcp'
+    env:
+      TUSHARE_TOKEN: [REDACTED - 从tushare.pro官网获取]
+    enabled: true
 plugins:
   hermes-memory-store:
     auto_extract: true
