@@ -43,3 +43,6 @@ node_modules/
 venv/
 .venv/
 venv_arm64/
+
+# 三方通信历史备份（不推仓库）
+*.bak
