@@ -5,3 +5,5 @@
 *.swp
 *~
 .DS_Store
+.claude/worktrees/
+egps-system/
