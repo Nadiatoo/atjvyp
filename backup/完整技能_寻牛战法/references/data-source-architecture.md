@@ -1,54 +1,67 @@
-# 数据源架构（2026-05-19 老涂确认）
+# A股数据源架构（2026-05-23 定型）
 
-## 主数据源矩阵
+三层数据源，各有定位，互补不重叠：
 
-### P0 核心层
+## 第一层：盘中高频实时
 
-| 数据源 | 用途 | 费用 | 覆盖范围 | 验证状态 |
-|--------|------|:----:|---------|:--------:|
-| **Tushare Pro** | A股日线行情（回测主力） | 500元/年 | A股全量日线 | ✅ 已验证稳定 |
-| **东方财富 API** | 实时行情、指数、涨停/龙虎榜 | 免费 | A股实时 | ✅ 已验证 |
-| **DeepSeek API** | LLM分析、策略推理 | API按量 | 对话/分析 | ✅ 主力模型 |
-| **千问VL (Qwen)** | 图片识别（图表/截图/知识库） | 免费额度 | 多模态 | ✅ 已验证 |
+| 数据 | 来源 | 延迟 | 方式 |
+|------|------|:----:|------|
+| 涨停池快照 | a-stock-data（腾讯API） | 30s | HTTP轮询→升级WS |
+| 行业板块排行 | a-stock-data（东财） | 实时 | HTTP |
+| 主要指数 | a-stock-data（腾讯） | 实时 | HTTP |
+| 个股实时行情 | a-stock-data（腾讯/mootdx） | 实时 | HTTP/TCP |
+| 涨速榜/跌停池 | Phase 2 东财WS（开发中） | 秒级 | WebSocket推流 |
+| 分时数据 | Phase 2 东财WS 1分钟K线 | 秒级 | WebSocket推流 |
 
-### P1 辅助层
+## 第二层：历史稳定数据（Tushare MCP）
 
-| 数据源 | 用途 | 费用 | 备注 |
-|--------|------|:----:|------|
-| **AkShare** | 涨停池/龙虎榜/板块数据 | 免费 | 偶有连接问题，重试即可 |
-| **DuckDuckGo** | 新闻搜索 | 免费 | 中文搜索效果有限 |
-| **Browser-use** | 浏览器自动化 | 免费 | 备用 |
+Tushare MCP Server 配置方式：
 
-### P2 备用层
-
-| 数据源 | 用途 | 费用 |
-|--------|------|:----:|
-| **baostock** | Tushare挂了时的备用日线 | 免费 |
-| **Jina AI** | 网页转Markdown（待测试） | 免费额度 |
-
-### 不推荐使用的
-
-| 数据源 | 原因 |
-|--------|------|
-| **SerpAPI** | 付费，免费源够用 |
-| **Tavily** | 付费，性价比低 |
-| **yfinance** | 国内连接限频严重 |
-
-## 个股研报数据获取流程
-
-```python
-① Knowledge Base查询 → 题材覆盖 + 核心逻辑 + 相关文章
-② Tushare Pro → 日线行情、财务数据
-③ 东方财富 (Chrome AppleScript) → 实时行情、板块数据
-④ AkShare → 涨停池、龙虎榜补缺
-⑤ DuckDuckGo/百度 → 最新新闻、公告
-⑥ 整合结论
+```yaml
+# ~/.hermes/config.yaml 中
+mcp_servers:
+  tushare:
+    command: npx
+    args:
+    - -y
+    - '@tushare/mcp'
+    env:
+      TUSHARE_TOKEN: [从tushare.pro获取]
+    enabled: true
 ```
 
-## 注意事项
+| 数据 | Tushare接口 | 用途 |
+|------|:----------:|------|
+| 个股K线 | daily | 历史K线（免费API不稳定时的备选） |
+| 指数K线 | index_daily | 指数历史数据 |
+| 龙虎榜 | top_list | 营业部+机构席位（免费API做不到） |
+| 资金流向 | moneyflow | 个股资金流备份 |
+| 概念板块 | concept | 879个概念全量 |
+| 港股通 | ggt_daily | 北向资金 |
+| 业绩预告 | forecast | 业绩预告查询 |
+| 融资融券 | margin_detail | 两融明细 |
+| 复权因子 | adj_factor | 复权计算 |
 
-- 东方财富 Chrome 抓取路径：`document.body.innerText`
-- Tushare Pro 日线查询：`pro.daily(ts_code='XXXXXX.SH', start_date=..., end_date=...)`
-- AkShare 涨停池：`ak.stock_zt_pool_em(date='YYYYMMDD')`
-- AkShare 龙虎榜：`ak.stock_lhb_detail_em(start_date=..., end_date=...)`
-- 所有数据源连接异常时，先重试1-2次，不行换源，不要停滞
+## 第三层：统一数据采集客户端
+
+小猪交付的 `unified_data_client.py` 把P0数据统一输出到 `~/.hermes/realtime/`：
+
+```
+~/.hermes/realtime/
+├── indices.json        # 主要指数
+├── limit_up.json       # 涨停池
+├── sector_rank.json    # 板块排行
+├── hot_themes.json     # 热点题材
+└── northbound.json     # 北向资金
+```
+
+## 数据源选择策略
+
+| 场景 | 优先 | 备选 |
+|------|------|------|
+| 盘中盯盘（涨停/板块/指数） | a-stock-data 腾讯API | 东财WS（Phase 2） |
+| 查个股历史K线 | Tushare daily | 新浪/腾讯历史 |
+| 查龙虎榜 | Tushare top_list | 东财datacenter-web |
+| 查资金流向 | Tushare moneyflow | 东财push2 |
+| 查概念板块 | Tushare concept | 百度概念归属 |
+| 查研报/公告 | a-stock-data 东财reportapi | 巨潮cninfo |
