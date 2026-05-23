@@ -1,48 +1,61 @@
-# OpenClaw workspace — 文件管理规范（2026-05-23 整理）
+# OpenClaw workspace — 仓库管理规范
 # 规则：不需要进仓库的临时/缓存/生成文件
+# 管理者：小禾 — 日常维护、内容审核、清理执行
 
-# === 缓存目录 ===
+# === 运行环境 ===
+venv/
+.venv/
+venv_arm64/
+node_modules/
+
+# === Python 缓存 ===
 __pycache__/
 *.pyc
+*.pyo
+
+# === 数据库 ===
+*.db
+*.sqlite
+*.sqlite3
+
+# === 日志 & 通信 ===
+*.log
+*.bak
+message_bus.jsonl
+message_bus.jsonl.*
+
+# === 缓存目录 ===
 .cache/
 .datapipeline_cache/
 image_cache/
 formation_cache/
+temp_fupan/
 
 # === 会话记录 ===
 .claude-flow/sessions/
 .claude-flow/data/
 session_backup_*/
+.claude-flow/
 
-# === 日志 ===
-*.log
-*.error.log
+# === Agent 内部目录 ===
+.claude/
+.clawhub/
+.learnings/
+.msg_pointers/
+.openclaw/
 
 # === 临时文件 ===
 *.tmp
 *.swp
 *~
-temp_fupan/
+*.dylib
+*.dat
+*.so
 
 # === macOS ===
 .DS_Store
 
-# === git子仓库 ===
-egps-system/
-
-# === 环境隔离 ===
-venv/
-.venv/
-node_modules/
-
-# === 大数据目录（由富富确认去留） ===
-# biaoge_v5_express/
-# position_analysis/
-
-# 虚拟环境
-venv/
-.venv/
-venv_arm64/
-
-# 三方通信历史备份（不推仓库）
-*.bak
+# === 缓存数据目录 ===
+data/cache/
+position_analysis/data/cache/
+position_analysis/outputs/
