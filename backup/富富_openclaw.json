@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.23",
+    "lastTouchedAt": "2026-05-19T15:16:19.191Z"
+  },
+  "env": {
+    "QVERIS_API_KEY": "sk-PYDj7ulDpbYUtxeXnKeUzKLzMjS2IdTZ6N-2uYbX5bo",
+    "DEEPSEEK_API_KEY": "sk-56ac1de05e9e49ae9f245d3dec93113a"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-25T11:40:57.163Z",
+    "lastRunVersion": "2026.3.23-2",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "deepseek:default": {
+        "provider": "deepseek",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "deepseek": {
+        "baseUrl": "https://api.deepseek.com",
+        "apiKey": "sk-56ac1de05e9e49ae9f245d3dec93113a",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-v4-flash",
+            "name": "DeepSeek V4 Flash",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.001,
+              "output": 0.002,
+              "cacheRead": 2e-05,
+              "cacheWrite": 0.001
+            },
+            "contextWindow": 200000,
+            "maxTokens": 200000
+          },
+          {
+            "id": "deepseek-v4-pro",
+            "name": "DeepSeek V4 Pro",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.003,
+              "output": 0.006,
+              "cacheRead": 2.5e-05,
+              "cacheWrite": 0.003
+            },
+            "contextWindow": 200000,
+            "maxTokens": 200000
+          }
+        ]
+      },
+      "qwen": {
+        "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "apiKey": "sk-c43afab2fec24b94a3aca8255dd95110",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen-vl-max",
+            "name": "Qwen VL Max",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0.003,
+              "output": 0.009,
+              "cacheRead": 0.0003,
+              "cacheWrite": 0.003
+            },
+            "contextWindow": 32000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "qwen-vl-plus",
+            "name": "Qwen VL Plus",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0.0015,
+              "output": 0.0045,
+              "cacheRead": 0.00015,
+              "cacheWrite": 0.0015
+            },
+            "contextWindow": 32000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "deepseek/deepseek-v4-flash",
+        "fallbacks": [
+          "deepseek/deepseek-v4-flash",
+          "qwen/qwen-vl-max"
+        ]
+      },
+      "models": {
+        "deepseek/deepseek-v4-pro": {
+          "alias": "DeepSeek-V4-Pro"
+        },
+        "qwen/qwen-vl-max": {
+          "alias": "Qwen-VL-Max"
+        },
+        "qwen/qwen-vl-plus": {
+          "alias": "Qwen-VL-Plus"
+        }
+      },
+      "workspace": "/Users/tuqibiao/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokens": 20000,
+        "keepRecentTokens": 10000,
+        "maxHistoryShare": 0.4,
+        "recentTurnsPreserve": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "claude-code",
+        "name": "claude-code",
+        "workspace": "/Users/tuqibiao/.claude",
+        "agentDir": "/Users/tuqibiao/.openclaw/agents/claude-code/agent",
+        "identity": {
+          "name": "小猪",
+          "emoji": "🐷"
+        }
+      },
+      {
+        "id": "hermes",
+        "name": "hermes",
+        "workspace": "/Users/tuqibiao/.hermes",
+        "agentDir": "/Users/tuqibiao/.openclaw/agents/hermes/agent",
+        "identity": {
+          "name": "小禾",
+          "emoji": "🔍"
+        }
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "claude-code",
+      "match": {
+        "channel": "feishu"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw",
+    "allowFrom": {
+      "webchat": [
+        "*"
+      ],
+      "*": [
+        "*"
+      ]
+    },
+    "text": true,
+    "bash": true
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "accounts": {
+        "main": {
+          "appId": "cli_a91460b282f85bd2",
+          "appSecret": "4GQXvV5i27yAZQdpGwjmUhPzqLJr8S0V"
+        },
+        "default": {
+          "dmPolicy": "pairing"
+        }
+      },
+      "appSecret": "QhoRErAxP7bl9yHtqDcEDhAt3otQOs8d",
+      "appId": "cli_a91100b306785cb2",
+      "encryptKey": "puOQDfFj9YJIUQBNLW894dtYotT0gZ4I",
+      "verificationToken": "VMSr4ko7qfPoP0Tb7SjYnIv5Pbs66zhR",
+      "domain": "feishu",
+      "connectionMode": "websocket",
+      "webhookPath": "/feishu/events",
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "reactionNotifications": "own",
+      "typingIndicator": true,
+      "resolveSenderNames": true
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "[REDACTED]"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "allow": [
+      "acpx",
+      "deepseek",
+      "feishu",
+      "memory-core",
+      "openclaw-mem0",
+      "qwen"
+    ],
+    "entries": {
+      "feishu": {
+        "enabled": true,
+        "config": {}
+      },
+      "deepseek": {
+        "enabled": true
+      },
+      "memory-core": {
+        "config": {
+          "dreaming": {
+            "enabled": false
+          }
+        },
+        "enabled": false
+      },
+      "openclaw-mem0": {
+        "enabled": false,
+        "config": {
+          "mode": "open-source"
+        }
+      },
+      "memory-lancedb": {
+        "enabled": false
+      },
+      "acpx": {
+        "enabled": true
+      },
+      "qwen": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "openclaw-mem0": {
+        "source": "npm",
+        "spec": "@adbm-ai/openclaw-mem0",
+        "installPath": "/Users/tuqibiao/.openclaw/extensions/openclaw-mem0",
+        "version": "0.3.2",
+        "resolvedName": "@adbm-ai/openclaw-mem0",
+        "resolvedVersion": "0.3.2",
+        "resolvedSpec": "@adbm-ai/openclaw-mem0@0.3.2",
+        "integrity": "sha512-XCeikIuitfqZmKuN+VPUBNqopinoMJ4lIeU+apK0lrXjNqq/oz3YVcpdVQ71A0mMnJ1z/mLWV2+2KMsilQyAyw==",
+        "shasum": "b4b9623d54ba662bf7f658e050bc57fc0d1bb1dc",
+        "resolvedAt": "2026-05-13T11:41:40.441Z",
+        "installedAt": "2026-05-13T11:41:56.756Z"
+      }
+    },
+    "slots": {
+      "memory": "openclaw-mem0"
+    }
+  },
+  "ui": {
+    "assistant": {
+      "name": "富富",
+      "avatar": "/Users/tuqibiao/.openclaw/workspace/avatars/openclaw.png"
+    }
+  }
+}

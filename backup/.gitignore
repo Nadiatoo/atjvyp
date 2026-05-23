@@ -1,0 +1,12 @@
+# backup目录的gitignore
+# 大二进制文件不备份入git
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.zip
+*.tar.gz
+__pycache__/
+*.pyc

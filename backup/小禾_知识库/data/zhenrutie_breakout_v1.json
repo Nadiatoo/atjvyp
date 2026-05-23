@@ -1,0 +1,441 @@
+{
+  "strategy": "事不过三·突破形态 v1",
+  "generated_at": "2026-05-20T20:13:09.282882",
+  "total_stocks": 4675,
+  "found": 54,
+  "hit_rate": "1.2%",
+  "results": [
+    {
+      "ts_code": "000507.SZ",
+      "name": "珠海港",
+      "industry": "新型电力",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.64
+    },
+    {
+      "ts_code": "000713.SZ",
+      "name": "国投丰乐",
+      "industry": "种植业",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.77
+    },
+    {
+      "ts_code": "000733.SZ",
+      "name": "振华科技",
+      "industry": "元器件",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.63
+    },
+    {
+      "ts_code": "000818.SZ",
+      "name": "航锦科技",
+      "industry": "化工原料",
+      "signals": 2,
+      "win_rate": 0.0,
+      "avg_pnl": -5.73
+    },
+    {
+      "ts_code": "000913.SZ",
+      "name": "钱江摩托",
+      "industry": "摩托车",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.06
+    },
+    {
+      "ts_code": "000951.SZ",
+      "name": "中国重汽",
+      "industry": "汽车整车",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.7
+    },
+    {
+      "ts_code": "600026.SH",
+      "name": "中远海能",
+      "industry": "水运",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -7.34
+    },
+    {
+      "ts_code": "600160.SH",
+      "name": "巨化股份",
+      "industry": "化工原料",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.52
+    },
+    {
+      "ts_code": "600166.SH",
+      "name": "福田汽车",
+      "industry": "汽车整车",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.57
+    },
+    {
+      "ts_code": "600528.SH",
+      "name": "中铁工业",
+      "industry": "运输设备",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -4.87
+    },
+    {
+      "ts_code": "600605.SH",
+      "name": "汇通能源",
+      "industry": "房产服务",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.96
+    },
+    {
+      "ts_code": "600639.SH",
+      "name": "浦东金桥",
+      "industry": "园区开发",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.71
+    },
+    {
+      "ts_code": "600808.SH",
+      "name": "马钢股份",
+      "industry": "普钢",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.37
+    },
+    {
+      "ts_code": "600827.SH",
+      "name": "百联股份",
+      "industry": "超市连锁",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -4.62
+    },
+    {
+      "ts_code": "600868.SH",
+      "name": "梅雁吉祥",
+      "industry": "水力发电",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.32
+    },
+    {
+      "ts_code": "002012.SZ",
+      "name": "凯恩股份",
+      "industry": "造纸",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.62
+    },
+    {
+      "ts_code": "002023.SZ",
+      "name": "海特高新",
+      "industry": "航空",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.17
+    },
+    {
+      "ts_code": "601872.SH",
+      "name": "招商轮船",
+      "industry": "水运",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.43
+    },
+    {
+      "ts_code": "002098.SZ",
+      "name": "浔兴股份",
+      "industry": "服饰",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.97
+    },
+    {
+      "ts_code": "002166.SZ",
+      "name": "莱茵生物",
+      "industry": "中成药",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -7.22
+    },
+    {
+      "ts_code": "601186.SH",
+      "name": "中国铁建",
+      "industry": "建筑工程",
+      "signals": 2,
+      "win_rate": 0.0,
+      "avg_pnl": -3.22
+    },
+    {
+      "ts_code": "002378.SZ",
+      "name": "章源钨业",
+      "industry": "小金属",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.41
+    },
+    {
+      "ts_code": "002420.SZ",
+      "name": "毅昌科技",
+      "industry": "家用电器",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -7.04
+    },
+    {
+      "ts_code": "002444.SZ",
+      "name": "巨星科技",
+      "industry": "轻工机械",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.0
+    },
+    {
+      "ts_code": "002609.SZ",
+      "name": "捷顺科技",
+      "industry": "软件服务",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.42
+    },
+    {
+      "ts_code": "300230.SZ",
+      "name": "永利股份",
+      "industry": "塑料",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -7.36
+    },
+    {
+      "ts_code": "601100.SH",
+      "name": "恒立液压",
+      "industry": "工程机械",
+      "signals": 1,
+      "win_rate": 100.0,
+      "avg_pnl": 28.15
+    },
+    {
+      "ts_code": "601231.SH",
+      "name": "环旭电子",
+      "industry": "元器件",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.11
+    },
+    {
+      "ts_code": "603993.SH",
+      "name": "洛阳钼业",
+      "industry": "小金属",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -7.07
+    },
+    {
+      "ts_code": "603806.SH",
+      "name": "福斯特",
+      "industry": "塑料",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.59
+    },
+    {
+      "ts_code": "603859.SH",
+      "name": "能科科技",
+      "industry": "软件服务",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.38
+    },
+    {
+      "ts_code": "603568.SH",
+      "name": "伟明环保",
+      "industry": "环境保护",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.15
+    },
+    {
+      "ts_code": "300426.SZ",
+      "name": "华智数媒",
+      "industry": "影视音像",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.89
+    },
+    {
+      "ts_code": "603968.SH",
+      "name": "醋化股份",
+      "industry": "化工原料",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.5
+    },
+    {
+      "ts_code": "603228.SH",
+      "name": "XD景旺电",
+      "industry": "元器件",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.27
+    },
+    {
+      "ts_code": "300651.SZ",
+      "name": "金陵体育",
+      "industry": "文教休闲",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -7.65
+    },
+    {
+      "ts_code": "603083.SH",
+      "name": "XD剑桥科",
+      "industry": "通信设备",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.93
+    },
+    {
+      "ts_code": "603917.SH",
+      "name": "合力科技",
+      "industry": "汽车配件",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -7.29
+    },
+    {
+      "ts_code": "300696.SZ",
+      "name": "爱乐达",
+      "industry": "航空",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.57
+    },
+    {
+      "ts_code": "603596.SH",
+      "name": "伯特利",
+      "industry": "汽车配件",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.64
+    },
+    {
+      "ts_code": "603105.SH",
+      "name": "芯能科技",
+      "industry": "电气设备",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.0
+    },
+    {
+      "ts_code": "601975.SH",
+      "name": "招商南油",
+      "industry": "水运",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -3.7
+    },
+    {
+      "ts_code": "688138.SH",
+      "name": "清溢光电",
+      "industry": "半导体",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.2
+    },
+    {
+      "ts_code": "003013.SZ",
+      "name": "地铁设计",
+      "industry": "建筑工程",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.23
+    },
+    {
+      "ts_code": "688377.SH",
+      "name": "迪威尔",
+      "industry": "专用机械",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.48
+    },
+    {
+      "ts_code": "688157.SH",
+      "name": "松井股份",
+      "industry": "染料涂料",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.6
+    },
+    {
+      "ts_code": "600935.SH",
+      "name": "华塑股份",
+      "industry": "化工原料",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.0
+    },
+    {
+      "ts_code": "688529.SH",
+      "name": "豪森智能",
+      "industry": "专用机械",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.26
+    },
+    {
+      "ts_code": "688070.SH",
+      "name": "纵横股份",
+      "industry": "航空",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.78
+    },
+    {
+      "ts_code": "605555.SH",
+      "name": "德昌股份",
+      "industry": "家用电器",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.39
+    },
+    {
+      "ts_code": "001288.SZ",
+      "name": "运机集团",
+      "industry": "专用机械",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -6.01
+    },
+    {
+      "ts_code": "688192.SH",
+      "name": "迪哲医药-U",
+      "industry": "生物制药",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.31
+    },
+    {
+      "ts_code": "920675.BJ",
+      "name": "秉扬科技",
+      "industry": "矿物制品",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.29
+    },
+    {
+      "ts_code": "920392.BJ",
+      "name": "佳合科技",
+      "industry": "广告包装",
+      "signals": 1,
+      "win_rate": 0.0,
+      "avg_pnl": -5.31
+    }
+  ]
+}

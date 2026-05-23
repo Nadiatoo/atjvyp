@@ -1,0 +1,27 @@
+{
+  "strategy": "真如铁事不过三",
+  "generated_at": "2026-05-20T13:39:23+08:00",
+  "sample_size": 500,
+  "stocks_with_signals": 360,
+  "total_signals": 1120,
+  "buyable_signals": 759,
+  "avg_win_rate": 77.9,
+  "avg_return": 5.92,
+  "by_period": {
+    "上升": {
+      "count": 25,
+      "win_rate": 72.0,
+      "avg_return": 6.48
+    },
+    "震荡": {
+      "count": 385,
+      "win_rate": 82.1,
+      "avg_return": 7.61
+    },
+    "下跌": {
+      "count": 539,
+      "win_rate": 79.0,
+      "avg_return": 6.29
+    }
+  }
+}
