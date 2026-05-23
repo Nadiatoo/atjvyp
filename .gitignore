@@ -38,3 +38,8 @@ node_modules/
 # === 大数据目录（由富富确认去留） ===
 # biaoge_v5_express/
 # position_analysis/
+
+# 虚拟环境
+venv/
+.venv/
+venv_arm64/
