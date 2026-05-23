@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 ============================================================================
-彪哥战法 v5.0 统一分析引擎 (数据管道版)
+彪哥战法 v5.0 统一分析引擎
 ============================================================================
-整合: 季节判断(规则引擎) + 龙头识别 + 中军识别 + 真夏长确认 + 风控
-数据源: DataPipeline (多源自动降级: 腾讯HTTP → akshare → mootdx → QVeris)
-回退策略: 自动降级 + 明确报错，不使用模拟/硬编码数据
+整合: 季节判断(规则+QLib ML) + 龙头识别 + 中军识别 + 真夏长确认 + 风控
+数据源: QVeris API (唯一主数据源)
+回退策略: 明确报错，不使用模拟/硬编码数据
 ============================================================================
 """
 
@@ -13,10 +13,11 @@ import os
 import json
 import sys
 import time
+import hashlib
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List, Tuple, Any
 
 import requests
 import numpy as np
@@ -26,11 +27,8 @@ import pandas as pd
 # 配置
 # ---------------------------------------------------------------------------
 WORKSPACE = Path(os.path.expanduser("~/.openclaw/workspace"))
-sys.path.insert(0, str(WORKSPACE))
-
-# DataPipeline 多源数据管道
-from data_pipeline import DataPipeline, CacheManager
-
+QLIB_DIR = WORKSPACE / "qlib_biaoge"
+QLIB_MODEL_PATH = QLIB_DIR / "biaoge_season_model.pkl"
 ARCHIVE_DIR = WORKSPACE / "archive" / f"biage_cleanup_{datetime.now():%Y%m%d}"
 
 QVERIS_API_KEY = os.getenv("QVERIS_API_KEY", "")
@@ -172,12 +170,70 @@ class QVerisClient:
 
 
 # ===========================================================================
+# 第2部分: QLib 模型加载
+# ===========================================================================
+
+class QLibSeasonPredictor:
+    """QLib 四季预测模型包装器"""
+
+    def __init__(self, model_path: str = ""):
+        self.model = None
+        self.feature_names = None
+        self.season_names = ["春播", "夏长", "秋收", "冬藏"]
+        self._loaded = False
+
+        path = model_path or str(QLIB_MODEL_PATH)
+        if os.path.exists(path):
+            self._load(path)
+
+    def _load(self, path: str):
+        try:
+            import joblib
+            data = joblib.load(path)
+            self.model = data["model"]
+            self.feature_names = data["feature_names"]
+            self._loaded = True
+            log.info(f"QLib模型已加载: {path} (特征: {len(self.feature_names)}维)")
+        except Exception as e:
+            log.warning(f"QLib模型加载失败: {e}，将使用规则判断")
+
+    @property
+    def available(self) -> bool:
+        return self._loaded and self.model is not None
+
+    def predict(self, features: dict) -> Tuple[str, float, dict]:
+        """
+        返回: (季节名, 置信度, 四季概率分布)
+        """
+        if not self.available:
+            return ("模型不可用", 0.0, {})
+
+        # 构建特征向量(按模型期望的顺序)
+        try:
+            X = pd.DataFrame([features])[self.feature_names]
+            proba = self.model.predict_proba(X)[0]
+            pred = int(self.model.predict(X)[0])
+
+            season = self.season_names[pred] if pred < len(self.season_names) else "未知"
+            confidence = float(proba[pred])
+
+            probs = {
+                self.season_names[i]: float(proba[i])
+                for i in range(min(len(proba), len(self.season_names)))
+            }
+            return (season, confidence, probs)
+        except Exception as e:
+            log.warning(f"QLib预测失败: {e}")
+            return ("预测异常", 0.0, {})
+
+
+# ===========================================================================
 # 第3部分: 季节判断引擎 (规则 + ML 融合)
 # ===========================================================================
 
 class SeasonEngine:
     """
-    季节判断引擎 — 规则引擎
+    季节判断引擎 — 规则引擎 + QLib模型双重验证
 
     规则判断（7分支修正逻辑）:
       - 跌停>30 或 上涨比例<15% → 混沌期
@@ -198,6 +254,9 @@ class SeasonEngine:
         "秋收期":   {"position": "30-50%", "strategy": "逐步减仓",   "仓位": 0.40},
         "观察期":   {"position": "20-30%", "strategy": "谨慎观察",   "仓位": 0.25},
     }
+
+    def __init__(self, qlib_predictor: Optional[QLibSeasonPredictor] = None):
+        self.qlib = qlib_predictor
 
     def judge(self, stats: dict, sh_change: float, weekly_trend: int = 0) -> dict:
         """
@@ -240,6 +299,20 @@ class SeasonEngine:
             "has_strong_stock_liquidation": limit_down > 30,
         }
 
+        # QLib模型验证
+        if self.qlib and self.qlib.available:
+            try:
+                features = self._build_qlib_features(stats, sh_change)
+                ml_season, ml_conf, ml_probs = self.qlib.predict(features)
+                result["ml_season"] = ml_season
+                result["ml_confidence"] = round(ml_conf, 3)
+                result["ml_probs"] = ml_probs
+                # 规则和ML一致时提升置信度
+                if ml_season == regime:
+                    result["consensus"] = True
+            except Exception:
+                pass
+
         return result
 
     def _rule_judge(self, limit_down: int, limit_up: int, rising_ratio: float, sh_change: float) -> str:
@@ -274,6 +347,34 @@ class SeasonEngine:
             return "春播期"
         return "观察期"
 
+    def _build_qlib_features(self, stats: dict, sh_change: float) -> dict:
+        """从统计数据构建QLib模型所需的13维特征"""
+        total = stats.get("total", 5000)
+        rising = stats.get("rising", 0)
+        limit_up = stats.get("limit_up", 0)
+        limit_down = stats.get("limit_down", 0)
+
+        rising_ratio = rising / total if total else 0
+
+        features = {
+            "momentum_5": sh_change / 100,       # 近似5日动量
+            "momentum_10": sh_change / 100,       # 近似10日动量
+            "momentum_20": sh_change / 100,       # 近似20日动量
+            "volatility_5": 0.01 if abs(sh_change) < 3 else 0.03,
+            "volatility_20": 0.015,
+            "volume_ma5": 1.0,
+            "volume_ma20": 1.0,
+            "ma5": 1.0,
+            "ma20": 1.0,
+            "ma60": 1.0,
+            "rsi": min(100, 50 + sh_change * 5),       # 估算RSI
+            "macd": sh_change / 100,
+            "macd_signal": sh_change / 200,
+            "bb_position": 0 if abs(sh_change) < 2 else (sh_change / 10),
+        }
+        return features
+
+
 # ===========================================================================
 # 第4部分: 龙头/中军识别
 # ===========================================================================
@@ -286,7 +387,6 @@ class StockIdentifier:
         """
         龙头识别 — 4维评分: 涨幅40% + 换手25% + 市值20% + 成交额15%
         条件: 涨停(≥9.5%) + 换手5-30% + 市值50-500亿
-        缺失列自动降维（仅用可用维度评分）
         """
         if df is None or len(df) == 0:
             return []
@@ -299,7 +399,7 @@ class StockIdentifier:
         c = col_map
         df = df.copy()
 
-        # 数值化可用列
+        # 数值化
         for key in ["涨跌幅", "换手率", "成交额", "总市值"]:
             if key in c:
                 df[c[key]] = pd.to_numeric(df[c[key]], errors="coerce")
@@ -309,38 +409,17 @@ class StockIdentifier:
         if len(zt) == 0:
             return []
 
-        # 检查可用维度，动态调整权重
-        has_turnover = "换手率" in c
-        has_mcap = "总市值" in c
-        has_amount = "成交额" in c
-
         def score(row):
             s = 0
             chg = float(row[c["涨跌幅"]])
+            turnover = float(row.get(c.get("换手率", ""), 0) or 0)
+            mcap = float(row.get(c.get("总市值", ""), 0) or 0) / 1e8
+            amount = float(row.get(c.get("成交额", ""), 0) or 0) / 1e8
 
-            # 涨幅 40% 基分
-            s += min(chg, 20) * 2
-
-            # 换手 (默认25分权重, 缺失时均分给其他维度)
-            if has_turnover:
-                turnover = float(row.get(c["换手率"], 0) or 0)
-                s += 25 if 5 <= turnover <= 20 else (15 if 3 <= turnover <= 30 else 5)
-
-            # 市值 (默认20分权重)
-            if has_mcap:
-                mcap = float(row.get(c["总市值"], 0) or 0) / 1e8
-                s += 20 if 50 <= mcap <= 500 else (15 if 20 <= mcap <= 1000 else 10)
-
-            # 成交额 (默认15分权重)
-            if has_amount:
-                amount = float(row.get(c["成交额"], 0) or 0) / 1e8
-                s += 15 if amount >= 10 else (12 if amount >= 5 else (8 if amount >= 2 else 5))
-
-            # 归一化: 如果缺少维度，将得分按比例放大
-            max_possible = 40 + (25 if has_turnover else 0) + (20 if has_mcap else 0) + (15 if has_amount else 0)
-            if max_possible < 100 and max_possible > 0:
-                s = s * 100 / max_possible
-
+            s += min(chg, 20) * 2                                 # 涨幅 40%
+            s += 25 if 5 <= turnover <= 20 else (15 if 3 <= turnover <= 30 else 5)  # 换手 25%
+            s += 20 if 50 <= mcap <= 500 else (15 if 20 <= mcap <= 1000 else 10)    # 市值 20%
+            s += 15 if amount >= 10 else (12 if amount >= 5 else (8 if amount >= 2 else 5))  # 成交额15%
             return s
 
         zt["_score"] = zt.apply(score, axis=1)
@@ -348,12 +427,12 @@ class StockIdentifier:
 
         return [
             {
-                "名称": str(row.get(c.get("名称", ""), "")),
-                "代码": str(row.get(c.get("代码", ""), "")),
+                "名称": row[c.get("名称", "")],
+                "代码": row[c.get("代码", "")],
                 "涨跌幅": f"{float(row[c['涨跌幅']]):+.2f}%",
-                "换手率": f"{float(row.get(c.get('换手率', ''), 0) or 0):.2f}%" if has_turnover else "N/A",
-                "成交额": f"{float(row.get(c.get('成交额', ''), 0) or 0) / 1e8:.2f}亿" if has_amount else "N/A",
-                "市值": f"{float(row.get(c.get('总市值', ''), 0) or 0) / 1e8:.1f}亿" if has_mcap else "N/A",
+                "换手率": f"{float(row.get(c.get('换手率', ''), 0) or 0):.2f}%",
+                "成交额": f"{float(row.get(c.get('成交额', ''), 0) or 0) / 1e8:.2f}亿",
+                "市值": f"{float(row.get(c.get('总市值', ''), 0) or 0) / 1e8:.1f}亿",
                 "得分": int(row["_score"]),
             }
             for _, row in top.iterrows()
@@ -364,7 +443,6 @@ class StockIdentifier:
         """
         中军识别 — 4维评分: 市值35% + 成交额30% + 涨幅稳健20% + 换手15%
         条件: 涨幅3-7%，市值≥200亿，换手≥2%
-        缺失列时降维处理（仅基于可用列评分）
         """
         if df is None or len(df) == 0:
             return []
@@ -380,51 +458,32 @@ class StockIdentifier:
             if key in c:
                 df[c[key]] = pd.to_numeric(df[c[key]], errors="coerce")
 
-        has_turnover = "换手率" in c
-        has_mcap = "总市值" in c
-        has_amount = "成交额" in c
-
-        # 筛选条件 — 仅筛可用维度
-        mask = (df[c["涨跌幅"]] >= 3) & (df[c["涨跌幅"]] <= 7)
-        if has_mcap:
-            mask &= (df[c["总市值"]] >= 200e8)
-        if has_turnover:
-            mask &= (df[c["换手率"]] >= 2)
+        # 筛选条件
+        mask = (
+            (df[c["涨跌幅"]] >= 3) & (df[c["涨跌幅"]] <= 7) &
+            (df[c["总市值"]] >= 200e8) &
+            (df[c["换手率"]] >= 2)
+        )
         core_df = df[mask].copy()
 
         if len(core_df) == 0:
             # 放宽条件
-            mask2 = (df[c["涨跌幅"]] >= 2) & (df[c["涨跌幅"]] <= 8)
-            if has_mcap:
-                mask2 &= (df[c["总市值"]] >= 100e8)
-            if has_turnover:
-                mask2 &= (df[c["换手率"]] >= 1.5)
+            mask2 = (df[c["涨跌幅"]] >= 2) & (df[c["总市值"]] >= 100e8) & (df[c["换手率"]] >= 1.5)
             core_df = df[mask2].copy()
         if len(core_df) == 0:
             return []
 
         def score(row):
             s = 0
+            mcap = float(row[c["总市值"]]) / 1e8
+            amount = float(row[c["成交额"]]) / 1e8
             chg = float(row[c["涨跌幅"]])
+            turnover = float(row[c["换手率"]])
 
-            # 市值 (默认35分权重)
-            if has_mcap:
-                mcap = float(row.get(c["总市值"], 0) or 0) / 1e8
-                s += 35 if mcap >= 1000 else (32 if mcap >= 500 else (28 if mcap >= 300 else (25 if mcap >= 200 else 20)))
-
-            # 成交额 (默认30分权重)
-            if has_amount:
-                amount = float(row.get(c["成交额"], 0) or 0) / 1e8
-                s += 30 if amount >= 20 else (27 if amount >= 10 else (22 if amount >= 5 else 18))
-
-            # 涨幅稳健 (默认20分权重)
+            s += 35 if mcap >= 1000 else (32 if mcap >= 500 else (28 if mcap >= 300 else (25 if mcap >= 200 else 20)))
+            s += 30 if amount >= 20 else (27 if amount >= 10 else (22 if amount >= 5 else 18))
             s += 20 if 4 <= chg <= 6 else (18 if 3 <= chg <= 7 else 15)
-
-            # 换手 (默认15分权重)
-            if has_turnover:
-                turnover = float(row.get(c["换手率"], 0) or 0)
-                s += 15 if 3 <= turnover <= 8 else (12 if 2 <= turnover <= 10 else 10)
-
+            s += 15 if 3 <= turnover <= 8 else (12 if 2 <= turnover <= 10 else 10)
             return s
 
         core_df["_score"] = core_df.apply(score, axis=1)
@@ -432,12 +491,12 @@ class StockIdentifier:
 
         return [
             {
-                "名称": str(row.get(c.get("名称", ""), "")),
-                "代码": str(row.get(c.get("代码", ""), "")),
+                "名称": row[c.get("名称", "")],
+                "代码": row[c.get("代码", "")],
                 "涨跌幅": f"{float(row[c['涨跌幅']]):+.2f}%",
-                "换手率": f"{float(row.get(c.get('换手率', ''), 0) or 0):.2f}%" if has_turnover else "N/A",
-                "成交额": f"{float(row.get(c.get('成交额', ''), 0) or 0) / 1e8:.2f}亿" if has_amount else "N/A",
-                "市值": f"{float(row.get(c.get('总市值', ''), 0) or 0) / 1e8:.1f}亿" if has_mcap else "N/A",
+                "换手率": f"{float(row[c['换手率']]):.2f}%",
+                "成交额": f"{float(row[c['成交额']]) / 1e8:.2f}亿",
+                "市值": f"{float(row[c['总市值']]) / 1e8:.1f}亿",
                 "得分": int(row["_score"]),
             }
             for _, row in top.iterrows()
@@ -584,14 +643,12 @@ class SummerConfirmation:
 # ===========================================================================
 
 class BiageEngine:
-    """彪哥战法统一分析引擎 (数据管道版)"""
+    """彪哥战法统一分析引擎"""
 
     def __init__(self):
-        # DataPipeline 作为主数据源（多源自动降级：腾讯HTTP → akshare → mootdx → QVeris）
-        self.pipe = DataPipeline()
-        # QVeris 保留为可选增强源
-        self.qveris = QVerisClient()
-        self.season = SeasonEngine()
+        self.client = QVerisClient()
+        self.qlib = QLibSeasonPredictor()
+        self.season = SeasonEngine(self.qlib)
         self.identifier = StockIdentifier()
         self.summer = SummerConfirmation()
 
@@ -633,145 +690,59 @@ class BiageEngine:
             "data_available": False,
         }
 
-        # Step 1: 获取指数数据 (通过 DataPipeline 自动降级)
+        # Step 1: 获取指数数据
         sh_data = None
         try:
-            pipe_result = self.pipe.get_index("000001.SH")
-            if pipe_result is None:
-                # 备用：尝试 QVeris 直接查询
-                pipe_result = self.qveris.get_index("000001.SH")
-            if pipe_result is not None:
-                sh_data = pipe_result
-                result["shanghai_index"] = sh_data
-                result["data_available"] = True
-            else:
-                errors.append("上证指数: 所有数据源均失败")
-        except Exception as e:
-            errors.append(f"上证指数获取异常: {e}")
+            sh_data = self.client.get_index("000001.SH")
+            result["shanghai_index"] = sh_data
+        except DataFetchError as e:
+            errors.append(f"上证指数: {e}")
 
-        # Step 2: 获取涨跌停统计 (通过 DataPipeline 自动降级)
+        # Step 2: 获取涨跌停统计
         stats = None
         try:
-            stats = self.pipe.get_market_stats()
-            if stats is None:
-                # 备用：尝试 QVeris 直接查询
-                try:
-                    stats = self.qveris.get_market_stats()
-                except Exception:
-                    pass
-            if stats is not None:
-                result["market_stats"] = stats
-                result["data_available"] = True
-                self._save_stats(stats)
-            else:
-                errors.append("涨跌停统计: 所有数据源均失败")
-        except Exception as e:
-            errors.append(f"涨跌停统计获取异常: {e}")
+            stats = self.client.get_market_stats()
+            result["market_stats"] = stats
+            result["data_available"] = True
+            self._save_stats(stats)
+        except DataFetchError as e:
+            errors.append(f"涨跌停统计: {e}")
 
         # 数据验证 — 关键检查
-        if not result["data_available"] or stats is None:
-            if not result["data_available"]:
-                result["error"] = "数据获取失败"
-                result["error_details"] = errors
-                pipe_status = self.pipe.status() if hasattr(self.pipe, 'status') else {}
-                result["warning"] = (
-                    "⚠️ 实盘数据无法获取，本次分析结果不可用于实盘决策。"
-                    f"\n数据管道状态: {pipe_status}"
-                    "\n请检查: 1) 网络连接 2) 数据源可用性 3) QVeris API (如需)"
-                )
-                result["elapsed_sec"] = round(time.time() - start, 1)
-                return result
-
-            # stats 为 None 但有指数数据时，尝试从全市场行情估算
-            log.warning("涨跌停统计不可用，尝试从全市场行情估算...")
-            try:
-                spot_df = self.pipe.get_realtime_spot()
-                if spot_df is not None and len(spot_df) > 100:
-                    total = len(spot_df)
-                    rising = len(spot_df[spot_df["涨跌幅"] > 0])
-                    limit_up = len(spot_df[spot_df["涨跌幅"] >= 9.5])
-                    limit_down = len(spot_df[spot_df["涨跌幅"] <= -9.5])
-                    stats = {
-                        "total": total, "rising": rising, "falling": total - rising,
-                        "limit_up": limit_up, "limit_down": limit_down,
-                        "source": "estimated_from_spot"
-                    }
-                    result["market_stats"] = stats
-                    log.info(f"估算涨跌停: 涨停{limit_up} / 跌停{limit_down}")
-            except Exception as e:
-                log.warning(f"从全市场行情估算失败: {e}")
+        if not result["data_available"]:
+            result["error"] = "数据获取失败"
+            result["error_details"] = errors
+            result["warning"] = (
+                "⚠️ 实盘数据无法获取，本次分析结果不可用于实盘决策。"
+                "请检查: 1) QVERIS_API_KEY 环境变量 2) 网络连接 3) QVeris API 服务状态"
+            )
+            result["elapsed_sec"] = round(time.time() - start, 1)
+            return result
 
         # Step 3: 季节判断
         sh_change = sh_data.get("change_pct", 0) if sh_data else 0
-        # 如果 stats 仍然不可用，使用安全默认值
-        if stats is None:
-            stats = {"total": 5000, "rising": 0, "falling": 0, "limit_up": 0, "limit_down": 0}
-            result["market_stats"] = stats
         season_result = self.season.judge(stats, sh_change, self._weekly_trend)
         result["season"] = season_result
 
-        # Step 4: 获取全市场数据 (通过 DataPipeline 自动降级)
+        # Step 4: 获取全市场数据
         df = None
         try:
-            df = self.pipe.get_realtime_spot()
-            if df is None or len(df) == 0:
-                log.warning("DataPipeline 全市场行情失败，尝试 QVeris 备用")
-                try:
-                    df = self.qveris.get_stock_screener()
-                except Exception:
-                    pass
+            df = self.client.get_stock_screener()
         except Exception as e:
             log.warning(f"全市场数据获取失败: {e}")
-            # 备用
-            try:
-                df = self.qveris.get_stock_screener()
-            except Exception:
-                pass
 
         # Step 5: 龙头/中军识别
-        # 性能优化: 提前过滤到涨幅前200只再处理，避免全市场5000只逐一评分
-        df_filtered = None
-        if df is not None and len(df) > 200:
-            if "涨跌幅" in df.columns:
-                df_filtered = df.nlargest(200, "涨跌幅").copy()
-            elif "change_pct" in df.columns:
-                df_filtered = df.nlargest(200, "change_pct").copy()
-            else:
-                df_filtered = df.head(200).copy()
-        else:
-            df_filtered = df
-        leaders = self.identifier.identify_leaders(df_filtered) if df_filtered is not None else []
-        cores = self.identifier.identify_cores(df_filtered) if df_filtered is not None else []
+        leaders = self.identifier.identify_leaders(df) if df is not None else []
+        cores = self.identifier.identify_cores(df) if df is not None else []
         result["leaders"] = leaders
         result["cores"] = cores
 
-        # Step 6: 领涨板块 (通过 DataPipeline 自动降级)
+        # Step 6: 领涨板块
         sectors = []
         try:
-            sector_df = self.pipe.get_sector_rank()
-            if sector_df is not None and len(sector_df) > 0:
-                # 统一格式化为 biage_engine 所需的 [{"name":..., "change_pct":...}] 格式
-                name_col = next((c for c in ["板块名称", "name", "板块"] if c in sector_df.columns), None)
-                pct_col = next((c for c in ["涨跌幅", "change_pct", "涨幅"] if c in sector_df.columns), None)
-                if name_col and pct_col:
-                    for _, row in sector_df.iterrows():
-                        try:
-                            sectors.append({
-                                "name": str(row[name_col]),
-                                "change_pct": float(row[pct_col])
-                            })
-                        except (ValueError, TypeError):
-                            continue
-        except Exception as e:
-            log.warning(f"板块数据获取失败: {e}")
-            # 备用：QVeris
-            try:
-                sectors = self.qveris.get_sector_leaders()
-            except Exception:
-                pass
-
-        # 取前8
-        sectors = sectors[:8]
+            sectors = self.client.get_sector_leaders()
+        except Exception:
+            pass
         result["sectors"] = sectors
 
         # Step 7: 真夏长确认
@@ -785,8 +756,6 @@ class BiageEngine:
         risk = self._risk_check(season_result, stats, sh_data)
         result["risk"] = risk
 
-        # 数据源信息
-        result["data_pipeline_status"] = self.pipe.status() if hasattr(self.pipe, 'status') else {}
         result["elapsed_sec"] = round(time.time() - start, 1)
         return result
 
@@ -854,6 +823,11 @@ class BiageEngine:
         lines.append(f"💰 仓位: {season['position']} | 策略: {season['strategy']}")
         lines.append(f"🧠 判断逻辑: {self._season_reason(season, stats)}")
 
+        # QLib 模型输出
+        if "ml_season" in season:
+            consensus = "✅ 一致" if season.get("consensus") else "⚠️ 分歧"
+            lines.append(f"🤖 QLib模型: {season['ml_season']} (置信度:{season.get('ml_confidence', 0):.0%}) {consensus}")
+
         # 真夏长确认
         if summer.get("verdict"):
             lines.append(f"")
@@ -888,14 +862,9 @@ class BiageEngine:
                 lines.append(f"  {a}")
 
         # 脚注
-        # 数据源信息
-        pipe_status = result.get('data_pipeline_status', {})
-        sources_used = pipe_status.get('sources_used', {})
-        src_info = ', '.join(f"{k}={v}" for k, v in sources_used.items()) if sources_used else "DataPipeline"
-
         lines.append(f"")
         lines.append(f"━━━━━━━━━━━━━━━━━━━━━━━━━")
-        lines.append(f"⏱️ 耗时: {result.get('elapsed_sec', 0):.1f}秒 | 数据源: DataPipeline ({src_info})")
+        lines.append(f"⏱️ 耗时: {result.get('elapsed_sec', 0):.1f}秒 | 数据源: QVeris")
         lines.append(f"⚠️ 本报告仅供参考，不构成投资建议")
 
         return "\n".join(lines)
